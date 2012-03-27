@@ -1,4 +1,4 @@
-require 'helper'
+require 'spec_helper'
 
 describe BigML::Client do
   let(:keys) {
@@ -19,17 +19,17 @@ describe BigML::Client do
   end
 
   context "class configuration" do
-    let(:configuration) {
+    let(:credentials) {
       {
-        :username => 'alfred',
-        :api_key  => '79138a622755a2383660347f895444b1eb927730',
+        :username => 'user',
+        :api_key  => 'secret'
       }
     }
 
     context "during initialization" do
       it "should override module configuration" do
-        api = BigML::Client.new(configuration)
-        keys.each { |key| api.send(key).should == configuration[key] }
+        api = BigML::Client.new(credentials)
+        keys.each { |key| api.send(key).should == credentials[key] }
       end
     end
 
@@ -42,8 +42,8 @@ describe BigML::Client do
 
       it "should override module configuration" do
         api = BigML::Client.new
-        configuration.each { |key, value| api.send("#{key}=", value) }
-        keys.each { |key| api.send(key).should == configuration[key] }
+        credentials.each { |key, value| api.send("#{key}=", value) }
+        keys.each { |key| api.send(key).should == credentials[key] }
       end
     end
   end

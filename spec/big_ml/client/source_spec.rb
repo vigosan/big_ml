@@ -29,9 +29,13 @@ describe BigML::Client do
   end
 
   describe "#get_source" do
+    let(:source_template) {
+      { :code => 201, :credits => 0.0087890625, :file_name => "iris.csv", :name => "iris.csv" }
+    }
+
     it "request the correct resource" do
       stub_request(:get, "https://bigml.io/andromeda/source/id").with(:query => auth).
-        to_return(:status => 200, :body => "", :headers => {})
+        to_return(:status => 200, :body => source_template, :headers => {})
       client.get_source('id')
     end
   end
@@ -50,7 +54,7 @@ describe BigML::Client do
       {
         "meta" => { :limit => 20, :next => nil, :offset => 0, :previous => nil, :total => 1 },
         "objects" => [
-          { :code => 201, :credits => 0.0087890625, :file_name => "iris.csv", :name => "iris.csv" },
+          { :code => 201, :credits => 0.0087890625, :file_name => "iris.csv", :name => "iris.csv" }
         ]
       }
     }
@@ -63,4 +67,11 @@ describe BigML::Client do
     end
   end
 
+  describe "#delete_source" do
+    it "request the correct resources" do
+      stub_request(:delete, "https://bigml.io/andromeda/source/id").with(:query => auth).
+        to_return(:status => 200, :body => "", :headers => {})
+      client.delete_source('id')
+    end
+  end
 end

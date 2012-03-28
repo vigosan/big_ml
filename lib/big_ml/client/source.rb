@@ -3,12 +3,21 @@ module BigML
     module Source
       def get_sources(options = {})
         # we need to extract also the pagination information
-        sources = get("/source", options)
-        sources['objects'].map { |source| BigML::Source.new(source) }
+        response = get("/source", options)
+        if response.success?
+          response['objects'].map { |source| BigML::Source.new(source) }
+        else
+          # errors
+        end
       end
 
       def get_source(id, options = {})
-        get("/source/#{id}", options)
+        response = get("/source/#{id}", options)
+        if response.success?
+          BigML::Source.new(response)
+        else
+          # errors
+        end
       end
 
       def update_source(id, options = {})
@@ -16,8 +25,16 @@ module BigML
       end
 
       def find_sources(options = {})
-        sources = get("/source", options)
-        sources['objects'].map { |source| BigML::Source.new(source) }
+        response = get("/source", options)
+        if response.success?
+          response['objects'].map { |source| BigML::Source.new(response) }
+        else
+          # errors
+        end
+      end
+
+      def delete_source(id)
+        delete("/source/#{id}")
       end
     end
   end

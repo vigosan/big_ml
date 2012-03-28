@@ -12,7 +12,7 @@ describe BigML::Client do
   describe "#get_sources" do
     let(:sources_template) {
       {
-        "meta" => { :limit => 20, :next => 'next', :offset => 0, :previous => nil, :total => 54 },
+        "meta" => { :limit => 20, :next => nil, :offset => 0, :previous => nil, :total => 2 },
         "objects" => [
           { :code => 201, :credits => 0.0087890625, :file_name => "iris.csv", :name => "iris.csv" },
           { :code => 201, :credits => 0.0086361836, :file_name => "gender.csv", :name => "gender.csv" }
@@ -44,4 +44,23 @@ describe BigML::Client do
       client.update_source('id', new_params)
     end
   end
+
+  describe "#find_sources" do
+    let(:sources_template) {
+      {
+        "meta" => { :limit => 20, :next => nil, :offset => 0, :previous => nil, :total => 1 },
+        "objects" => [
+          { :code => 201, :credits => 0.0087890625, :file_name => "iris.csv", :name => "iris.csv" },
+        ]
+      }
+    }
+
+    it "request the correct resources" do
+      search_params = { :name => 'iris.csv', :size__gt => 1048576 }
+      stub_request(:get, "https://bigml.io/andromeda/source").with(:query => auth.merge(search_params)).
+        to_return(:status => 200, :body => sources_template, :headers => {})
+      client.find_sources(search_params)
+    end
+  end
+
 end

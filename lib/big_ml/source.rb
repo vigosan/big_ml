@@ -16,5 +16,8 @@ module BigML
         }
      end
 
+     def id
+       resource.split('/').last
+     end
   end
 end

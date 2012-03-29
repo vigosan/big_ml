@@ -1,11 +1,11 @@
 module BigML
   module Request
     def get(path, options = {})
-      self.class.get(path, :query => options.merge(credentials))
+      self.class.get(path, :query => credentials.merge(options))
     end
 
     def post(path, options = {})
-      self.class.post(path, :query => options.merge(credentials))
+      self.class.post(path, :query => credentials.merge(options))
     end
 
     def delete(path)

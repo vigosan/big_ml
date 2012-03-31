@@ -43,7 +43,8 @@ describe BigML::Client do
   describe "#update_source" do
     it "request the correct resource" do
       new_params = { :name => 'new_name' }
-      stub_request(:post, "https://bigml.io/andromeda/source/id").with(:query => auth.merge(new_params)).
+      stub_request(:put, "https://bigml.io/andromeda/source/id").
+        with(:body => auth.merge(new_params)).
         to_return(:status => 200, :body => "", :headers => {})
       client.update_source('id', new_params)
     end

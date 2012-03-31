@@ -13,7 +13,10 @@ module BigML
       end
 
       def update_source(id, options = {})
-        post("/source/#{id}", options)
+        put("/source/#{id}", options)
+      end
+
+      def create_source(file, options ={})
       end
 
       def find_sources(options = {})

@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{A Ruby wrapper for the BigML REST API}
   gem.homepage      = "https://bigml.com"
 
-  gem.add_dependency              "httparty"
+  gem.add_dependency              "httmultiparty"
   gem.add_development_dependency  "rspec"
   gem.add_development_dependency  "webmock"
 

@@ -9,7 +9,12 @@ module BigML
     end
 
     def post(path, options = {})
-      self.class.post(path, :body => credentials.merge(options))
+      multipart = options.delete(:multipart) || false
+      if multipart
+        self.class.post(path, :query => credentials.merge(options))
+      else
+        self.class.post(path, :body => credentials.merge(options))
+      end
     end
 
     def delete(path)

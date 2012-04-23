@@ -1,6 +1,10 @@
-# BigMl
+# BigML
 
-TODO: Write a gem description
+A Ruby wrapper for the BigML REST API
+
+## Compile into system gems
+
+    rake build; rake install
 
 ## Installation
 
@@ -18,7 +22,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    client = BigML::Client.new(:username => 'foo', :api_key => 'bar')
+    client.get_sources
 
 ## Contributing
 

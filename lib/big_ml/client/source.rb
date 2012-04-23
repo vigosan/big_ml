@@ -2,7 +2,6 @@ module BigML
   class Client
     module Source
       def get_sources(options = {})
-        # we need to extract also the pagination information
         response = get("/source", options)
         response['objects'].map { |source| BigML::Source.new(source) } if response.success?
       end
@@ -17,7 +16,8 @@ module BigML
       end
 
       def create_source(file, options ={})
-        post("/source", options.merge(:multipart => true, :file => File.new(file)))
+        response = post("/source", options.merge(:multipart => true, :file => File.new(file)))
+        BigML::Source.new(response) if response.success?
       end
 
       def find_sources(options = {})
@@ -26,7 +26,8 @@ module BigML
       end
 
       def delete_source(id)
-        delete("/source/#{id}")
+        response = delete("/source/#{id}")
+        response.success?
       end
     end
   end

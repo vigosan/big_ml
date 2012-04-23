@@ -22,7 +22,8 @@ describe BigML::Client do
 
     it "request the correct resources" do
       extra_params = { :offset => 0, :limit => 20 }
-      stub_request(:get, "https://bigml.io/andromeda/source").with(:query => auth.merge(extra_params)).
+      options = extra_params.merge!(auth)
+      stub_request(:get, "https://bigml.io/andromeda/source").with(:query => options).
         to_return(:status => 200, :body => sources_template, :headers => {})
       client.get_sources(extra_params)
     end
@@ -43,8 +44,8 @@ describe BigML::Client do
   describe "#update_source" do
     it "request the correct resource" do
       new_params = { :name => 'new_name' }
-      stub_request(:put, "https://bigml.io/andromeda/source/id").
-        with(:body => auth.merge(new_params)).
+      options = new_params.merge!(auth)
+      stub_request(:put, "https://bigml.io/andromeda/source/id").with(:query => options).
         to_return(:status => 200, :body => "", :headers => {})
       client.update_source('id', new_params)
     end

@@ -1,24 +1,23 @@
 module BigML
   module Request
     def get(path, options = {})
-      self.class.get(path, :query => credentials.merge(options))
+      options.merge!(credentials)
+      self.class.get(path, :query => options)
     end
 
     def put(path, options = {})
-      self.class.put(path, :body => credentials.merge(options))
+      options.merge!(credentials)
+      self.class.put(path, :query => options)
     end
 
     def post(path, options = {})
-      multipart = options.delete(:multipart) || false
-      if multipart
-        self.class.post(path, :query => credentials.merge(options))
-      else
-        self.class.post(path, :body => credentials.merge(options))
-      end
+      options.merge!(credentials)
+      self.class.post(path, :query => options)
     end
 
-    def delete(path)
-      self.class.delete(path, :query => credentials)
+    def delete(path, options = {})
+      options.merge!(credentials)
+      self.class.delete(path, :query => options)
     end
   end
 end

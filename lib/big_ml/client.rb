@@ -2,7 +2,6 @@ require 'httmultiparty'
 require 'big_ml/authenticable'
 require 'big_ml/config'
 require 'big_ml/request'
-require 'big_ml/pagination'
 require 'big_ml/source'
 require 'big_ml/client/source'
 

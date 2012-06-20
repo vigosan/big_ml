@@ -1,8 +1,6 @@
 # BigML
 
-[![Build Status](https://secure.travis-ci.org/vigosan/big_ml.png?branch=master)](http://travis-ci.org/vigosan/big_ml)
-
-A Ruby wrapper for the BigML REST API
+A Ruby wrapper for the [BigML REST API](https://bigml.com/developers)
 
 ## Compile into system gems
 
@@ -33,6 +31,14 @@ dataset = BigML::Dataset.create(source.resource)
 model = BigML::Model.create(dataset.resource)
 prediction = BigML::Prediction.create(model.resource, { :input_data => { "000001" => 3 }})
 ```
+
+## Ruby Interpreter Compatibility
+This library has been tested on the following ruby interpreters:
+
+* MRI 1.9.2
+* MRI 1.9.3
+
+[![Build Status](https://secure.travis-ci.org/vigosan/big_ml.png?branch=master)](http://travis-ci.org/vigosan/big_ml)
 
 ## Contributing
 

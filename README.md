@@ -2,10 +2,6 @@
 
 A Ruby wrapper for the [BigML REST API](https://bigml.com/developers)
 
-## Compile into system gems
-
-    rake build; rake install
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -37,6 +33,16 @@ This library has been tested on the following ruby interpreters:
 
 * MRI 1.9.2
 * MRI 1.9.3
+
+## Running the tests in your local
+
+Execute:
+
+    rspec spec
+
+or simply:
+
+    rake
 
 [![Build Status](https://secure.travis-ci.org/vigosan/big_ml.png?branch=master)](http://travis-ci.org/vigosan/big_ml)
 

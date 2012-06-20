@@ -16,14 +16,21 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install big_ml
-
 ## Usage
 
-    client = BigML::Client.new(:username => 'foo', :api_key => 'bar')
-    client.get_sources
+```ruby
+require 'big_ml'
+
+BigML.configure do |c|
+  c.username = 'foo'
+  c.api_key = 'bar'
+end
+
+source = BigML::Source.create("spec/fixtures/iris.csv")
+dataset = BigML::Dataset.create(source.resource)
+model = BigML::Model.create(dataset.resource)
+prediction = BigML::Prediction.create(model.resource, { :input_data => { "000001" => 3 }})
+```
 
 ## Contributing
 

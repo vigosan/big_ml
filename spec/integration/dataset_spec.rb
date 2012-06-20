@@ -3,12 +3,8 @@ require "spec_helper"
 describe BigML::Dataset, :vcr do
 
   before(:each) do
-    BigML::Source.all.each do |s|
-      BigML::Source.delete(s.id)
-    end
-    BigML::Dataset.all.each do |s|
-      BigML::Dataset.delete(s.id)
-    end
+    BigML::Source.delete_all
+    BigML::Dataset.delete_all
   end
 
   describe "no dataset" do

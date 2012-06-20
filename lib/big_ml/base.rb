@@ -28,10 +28,13 @@ module BigML
         client.put("/#{resource_name}/#{id}", {}, options)
       end
 
-
       def delete(id)
         response = client.delete("/#{resource_name}/#{id}")
         response.success?
+      end
+
+      def delete_all
+        all.each {|s| delete(s.id) }
       end
 
       private

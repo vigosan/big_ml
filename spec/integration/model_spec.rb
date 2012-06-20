@@ -3,15 +3,9 @@ require "spec_helper"
 describe BigML::Model, :vcr do
 
   before(:each) do
-    BigML::Source.all.each do |s|
-      BigML::Source.delete(s.id)
-    end
-    BigML::Dataset.all.each do |s|
-      BigML::Dataset.delete(s.id)
-    end
-    BigML::Model.all.each do |s|
-      BigML::Model.delete(s.id)
-    end
+    BigML::Source.delete_all
+    BigML::Dataset.delete_all
+    BigML::Model.delete_all
   end
 
   describe "no model" do

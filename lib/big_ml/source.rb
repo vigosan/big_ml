@@ -19,5 +19,39 @@ module BigML
      def id
        resource.split('/').last
      end
+
+    class << self
+
+      def all(options = {})
+        response = client.get("/source", options)
+        response['objects'].map { |source| self.new(source) } if response.success?
+      end
+
+      def find(id, options = {})
+        response = client.get("/source/#{id}", options)
+        self.new(response) if response.success?
+      end
+
+      def update(id, options = {})
+        client.put("/source/#{id}", options)
+      end
+
+      def create(file, options = {})
+        response = client.post("/source", options.merge(:multipart => true, :file => File.new(file)))
+        self.new(response) if response.success?
+      end
+
+      def delete(id)
+        response = client.delete("/source/#{id}")
+        response.success?
+      end
+
+      private
+
+      def client
+        @client ||= Client.new
+      end
+
+    end
   end
 end

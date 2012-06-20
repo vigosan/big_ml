@@ -10,7 +10,8 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency              "httmultiparty"
   gem.add_development_dependency  "rspec"
-  gem.add_development_dependency  "webmock"
+  gem.add_development_dependency  "vcr"
+  gem.add_development_dependency  "fakeweb"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://bigml.io/andromeda/source?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 20 Jun 2012 01:07:00 GMT
+      server:
+      - nginx/1.0.12
+      content-length:
+      - '101'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 0}, "objects": []}'
+    http_version: '1.1'
+  recorded_at: Wed, 20 Jun 2012 01:08:31 GMT
+- request:
+    method: get
+    uri: https://bigml.io/andromeda/source?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 20 Jun 2012 01:04:42 GMT
+      server:
+      - nginx/1.0.12
+      content-length:
+      - '101'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 0}, "objects": []}'
+    http_version: '1.1'
+  recorded_at: Wed, 20 Jun 2012 01:08:32 GMT
+recorded_with: VCR 2.2.2

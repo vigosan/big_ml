@@ -9,6 +9,10 @@ module BigML
         }
      end
 
+     def id
+       resource.split('/').last
+     end
+
     class << self
       def all(options = {})
         response = client.get("/#{resource_name}", options)
@@ -21,13 +25,9 @@ module BigML
       end
 
       def update(id, options = {})
-        client.put("/#{resource_name}/#{id}", options)
+        client.put("/#{resource_name}/#{id}", {}, options)
       end
 
-      def create(file, options = {})
-        response = client.post("/#{resource_name}", options.merge(:multipart => true, :file => File.new(file)))
-        self.new(response) if response.success?
-      end
 
       def delete(id)
         response = client.delete("/#{resource_name}/#{id}")

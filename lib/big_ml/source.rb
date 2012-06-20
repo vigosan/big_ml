@@ -8,9 +8,11 @@ module BigML
 
      attr_reader *SOURCE_PROPERTIES
 
-     def id
-       resource.split('/').last
+     class << self
+      def create(file, options = {})
+        response = client.post("/#{resource_name}", options.merge(:multipart => true, :file => File.new(file)))
+        self.new(response) if response.success?
+      end
      end
-
   end
 end

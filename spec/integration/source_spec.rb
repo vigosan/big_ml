@@ -6,6 +6,9 @@ describe BigML::Source, :vcr do
     BigML::Source.all.each do |s|
       BigML::Source.delete(s.id)
     end
+    BigML::Dataset.all.each do |s|
+      BigML::Dataset.delete(s.id)
+    end
   end
 
   describe "no source" do
@@ -37,10 +40,10 @@ describe BigML::Source, :vcr do
       BigML::Source.find(@source.id) == @source
     end
 
-    it "must be able to update the name", :pending do
+    it "must be able to update the name" do
       BigML::Source.find(@source.id).name.should == 'iris.csv'
-      BigML::Source.update(@source.id, { :name => 'new name', :source_parser => {:locale => "es-ES" } }).code.should == 202
-      BigML::Source.find(@source.id).file_name.should == 'new_name'
+      BigML::Source.update(@source.id, { :name => 'new name' }).code.should == 202
+      BigML::Source.find(@source.id).name.should == 'new name'
     end
 
     it "must be able to remove the source" do

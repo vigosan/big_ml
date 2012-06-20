@@ -1,23 +1,29 @@
 module BigML
   module Request
-    def get(path, options = {})
-      options.merge!(credentials)
-      self.class.get(path, :query => options)
+    def get(path, options = {}, body = {})
+      self.class.get(path, prepare_options(options, body))
     end
 
-    def put(path, options = {})
-      options.merge!(credentials)
-      self.class.put(path, :query => options)
+    def put(path, options = {}, body = {})
+      self.class.put(path, prepare_options(options, body))
     end
 
-    def post(path, options = {})
-      options.merge!(credentials)
-      self.class.post(path, :query => options)
+    def post(path, options = {}, body = {})
+      self.class.post(path, prepare_options(options, body))
     end
 
-    def delete(path, options = {})
+    def delete(path, options = {}, body = {})
+      self.class.delete(path, prepare_options(options, body))
+    end
+
+    private
+    def prepare_options(options, body)
       options.merge!(credentials)
-      self.class.delete(path, :query => options)
+      if body.empty?
+        { :query => options }
+      else
+        { :headers => {'content-type' => 'application/json'}, :query => options, :body => body }
+      end
     end
   end
 end

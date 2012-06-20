@@ -4,6 +4,7 @@ require 'big_ml/config'
 require 'big_ml/request'
 require 'big_ml/base'
 require 'big_ml/source'
+require 'big_ml/dataset'
 
 module BigML
   class Client

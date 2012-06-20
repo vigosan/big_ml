@@ -1,6 +1,6 @@
 module BigML
   class Model < Base
-    SOURCE_PROPERTIES = [
+    MODEL_PROPERTIES = [
        :category, :code, :columns, :created, :credits, 
        :dataset, :dataset_status, :description, :holdout, 
        :input_fields, :locale, :max_columns, :max_rows, :model, 
@@ -9,10 +9,9 @@ module BigML
        :status, :tags, :updated
      ]
 
-     attr_reader *SOURCE_PROPERTIES
+     attr_reader *MODEL_PROPERTIES
 
      class << self
-
       def create(dataset, options = {})
         response = client.post("/#{resource_name}", options, { :dataset => dataset })
         self.new(response) if response.success?

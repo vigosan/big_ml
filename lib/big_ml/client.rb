@@ -6,6 +6,7 @@ require 'big_ml/base'
 require 'big_ml/source'
 require 'big_ml/dataset'
 require 'big_ml/model'
+require 'big_ml/prediction'
 
 module BigML
   class Client

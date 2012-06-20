@@ -37,7 +37,7 @@ describe BigML::Model, :vcr do
       BigML::Model.all.should have(1).models
     end
 
-    it "must have the same file_name" do
+    it "must have the same size" do
       BigML::Model.all.first.size.should == 4608
     end
 

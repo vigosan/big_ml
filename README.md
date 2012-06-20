@@ -1,5 +1,7 @@
 # BigML
 
+[![Build Status](https://secure.travis-ci.org/vigosan/big_ml.png?branch=master)](http://travis-ci.org/vigosan/big_ml)
+
 A Ruby wrapper for the BigML REST API
 
 ## Compile into system gems

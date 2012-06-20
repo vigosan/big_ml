@@ -9,6 +9,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://bigml.com"
 
   gem.add_dependency              "httmultiparty"
+  gem.add_development_dependency  "rake"
   gem.add_development_dependency  "rspec"
   gem.add_development_dependency  "vcr"
   gem.add_development_dependency  "fakeweb"

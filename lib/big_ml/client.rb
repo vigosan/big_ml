@@ -5,12 +5,14 @@ require 'big_ml/request'
 require 'big_ml/base'
 require 'big_ml/source'
 require 'big_ml/dataset'
+require 'big_ml/model'
 
 module BigML
   class Client
     include HTTMultiParty
     include Authenticable
     include Request
+    format :json
 
     base_uri Config::BIGML_ENDPOINT
 

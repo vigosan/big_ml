@@ -22,7 +22,7 @@ module BigML
       if body.empty?
         { :query => options }
       else
-        { :headers => {'content-type' => 'application/json'}, :query => options, :body => body }
+        { :headers => {'content-type' => 'application/json'}, :query => options, :body => body.to_json }
       end
     end
   end

@@ -2,9 +2,6 @@ require "spec_helper"
 
 describe BigML::Source, :vcr do
 
-  before do
-  end
-
   before(:each) do
     BigML::Source.all.each do |s|
       BigML::Source.delete(s.id)

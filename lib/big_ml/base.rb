@@ -1,17 +1,17 @@
 module BigML
   class Base
-     attr_accessor :attrs
+    attr_accessor :attrs
 
-     def initialize(attrs = {})
-        @attrs = attrs.dup
-        @attrs.each { |key, value|
-          instance_variable_set("@#{key}".to_sym, value)
-        }
-     end
+    def initialize(attrs = {})
+      @attrs = attrs.dup
+      @attrs.each { |key, value|
+        instance_variable_set("@#{key}".to_sym, value)
+      }
+    end
 
-     def id
-       resource.split('/').last
-     end
+    def id
+      resource.split('/').last
+    end
 
     class << self
       def all(options = {})

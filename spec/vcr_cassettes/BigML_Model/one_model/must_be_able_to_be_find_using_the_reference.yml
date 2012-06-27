@@ -3,7 +3,7 @@ recorded_with: VCR 2.2.2
 http_interactions: 
 - request: 
     method: get
-    uri: https://bigml.io/andromeda/source?api_key=<API_KEY>&username=<USERNAME>
+    uri: https://bigml.io/andromeda/source?username=<USERNAME>&api_key=<API_KEY>
     body: 
       string: ""
     headers: 
@@ -21,16 +21,16 @@ http_interactions:
       server: 
       - nginx/1.0.12
       date: 
-      - Wed, 27 Jun 2012 01:39:30 GMT
+      - Wed, 27 Jun 2012 01:58:36 GMT
       content-length: 
       - "1280"
     body: 
-      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"category\": 0, \"code\": 200, \"content_type\": \"application/octet-stream\", \"created\": \"2012-06-27T01:41:01.682000\", \"credits\": 0.0, \"description\": \"\", \"fields\": {\"000000\": {\"column_number\": 0, \"name\": \"sepal length\", \"optype\": \"numeric\"}, \"000001\": {\"column_number\": 1, \"name\": \"sepal width\", \"optype\": \"numeric\"}, \"000002\": {\"column_number\": 2, \"name\": \"petal length\", \"optype\": \"numeric\"}, \"000003\": {\"column_number\": 3, \"name\": \"petal width\", \"optype\": \"numeric\"}, \"000004\": {\"column_number\": 4, \"name\": \"species\", \"optype\": \"categorical\"}}, \"file_name\": \"iris.csv\", \"md5\": \"d1175c032e1042bec7f974c91e4a65ae\", \"name\": \"iris.csv\", \"number_of_datasets\": 1, \"number_of_models\": 1, \"number_of_predictions\": 0, \"private\": true, \"resource\": \"source/4fea64ad035d0741f0001bc1\", \"size\": 4608, \"source_parser\": {\"header\": true, \"locale\": \"en_US\", \"missing_tokens\": [\"\", \"N/A\", \"n/a\", \"NULL\", \"null\", \"-\", \"#DIV/0\", \"#REF!\", \"#NAME?\", \"NIL\", \"nil\", \"NA\", \"na\", \"#VALUE!\", \"#NULL!\", \"NaN\", \"#N/A\", \"#NUM!\", \"?\"], \"quote\": \"\\\"\", \"separator\": \",\"}, \"status\": {\"code\": 5, \"elapsed\": 61, \"message\": \"The source has been created\"}, \"tags\": [], \"type\": 0, \"updated\": \"2012-06-27T01:41:48.891000\"}]}"
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"category\": 0, \"code\": 200, \"content_type\": \"application/octet-stream\", \"created\": \"2012-06-27T02:00:07.165000\", \"credits\": 0.0, \"description\": \"\", \"fields\": {\"000000\": {\"column_number\": 0, \"name\": \"sepal length\", \"optype\": \"numeric\"}, \"000001\": {\"column_number\": 1, \"name\": \"sepal width\", \"optype\": \"numeric\"}, \"000002\": {\"column_number\": 2, \"name\": \"petal length\", \"optype\": \"numeric\"}, \"000003\": {\"column_number\": 3, \"name\": \"petal width\", \"optype\": \"numeric\"}, \"000004\": {\"column_number\": 4, \"name\": \"species\", \"optype\": \"categorical\"}}, \"file_name\": \"iris.csv\", \"md5\": \"d1175c032e1042bec7f974c91e4a65ae\", \"name\": \"iris.csv\", \"number_of_datasets\": 1, \"number_of_models\": 1, \"number_of_predictions\": 0, \"private\": true, \"resource\": \"source/4fea6927035d0741f0001be5\", \"size\": 4608, \"source_parser\": {\"header\": true, \"locale\": \"en_US\", \"missing_tokens\": [\"\", \"N/A\", \"n/a\", \"NULL\", \"null\", \"-\", \"#DIV/0\", \"#REF!\", \"#NAME?\", \"NIL\", \"nil\", \"NA\", \"na\", \"#VALUE!\", \"#NULL!\", \"NaN\", \"#N/A\", \"#NUM!\", \"?\"], \"quote\": \"\\\"\", \"separator\": \",\"}, \"status\": {\"code\": 5, \"elapsed\": 85, \"message\": \"The source has been created\"}, \"tags\": [], \"type\": 0, \"updated\": \"2012-06-27T02:00:54.581000\"}]}"
     http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 01:41:30 GMT
+  recorded_at: Wed, 27 Jun 2012 02:00:36 GMT
 - request: 
     method: delete
-    uri: https://bigml.io/andromeda/source/4fea64ad035d0741f0001bc1?api_key=<API_KEY>&username=<USERNAME>
+    uri: https://bigml.io/andromeda/source/4fea6927035d0741f0001be5?username=<USERNAME>&api_key=<API_KEY>
     body: 
       string: ""
     headers: 
@@ -48,16 +48,16 @@ http_interactions:
       server: 
       - nginx/1.0.12
       date: 
-      - Wed, 27 Jun 2012 01:37:02 GMT
+      - Wed, 27 Jun 2012 01:56:07 GMT
       content-length: 
       - "0"
     body: 
       string: ""
     http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 01:41:33 GMT
+  recorded_at: Wed, 27 Jun 2012 02:00:38 GMT
 - request: 
     method: get
-    uri: https://bigml.io/andromeda/dataset?api_key=<API_KEY>&username=<USERNAME>
+    uri: https://bigml.io/andromeda/dataset?username=<USERNAME>&api_key=<API_KEY>
     body: 
       string: ""
     headers: 
@@ -75,16 +75,16 @@ http_interactions:
       server: 
       - nginx/1.0.12
       date: 
-      - Wed, 27 Jun 2012 01:39:34 GMT
-      content-length: 
-      - "704"
+      - Wed, 27 Jun 2012 01:58:39 GMT
+      transfer-encoding: 
+      - chunked
     body: 
-      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"category\": 0, \"code\": 200, \"columns\": 5, \"created\": \"2012-06-27T01:41:03.132000\", \"credits\": 0.00439453125, \"description\": \"\", \"locale\": \"en_US\", \"name\": \"iris' dataset\", \"number_of_models\": 1, \"number_of_predictions\": 0, \"private\": true, \"resource\": \"dataset/4fea64af035d0741f1001b79\", \"rows\": 150, \"size\": 4608, \"source\": \"source/4fea64ad035d0741f0001bc1\", \"source_status\": false, \"status\": {\"bytes\": 4608, \"code\": 5, \"elapsed\": 102, \"field_errors\": [], \"message\": \"The dataset has been created\", \"row_format_errors\": [], \"serialized_rows\": 150}, \"tags\": [], \"updated\": \"2012-06-27T01:41:48.898000\"}]}"
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"category\": 0, \"code\": 200, \"columns\": 5, \"created\": \"2012-06-27T02:00:53.128000\", \"credits\": 0.00439453125, \"description\": \"\", \"locale\": \"en_US\", \"name\": \"iris' dataset\", \"number_of_models\": 1, \"number_of_predictions\": 0, \"private\": true, \"resource\": \"dataset/4fea695515526875f9001b83\", \"rows\": 150, \"size\": 4608, \"source\": \"source/4fea6927035d0741f0001be5\", \"source_status\": false, \"status\": {\"bytes\": 4608, \"code\": 5, \"elapsed\": 335, \"field_errors\": [], \"message\": \"The dataset has been created\", \"row_format_errors\": [], \"serialized_rows\": 150}, \"tags\": [], \"updated\": \"2012-06-27T02:00:54.588000\"}]}"
     http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 01:41:34 GMT
+  recorded_at: Wed, 27 Jun 2012 02:00:39 GMT
 - request: 
     method: delete
-    uri: https://bigml.io/andromeda/dataset/4fea64af035d0741f1001b79?api_key=<API_KEY>&username=<USERNAME>
+    uri: https://bigml.io/andromeda/dataset/4fea695515526875f9001b83?username=<USERNAME>&api_key=<API_KEY>
     body: 
       string: ""
     headers: 
@@ -102,16 +102,16 @@ http_interactions:
       server: 
       - nginx/1.0.12
       date: 
-      - Wed, 27 Jun 2012 01:37:05 GMT
+      - Wed, 27 Jun 2012 01:56:10 GMT
       content-length: 
       - "0"
     body: 
       string: ""
     http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 01:41:36 GMT
+  recorded_at: Wed, 27 Jun 2012 02:00:40 GMT
 - request: 
     method: get
-    uri: https://bigml.io/andromeda/model?api_key=<API_KEY>&username=<USERNAME>
+    uri: https://bigml.io/andromeda/model?username=<USERNAME>&api_key=<API_KEY>
     body: 
       string: ""
     headers: 
@@ -129,16 +129,16 @@ http_interactions:
       server: 
       - nginx/1.0.12
       date: 
-      - Wed, 27 Jun 2012 01:39:37 GMT
+      - Wed, 27 Jun 2012 01:58:41 GMT
       content-length: 
       - "844"
     body: 
-      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"category\": 0, \"code\": 200, \"columns\": 5, \"created\": \"2012-06-27T01:41:48.884000\", \"credits\": 0.017578125, \"dataset\": \"dataset/4fea64af035d0741f1001b79\", \"dataset_status\": false, \"description\": \"\", \"holdout\": 0.0, \"input_fields\": [\"000000\", \"000001\", \"000002\", \"000003\"], \"locale\": \"en_US\", \"max_columns\": 5, \"max_rows\": 150, \"name\": \"iris' dataset model\", \"number_of_predictions\": 0, \"objective_fields\": [\"000004\"], \"private\": true, \"range\": [1, 150], \"resource\": \"model/4fea64dc15526875f5001b87\", \"rows\": 150, \"size\": 4608, \"source\": \"source/4fea64ad035d0741f0001bc1\", \"source_status\": false, \"status\": {\"code\": 5, \"elapsed\": 134, \"message\": \"The model has been created\", \"progress\": 1}, \"tags\": [], \"updated\": \"2012-06-27T01:41:50.251000\"}]}"
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"category\": 0, \"code\": 200, \"columns\": 5, \"created\": \"2012-06-27T02:00:54.576000\", \"credits\": 0.017578125, \"dataset\": \"dataset/4fea695515526875f9001b83\", \"dataset_status\": false, \"description\": \"\", \"holdout\": 0.0, \"input_fields\": [\"000000\", \"000001\", \"000002\", \"000003\"], \"locale\": \"en_US\", \"max_columns\": 5, \"max_rows\": 150, \"name\": \"iris' dataset model\", \"number_of_predictions\": 0, \"objective_fields\": [\"000004\"], \"private\": true, \"range\": [1, 150], \"resource\": \"model/4fea695615526875f3001bdc\", \"rows\": 150, \"size\": 4608, \"source\": \"source/4fea6927035d0741f0001be5\", \"source_status\": false, \"status\": {\"code\": 5, \"elapsed\": 131, \"message\": \"The model has been created\", \"progress\": 1}, \"tags\": [], \"updated\": \"2012-06-27T02:00:11.227000\"}]}"
     http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 01:41:37 GMT
+  recorded_at: Wed, 27 Jun 2012 02:00:41 GMT
 - request: 
     method: delete
-    uri: https://bigml.io/andromeda/model/4fea64dc15526875f5001b87?api_key=<API_KEY>&username=<USERNAME>
+    uri: https://bigml.io/andromeda/model/4fea695615526875f3001bdc?username=<USERNAME>&api_key=<API_KEY>
     body: 
       string: ""
     headers: 
@@ -156,13 +156,13 @@ http_interactions:
       server: 
       - nginx/1.0.12
       date: 
-      - Wed, 27 Jun 2012 01:37:07 GMT
+      - Wed, 27 Jun 2012 01:56:12 GMT
       content-length: 
       - "0"
     body: 
       string: ""
     http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 01:41:38 GMT
+  recorded_at: Wed, 27 Jun 2012 02:00:43 GMT
 - request: 
     method: post
     uri: https://bigml.io/andromeda/source
@@ -181,7 +181,7 @@ http_interactions:
       message: CREATED
     headers: 
       location: 
-      - http://bigml.io/andromeda/source/4fea64e815526875f8001b88
+      - http://bigml.io/andromeda/source/4fea696015526875f7001bf1
       connection: 
       - Close
       content-type: 
@@ -189,18 +189,18 @@ http_interactions:
       server: 
       - nginx/1.0.12
       date: 
-      - Wed, 27 Jun 2012 01:39:39 GMT
+      - Wed, 27 Jun 2012 01:58:44 GMT
       content-length: 
       - "567"
     body: 
-      string: "{\"category\": 0, \"code\": 201, \"content_type\": \"application/octet-stream\", \"created\": \"2012-06-27T01:42:00.255916\", \"credits\": 0.0, \"description\": \"\", \"file_name\": \"iris.csv\", \"md5\": \"d1175c032e1042bec7f974c91e4a65ae\", \"name\": \"iris.csv\", \"number_of_datasets\": 0, \"number_of_models\": 0, \"number_of_predictions\": 0, \"private\": true, \"resource\": \"source/4fea64e815526875f8001b88\", \"size\": 4608, \"source_parser\": {}, \"status\": {\"code\": 1, \"message\": \"The request has been queued and will be processed soon\"}, \"tags\": [], \"type\": 0, \"updated\": \"2012-06-27T01:42:00.255936\"}"
+      string: "{\"category\": 0, \"code\": 201, \"content_type\": \"application/octet-stream\", \"created\": \"2012-06-27T02:01:04.880413\", \"credits\": 0.0, \"description\": \"\", \"file_name\": \"iris.csv\", \"md5\": \"d1175c032e1042bec7f974c91e4a65ae\", \"name\": \"iris.csv\", \"number_of_datasets\": 0, \"number_of_models\": 0, \"number_of_predictions\": 0, \"private\": true, \"resource\": \"source/4fea696015526875f7001bf1\", \"size\": 4608, \"source_parser\": {}, \"status\": {\"code\": 1, \"message\": \"The request has been queued and will be processed soon\"}, \"tags\": [], \"type\": 0, \"updated\": \"2012-06-27T02:01:04.880433\"}"
     http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 01:41:40 GMT
+  recorded_at: Wed, 27 Jun 2012 02:00:44 GMT
 - request: 
     method: post
-    uri: https://bigml.io/andromeda/dataset?api_key=<API_KEY>&username=<USERNAME>
+    uri: https://bigml.io/andromeda/dataset?username=<USERNAME>&api_key=<API_KEY>
     body: 
-      string: "{\"source\":\"source/4fea64e815526875f8001b88\"}"
+      string: "{\"source\":\"source/4fea696015526875f7001bf1\"}"
     headers: 
       connection: 
       - close
@@ -212,7 +212,7 @@ http_interactions:
       message: CREATED
     headers: 
       location: 
-      - http://bigml.io/andromeda/dataset/4fea64e915526875f7001bd0
+      - http://bigml.io/andromeda/dataset/4fea6936035d0741ef001b57
       connection: 
       - Close
       content-type: 
@@ -220,18 +220,18 @@ http_interactions:
       server: 
       - nginx/1.0.12
       date: 
-      - Wed, 27 Jun 2012 01:37:10 GMT
+      - Wed, 27 Jun 2012 01:56:15 GMT
       content-length: 
       - "921"
     body: 
-      string: "{\"category\": 0, \"code\": 201, \"columns\": 5, \"created\": \"2012-06-27T01:42:01.676885\", \"credits\": 0.00439453125, \"description\": \"\", \"fields\": {\"000000\": {\"column_number\": 0, \"name\": \"sepal length\", \"optype\": \"numeric\"}, \"000001\": {\"column_number\": 1, \"name\": \"sepal width\", \"optype\": \"numeric\"}, \"000002\": {\"column_number\": 2, \"name\": \"petal length\", \"optype\": \"numeric\"}, \"000003\": {\"column_number\": 3, \"name\": \"petal width\", \"optype\": \"numeric\"}, \"000004\": {\"column_number\": 4, \"name\": \"species\", \"optype\": \"categorical\"}}, \"locale\": \"en_US\", \"name\": \"iris' dataset\", \"number_of_models\": 0, \"number_of_predictions\": 0, \"private\": true, \"resource\": \"dataset/4fea64e915526875f7001bd0\", \"rows\": 0, \"size\": 4608, \"source\": \"source/4fea64e815526875f8001b88\", \"source_status\": true, \"status\": {\"code\": 1, \"message\": \"The dataset is being processed and will be created soon\"}, \"tags\": [], \"updated\": \"2012-06-27T01:42:01.676906\"}"
+      string: "{\"category\": 0, \"code\": 201, \"columns\": 5, \"created\": \"2012-06-27T02:00:22.157486\", \"credits\": 0.00439453125, \"description\": \"\", \"fields\": {\"000000\": {\"column_number\": 0, \"name\": \"sepal length\", \"optype\": \"numeric\"}, \"000001\": {\"column_number\": 1, \"name\": \"sepal width\", \"optype\": \"numeric\"}, \"000002\": {\"column_number\": 2, \"name\": \"petal length\", \"optype\": \"numeric\"}, \"000003\": {\"column_number\": 3, \"name\": \"petal width\", \"optype\": \"numeric\"}, \"000004\": {\"column_number\": 4, \"name\": \"species\", \"optype\": \"categorical\"}}, \"locale\": \"en_US\", \"name\": \"iris' dataset\", \"number_of_models\": 0, \"number_of_predictions\": 0, \"private\": true, \"resource\": \"dataset/4fea6936035d0741ef001b57\", \"rows\": 0, \"size\": 4608, \"source\": \"source/4fea696015526875f7001bf1\", \"source_status\": true, \"status\": {\"code\": 1, \"message\": \"The dataset is being processed and will be created soon\"}, \"tags\": [], \"updated\": \"2012-06-27T02:00:22.157505\"}"
     http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 01:41:41 GMT
+  recorded_at: Wed, 27 Jun 2012 02:00:46 GMT
 - request: 
     method: post
-    uri: https://bigml.io/andromeda/model?api_key=<API_KEY>&username=<USERNAME>
+    uri: https://bigml.io/andromeda/model?username=<USERNAME>&api_key=<API_KEY>
     body: 
-      string: "{\"dataset\":\"dataset/4fea64e915526875f7001bd0\"}"
+      string: "{\"dataset\":\"dataset/4fea6936035d0741ef001b57\"}"
     headers: 
       connection: 
       - close
@@ -243,7 +243,7 @@ http_interactions:
       message: CREATED
     headers: 
       location: 
-      - http://bigml.io/andromeda/model/4fea64be035d0741f1001b7c
+      - http://bigml.io/andromeda/model/4fea6937035d0741f4001b9a
       connection: 
       - Close
       content-type: 
@@ -251,16 +251,16 @@ http_interactions:
       server: 
       - nginx/1.0.12
       date: 
-      - Wed, 27 Jun 2012 01:39:42 GMT
+      - Wed, 27 Jun 2012 01:58:47 GMT
       content-length: 
       - "691"
     body: 
-      string: "{\"category\": 0, \"code\": 201, \"columns\": 5, \"created\": \"2012-06-27T01:41:18.881290\", \"credits\": 0.017578125, \"dataset\": \"dataset/4fea64e915526875f7001bd0\", \"dataset_status\": true, \"description\": \"\", \"holdout\": 0.0, \"input_fields\": [], \"locale\": \"en_US\", \"max_columns\": 5, \"max_rows\": 150, \"name\": \"iris' dataset model\", \"number_of_predictions\": 0, \"objective_fields\": [], \"private\": true, \"range\": [1, 150], \"resource\": \"model/4fea64be035d0741f1001b7c\", \"rows\": 150, \"size\": 4608, \"source\": \"source/4fea64e815526875f8001b88\", \"source_status\": true, \"status\": {\"code\": 1, \"message\": \"The model is being processed and will be created soon\"}, \"tags\": [], \"updated\": \"2012-06-27T01:41:18.881311\"}"
+      string: "{\"category\": 0, \"code\": 201, \"columns\": 5, \"created\": \"2012-06-27T02:00:23.677896\", \"credits\": 0.017578125, \"dataset\": \"dataset/4fea6936035d0741ef001b57\", \"dataset_status\": true, \"description\": \"\", \"holdout\": 0.0, \"input_fields\": [], \"locale\": \"en_US\", \"max_columns\": 5, \"max_rows\": 150, \"name\": \"iris' dataset model\", \"number_of_predictions\": 0, \"objective_fields\": [], \"private\": true, \"range\": [1, 150], \"resource\": \"model/4fea6937035d0741f4001b9a\", \"rows\": 150, \"size\": 4608, \"source\": \"source/4fea696015526875f7001bf1\", \"source_status\": true, \"status\": {\"code\": 1, \"message\": \"The model is being processed and will be created soon\"}, \"tags\": [], \"updated\": \"2012-06-27T02:00:23.677925\"}"
     http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 01:41:43 GMT
+  recorded_at: Wed, 27 Jun 2012 02:00:47 GMT
 - request: 
     method: get
-    uri: https://bigml.io/andromeda/model/4fea64be035d0741f1001b7c?api_key=<API_KEY>&username=<USERNAME>
+    uri: https://bigml.io/andromeda/model/4fea6937035d0741f4001b9a?username=<USERNAME>&api_key=<API_KEY>
     body: 
       string: ""
     headers: 
@@ -278,10 +278,10 @@ http_interactions:
       server: 
       - nginx/1.0.12
       date: 
-      - Wed, 27 Jun 2012 01:37:13 GMT
+      - Wed, 27 Jun 2012 01:56:18 GMT
       content-length: 
       - "6515"
     body: 
-      string: "{\"category\": 0, \"code\": 200, \"columns\": 5, \"created\": \"2012-06-27T01:41:18.881000\", \"credits\": 0.017578125, \"dataset\": \"dataset/4fea64e915526875f7001bd0\", \"dataset_status\": true, \"description\": \"\", \"holdout\": 0.0, \"input_fields\": [\"000000\", \"000001\", \"000002\", \"000003\"], \"locale\": \"en_US\", \"max_columns\": 5, \"max_rows\": 150, \"model\": {\"fields\": {\"000000\": {\"column_number\": 0, \"datatype\": \"double\", \"name\": \"sepal length\", \"optype\": \"numeric\", \"preferred\": true, \"summary\": {\"maximum\": 7.9, \"median\": 5.77889, \"minimum\": 4.3, \"missing_count\": 0, \"population\": 150, \"splits\": [4.51526, 4.67252, 4.81113, 4.89582, 4.96139, 5.01131, 5.05992, 5.11148, 5.18177, 5.35681, 5.44129, 5.5108, 5.58255, 5.65532, 5.71658, 5.77889, 5.85381, 5.97078, 6.05104, 6.13074, 6.23023, 6.29578, 6.35078, 6.41459, 6.49383, 6.63013, 6.70719, 6.79218, 6.92597, 7.20423, 7.64746], \"sum\": 876.5, \"sum_squares\": 5223.85}}, \"000001\": {\"column_number\": 1, \"datatype\": \"double\", \"name\": \"sepal width\", \"optype\": \"numeric\", \"preferred\": true, \"summary\": {\"counts\": [[2, 1], [2.2, 3], [2.3, 4], [2.4, 3], [2.5, 8], [2.6, 5], [2.7, 9], [2.8, 14], [2.9, 10], [3, 26], [3.1, 11], [3.2, 13], [3.3, 6], [3.4, 12], [3.5, 6], [3.6, 4], [3.7, 3], [3.8, 6], [3.9, 2], [4, 1], [4.1, 1], [4.2, 1], [4.4, 1]], \"maximum\": 4.4, \"median\": 3.02044, \"minimum\": 2, \"missing_count\": 0, \"population\": 150, \"sum\": 458.6, \"sum_squares\": 1430.4}}, \"000002\": {\"column_number\": 2, \"datatype\": \"double\", \"name\": \"petal length\", \"optype\": \"numeric\", \"preferred\": true, \"summary\": {\"maximum\": 6.9, \"median\": 4.34142, \"minimum\": 1, \"missing_count\": 0, \"population\": 150, \"splits\": [1.25138, 1.32426, 1.37171, 1.40962, 1.44567, 1.48173, 1.51859, 1.56301, 1.6255, 1.74645, 3.23033, 3.675, 3.94203, 4.0469, 4.18243, 4.34142, 4.45309, 4.51823, 4.61771, 4.72566, 4.83445, 4.93363, 5.03807, 5.1064, 5.20938, 5.43979, 5.5744, 5.6646, 5.81496, 6.02913, 6.38125], \"sum\": 563.7, \"sum_squares\": 2582.71}}, \"000003\": {\"column_number\": 3, \"datatype\": \"double\", \"name\": \"petal width\", \"optype\": \"numeric\", \"preferred\": true, \"summary\": {\"counts\": [[0.1, 5], [0.2, 29], [0.3, 7], [0.4, 7], [0.5, 1], [0.6, 1], [1, 7], [1.1, 3], [1.2, 5], [1.3, 13], [1.4, 8], [1.5, 12], [1.6, 4], [1.7, 2], [1.8, 12], [1.9, 5], [2, 6], [2.1, 6], [2.2, 3], [2.3, 8], [2.4, 3], [2.5, 3]], \"maximum\": 2.5, \"median\": 1.32848, \"minimum\": 0.1, \"missing_count\": 0, \"population\": 150, \"sum\": 179.9, \"sum_squares\": 302.33}}, \"000004\": {\"column_number\": 4, \"datatype\": \"string\", \"name\": \"species\", \"optype\": \"categorical\", \"preferred\": true, \"summary\": {\"categories\": [[\"Iris-versicolor\", 50], [\"Iris-setosa\", 50], [\"Iris-virginica\", 50]], \"missing_count\": 0}}}, \"kind\": \"stree\", \"locale\": \"en_US\", \"missing_strategy\": \"last_prediction\", \"root\": {\"children\": [{\"children\": [{\"children\": [{\"count\": 38, \"distribution\": [[\"Iris-virginica\", 38]], \"leaf\": true, \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000002\", \"operator\": \">\", \"value\": 5.05}}, {\"children\": [{\"children\": [{\"children\": [{\"count\": 1, \"distribution\": [[\"Iris-versicolor\", 1]], \"leaf\": true, \"output\": \"Iris-versicolor\", \"predicate\": {\"field\": \"000002\", \"operator\": \">\", \"value\": 4.95}}, {\"count\": 2, \"distribution\": [[\"Iris-virginica\", 2]], \"leaf\": true, \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000002\", \"operator\": \"<=\", \"value\": 4.95}}], \"count\": 3, \"distribution\": [[\"Iris-virginica\", 2], [\"Iris-versicolor\", 1]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000000\", \"operator\": \">\", \"value\": 5.95}}, {\"count\": 1, \"distribution\": [[\"Iris-versicolor\", 1]], \"leaf\": true, \"output\": \"Iris-versicolor\", \"predicate\": {\"field\": \"000000\", \"operator\": \"<=\", \"value\": 5.95}}], \"count\": 4, \"distribution\": [[\"Iris-virginica\", 2], [\"Iris-versicolor\", 2]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000001\", \"operator\": \">\", \"value\": 2.9}}, {\"count\": 6, \"distribution\": [[\"Iris-virginica\", 6]], \"leaf\": true, \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000001\", \"operator\": \"<=\", \"value\": 2.9}}], \"count\": 10, \"distribution\": [[\"Iris-virginica\", 8], [\"Iris-versicolor\", 2]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000002\", \"operator\": \"<=\", \"value\": 5.05}}], \"count\": 48, \"distribution\": [[\"Iris-virginica\", 46], [\"Iris-versicolor\", 2]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000003\", \"operator\": \">\", \"value\": 1.65}}, {\"children\": [{\"children\": [{\"count\": 3, \"distribution\": [[\"Iris-virginica\", 3]], \"leaf\": true, \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000000\", \"operator\": \">\", \"value\": 6.05}}, {\"children\": [{\"count\": 1, \"distribution\": [[\"Iris-versicolor\", 1]], \"leaf\": true, \"output\": \"Iris-versicolor\", \"predicate\": {\"field\": \"000001\", \"operator\": \">\", \"value\": 2.45}}, {\"count\": 1, \"distribution\": [[\"Iris-virginica\", 1]], \"leaf\": true, \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000001\", \"operator\": \"<=\", \"value\": 2.45}}], \"count\": 2, \"distribution\": [[\"Iris-virginica\", 1], [\"Iris-versicolor\", 1]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000000\", \"operator\": \"<=\", \"value\": 6.05}}], \"count\": 5, \"distribution\": [[\"Iris-virginica\", 4], [\"Iris-versicolor\", 1]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000002\", \"operator\": \">\", \"value\": 4.95}}, {\"count\": 47, \"distribution\": [[\"Iris-versicolor\", 47]], \"leaf\": true, \"output\": \"Iris-versicolor\", \"predicate\": {\"field\": \"000002\", \"operator\": \"<=\", \"value\": 4.95}}], \"count\": 52, \"distribution\": [[\"Iris-virginica\", 4], [\"Iris-versicolor\", 48]], \"output\": \"Iris-versicolor\", \"predicate\": {\"field\": \"000003\", \"operator\": \"<=\", \"value\": 1.65}}], \"count\": 100, \"distribution\": [[\"Iris-virginica\", 50], [\"Iris-versicolor\", 50]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000002\", \"operator\": \">\", \"value\": 2.45}}, {\"count\": 50, \"distribution\": [[\"Iris-setosa\", 50]], \"leaf\": true, \"output\": \"Iris-setosa\", \"predicate\": {\"field\": \"000002\", \"operator\": \"<=\", \"value\": 2.45}}], \"count\": 150, \"distribution\": [[\"Iris-virginica\", 50], [\"Iris-versicolor\", 50], [\"Iris-setosa\", 50]], \"output\": \"Iris-virginica\", \"predicate\": true}, \"row_range\": {\"size\": 150, \"start\": 0}}, \"name\": \"iris' dataset model\", \"number_of_predictions\": 0, \"objective_fields\": [\"000004\"], \"private\": true, \"range\": [1, 150], \"resource\": \"model/4fea64be035d0741f1001b7c\", \"rows\": 150, \"size\": 4608, \"source\": \"source/4fea64e815526875f8001b88\", \"source_status\": true, \"status\": {\"code\": 5, \"elapsed\": 131, \"message\": \"The model has been created\", \"progress\": 1}, \"tags\": [], \"updated\": \"2012-06-27T01:41:19.041000\"}"
+      string: "{\"category\": 0, \"code\": 200, \"columns\": 5, \"created\": \"2012-06-27T02:00:23.677000\", \"credits\": 0.017578125, \"dataset\": \"dataset/4fea6936035d0741ef001b57\", \"dataset_status\": true, \"description\": \"\", \"holdout\": 0.0, \"input_fields\": [\"000000\", \"000001\", \"000002\", \"000003\"], \"locale\": \"en_US\", \"max_columns\": 5, \"max_rows\": 150, \"model\": {\"fields\": {\"000000\": {\"column_number\": 0, \"datatype\": \"double\", \"name\": \"sepal length\", \"optype\": \"numeric\", \"preferred\": true, \"summary\": {\"maximum\": 7.9, \"median\": 5.77889, \"minimum\": 4.3, \"missing_count\": 0, \"population\": 150, \"splits\": [4.51526, 4.67252, 4.81113, 4.89582, 4.96139, 5.01131, 5.05992, 5.11148, 5.18177, 5.35681, 5.44129, 5.5108, 5.58255, 5.65532, 5.71658, 5.77889, 5.85381, 5.97078, 6.05104, 6.13074, 6.23023, 6.29578, 6.35078, 6.41459, 6.49383, 6.63013, 6.70719, 6.79218, 6.92597, 7.20423, 7.64746], \"sum\": 876.5, \"sum_squares\": 5223.85}}, \"000001\": {\"column_number\": 1, \"datatype\": \"double\", \"name\": \"sepal width\", \"optype\": \"numeric\", \"preferred\": true, \"summary\": {\"counts\": [[2, 1], [2.2, 3], [2.3, 4], [2.4, 3], [2.5, 8], [2.6, 5], [2.7, 9], [2.8, 14], [2.9, 10], [3, 26], [3.1, 11], [3.2, 13], [3.3, 6], [3.4, 12], [3.5, 6], [3.6, 4], [3.7, 3], [3.8, 6], [3.9, 2], [4, 1], [4.1, 1], [4.2, 1], [4.4, 1]], \"maximum\": 4.4, \"median\": 3.02044, \"minimum\": 2, \"missing_count\": 0, \"population\": 150, \"sum\": 458.6, \"sum_squares\": 1430.4}}, \"000002\": {\"column_number\": 2, \"datatype\": \"double\", \"name\": \"petal length\", \"optype\": \"numeric\", \"preferred\": true, \"summary\": {\"maximum\": 6.9, \"median\": 4.34142, \"minimum\": 1, \"missing_count\": 0, \"population\": 150, \"splits\": [1.25138, 1.32426, 1.37171, 1.40962, 1.44567, 1.48173, 1.51859, 1.56301, 1.6255, 1.74645, 3.23033, 3.675, 3.94203, 4.0469, 4.18243, 4.34142, 4.45309, 4.51823, 4.61771, 4.72566, 4.83445, 4.93363, 5.03807, 5.1064, 5.20938, 5.43979, 5.5744, 5.6646, 5.81496, 6.02913, 6.38125], \"sum\": 563.7, \"sum_squares\": 2582.71}}, \"000003\": {\"column_number\": 3, \"datatype\": \"double\", \"name\": \"petal width\", \"optype\": \"numeric\", \"preferred\": true, \"summary\": {\"counts\": [[0.1, 5], [0.2, 29], [0.3, 7], [0.4, 7], [0.5, 1], [0.6, 1], [1, 7], [1.1, 3], [1.2, 5], [1.3, 13], [1.4, 8], [1.5, 12], [1.6, 4], [1.7, 2], [1.8, 12], [1.9, 5], [2, 6], [2.1, 6], [2.2, 3], [2.3, 8], [2.4, 3], [2.5, 3]], \"maximum\": 2.5, \"median\": 1.32848, \"minimum\": 0.1, \"missing_count\": 0, \"population\": 150, \"sum\": 179.9, \"sum_squares\": 302.33}}, \"000004\": {\"column_number\": 4, \"datatype\": \"string\", \"name\": \"species\", \"optype\": \"categorical\", \"preferred\": true, \"summary\": {\"categories\": [[\"Iris-versicolor\", 50], [\"Iris-setosa\", 50], [\"Iris-virginica\", 50]], \"missing_count\": 0}}}, \"kind\": \"stree\", \"locale\": \"en_US\", \"missing_strategy\": \"last_prediction\", \"root\": {\"children\": [{\"children\": [{\"children\": [{\"count\": 38, \"distribution\": [[\"Iris-virginica\", 38]], \"leaf\": true, \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000002\", \"operator\": \">\", \"value\": 5.05}}, {\"children\": [{\"children\": [{\"children\": [{\"count\": 1, \"distribution\": [[\"Iris-versicolor\", 1]], \"leaf\": true, \"output\": \"Iris-versicolor\", \"predicate\": {\"field\": \"000002\", \"operator\": \">\", \"value\": 4.95}}, {\"count\": 2, \"distribution\": [[\"Iris-virginica\", 2]], \"leaf\": true, \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000002\", \"operator\": \"<=\", \"value\": 4.95}}], \"count\": 3, \"distribution\": [[\"Iris-virginica\", 2], [\"Iris-versicolor\", 1]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000000\", \"operator\": \">\", \"value\": 5.95}}, {\"count\": 1, \"distribution\": [[\"Iris-versicolor\", 1]], \"leaf\": true, \"output\": \"Iris-versicolor\", \"predicate\": {\"field\": \"000000\", \"operator\": \"<=\", \"value\": 5.95}}], \"count\": 4, \"distribution\": [[\"Iris-virginica\", 2], [\"Iris-versicolor\", 2]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000001\", \"operator\": \">\", \"value\": 2.9}}, {\"count\": 6, \"distribution\": [[\"Iris-virginica\", 6]], \"leaf\": true, \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000001\", \"operator\": \"<=\", \"value\": 2.9}}], \"count\": 10, \"distribution\": [[\"Iris-virginica\", 8], [\"Iris-versicolor\", 2]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000002\", \"operator\": \"<=\", \"value\": 5.05}}], \"count\": 48, \"distribution\": [[\"Iris-virginica\", 46], [\"Iris-versicolor\", 2]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000003\", \"operator\": \">\", \"value\": 1.65}}, {\"children\": [{\"children\": [{\"count\": 3, \"distribution\": [[\"Iris-virginica\", 3]], \"leaf\": true, \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000000\", \"operator\": \">\", \"value\": 6.05}}, {\"children\": [{\"count\": 1, \"distribution\": [[\"Iris-versicolor\", 1]], \"leaf\": true, \"output\": \"Iris-versicolor\", \"predicate\": {\"field\": \"000001\", \"operator\": \">\", \"value\": 2.45}}, {\"count\": 1, \"distribution\": [[\"Iris-virginica\", 1]], \"leaf\": true, \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000001\", \"operator\": \"<=\", \"value\": 2.45}}], \"count\": 2, \"distribution\": [[\"Iris-virginica\", 1], [\"Iris-versicolor\", 1]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000000\", \"operator\": \"<=\", \"value\": 6.05}}], \"count\": 5, \"distribution\": [[\"Iris-virginica\", 4], [\"Iris-versicolor\", 1]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000002\", \"operator\": \">\", \"value\": 4.95}}, {\"count\": 47, \"distribution\": [[\"Iris-versicolor\", 47]], \"leaf\": true, \"output\": \"Iris-versicolor\", \"predicate\": {\"field\": \"000002\", \"operator\": \"<=\", \"value\": 4.95}}], \"count\": 52, \"distribution\": [[\"Iris-virginica\", 4], [\"Iris-versicolor\", 48]], \"output\": \"Iris-versicolor\", \"predicate\": {\"field\": \"000003\", \"operator\": \"<=\", \"value\": 1.65}}], \"count\": 100, \"distribution\": [[\"Iris-virginica\", 50], [\"Iris-versicolor\", 50]], \"output\": \"Iris-virginica\", \"predicate\": {\"field\": \"000002\", \"operator\": \">\", \"value\": 2.45}}, {\"count\": 50, \"distribution\": [[\"Iris-setosa\", 50]], \"leaf\": true, \"output\": \"Iris-setosa\", \"predicate\": {\"field\": \"000002\", \"operator\": \"<=\", \"value\": 2.45}}], \"count\": 150, \"distribution\": [[\"Iris-virginica\", 50], [\"Iris-versicolor\", 50], [\"Iris-setosa\", 50]], \"output\": \"Iris-virginica\", \"predicate\": true}, \"row_range\": {\"size\": 150, \"start\": 0}}, \"name\": \"iris' dataset model\", \"number_of_predictions\": 0, \"objective_fields\": [\"000004\"], \"private\": true, \"range\": [1, 150], \"resource\": \"model/4fea6937035d0741f4001b9a\", \"rows\": 150, \"size\": 4608, \"source\": \"source/4fea696015526875f7001bf1\", \"source_status\": true, \"status\": {\"code\": 5, \"elapsed\": 134, \"message\": \"The model has been created\", \"progress\": 1}, \"tags\": [], \"updated\": \"2012-06-27T02:00:23.833000\"}"
     http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 01:41:44 GMT
+  recorded_at: Wed, 27 Jun 2012 02:00:48 GMT

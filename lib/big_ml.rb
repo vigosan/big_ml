@@ -1,9 +1,13 @@
-require 'big_ml/version'
-require 'big_ml/client'
-require 'big_ml/config'
+require 'big_ml/util/client'
+require 'big_ml/model'
+require 'big_ml/dataset'
+require 'big_ml/prediction'
+require 'big_ml/source'
+
+require 'big_ml/util/config'
 
 module BigML
-  extend Config
+  extend Util::Config
 
   class << self
     def new(options = {})

@@ -1,3 +1,5 @@
+require 'big_ml/base'
+
 module BigML
   class Dataset < Base
     DATASET_PROPERTIES = [

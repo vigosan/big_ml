@@ -1,3 +1,5 @@
+require 'big_ml/util/client'
+
 module BigML
   class Base
     attr_accessor :attrs
@@ -40,7 +42,7 @@ module BigML
       private
 
       def client
-        @client ||= Client.new
+        @client ||= Util::Client.new
       end
 
       def resource_name

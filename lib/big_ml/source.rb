@@ -1,3 +1,5 @@
+require 'big_ml/base'
+
 module BigML
   class Source < Base
     SOURCE_PROPERTIES = [

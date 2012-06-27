@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe BigML::Client do
+describe BigML::Util::Client do
   let(:keys) {
-    BigML::Config::VALID_OPTIONS_KEYS
+    BigML::Util::Config::VALID_OPTIONS_KEYS
   }
 
   context "module configuration" do
@@ -13,7 +13,7 @@ describe BigML::Client do
     }
 
     it "should inherit module configuration" do
-      api = BigML::Client.new
+      api = BigML::Util::Client.new
       keys.each { |key| api.send(key).should == key }
     end
   end
@@ -28,7 +28,7 @@ describe BigML::Client do
 
     context "during initialization" do
       it "should override module configuration" do
-        api = BigML::Client.new(credentials)
+        api = BigML::Util::Client.new(credentials)
         keys.each { |key| api.send(key).should == credentials[key] }
       end
     end
@@ -41,7 +41,7 @@ describe BigML::Client do
       }
 
       it "should override module configuration" do
-        api = BigML::Client.new
+        api = BigML::Util::Client.new
         credentials.each { |key, value| api.send("#{key}=", value) }
         keys.each { |key| api.send(key).should == credentials[key] }
       end

@@ -47,6 +47,12 @@ describe BigML::Source, :vcr do
       BigML::Source.all.should have(0).sources
     end
 
+    it "must be able to be deleted using the destroy method" do
+      source_id = @source.id
+      @source.destroy
+      BigML::Source.find(source_id).should be_nil
+    end
+
     it "can be converted in a dataset" do
       dataset = @source.to_dataset
       dataset.instance_of?(BigML::Dataset).should be_true

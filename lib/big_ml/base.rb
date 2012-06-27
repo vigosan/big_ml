@@ -15,6 +15,10 @@ module BigML
       resource.split('/').last
     end
 
+    def destroy
+      self.class.delete(id)
+    end
+
     class << self
       def all(options = {})
         response = client.get("/#{resource_name}", options)

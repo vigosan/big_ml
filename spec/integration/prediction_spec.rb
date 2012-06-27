@@ -51,5 +51,11 @@ describe BigML::Prediction, :vcr do
       BigML::Prediction.find(@prediction.id).should be_nil
       BigML::Prediction.all.should have(0).predictions
     end
+
+    it "must be able to be deleted using the destroy method" do
+      prediction_id = @prediction.id
+      @prediction.destroy
+      BigML::Prediction.find(prediction_id).should be_nil
+    end
   end
 end

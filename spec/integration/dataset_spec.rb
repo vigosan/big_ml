@@ -42,6 +42,12 @@ describe BigML::Dataset, :vcr do
       BigML::Dataset.find(@dataset.id).name.should == 'foo name'
     end
 
+    it "must be able to be deleted using the destroy method" do
+      dataset_id = @dataset.id
+      @dataset.destroy
+      BigML::Dataset.find(dataset_id).should be_nil
+    end
+
     it "must be able to remove the dataset" do
       BigML::Dataset.delete(@dataset.id)
       BigML::Dataset.find(@dataset.id).should be_nil

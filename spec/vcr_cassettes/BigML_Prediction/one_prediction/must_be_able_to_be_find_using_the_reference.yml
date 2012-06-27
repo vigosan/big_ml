@@ -1,502 +1,372 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.2.2
+http_interactions: 
+- request: 
     method: get
-    uri: https://bigml.io/andromeda/source?username=<USERNAME>&api_key=<API_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      connection:
+    uri: https://bigml.io/andromeda/source?api_key=<API_KEY>&username=<USERNAME>
+    body: 
+      string: ""
+    headers: 
+      connection: 
       - close
-  response:
-    status:
+  response: 
+    status: 
       code: 200
       message: OK
-    headers:
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Mon, 25 Jun 2012 15:39:07 GMT
-      server:
-      - nginx/1.0.12
-      content-length:
-      - '1280'
-      connection:
+    headers: 
+      connection: 
       - Close
-    body:
-      encoding: US-ASCII
-      string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
-        "total_count": 1}, "objects": [{"category": 0, "code": 200, "content_type":
-        "application/octet-stream", "created": "2012-06-25T15:43:01.263000", "credits":
-        0.0, "description": "", "fields": {"000000": {"column_number": 0, "name":
-        "sepal length", "optype": "numeric"}, "000001": {"column_number": 1, "name":
-        "sepal width", "optype": "numeric"}, "000002": {"column_number": 2, "name":
-        "petal length", "optype": "numeric"}, "000003": {"column_number": 3, "name":
-        "petal width", "optype": "numeric"}, "000004": {"column_number": 4, "name":
-        "species", "optype": "categorical"}}, "file_name": "iris.csv", "md5": "d1175c032e1042bec7f974c91e4a65ae",
-        "name": "iris.csv", "number_of_datasets": 1, "number_of_models": 1, "number_of_predictions":
-        1, "private": true, "resource": "source/4fe88705035d07682f00289f", "size":
-        4608, "source_parser": {"header": true, "locale": "en_US", "missing_tokens":
-        ["", "N/A", "n/a", "NULL", "null", "-", "#DIV/0", "#REF!", "#NAME?", "NIL",
-        "nil", "NA", "na", "#VALUE!", "#NULL!", "NaN", "#N/A", "#NUM!", "?"], "quote":
-        "\"", "separator": ","}, "status": {"code": 5, "elapsed": 91, "message": "The
-        source has been created"}, "tags": [], "type": 0, "updated": "2012-06-25T15:43:05.870000"}]}'
-    http_version: '1.1'
-  recorded_at: Mon, 25 Jun 2012 15:43:26 GMT
-- request:
+      content-type: 
+      - application/json; charset=utf-8
+      server: 
+      - nginx/1.0.12
+      date: 
+      - Wed, 27 Jun 2012 01:38:49 GMT
+      content-length: 
+      - "1280"
+    body: 
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"category\": 0, \"code\": 200, \"content_type\": \"application/octet-stream\", \"created\": \"2012-06-27T01:43:33.007000\", \"credits\": 0.0, \"description\": \"\", \"fields\": {\"000000\": {\"column_number\": 0, \"name\": \"sepal length\", \"optype\": \"numeric\"}, \"000001\": {\"column_number\": 1, \"name\": \"sepal width\", \"optype\": \"numeric\"}, \"000002\": {\"column_number\": 2, \"name\": \"petal length\", \"optype\": \"numeric\"}, \"000003\": {\"column_number\": 3, \"name\": \"petal width\", \"optype\": \"numeric\"}, \"000004\": {\"column_number\": 4, \"name\": \"species\", \"optype\": \"categorical\"}}, \"file_name\": \"iris.csv\", \"md5\": \"d1175c032e1042bec7f974c91e4a65ae\", \"name\": \"iris.csv\", \"number_of_datasets\": 1, \"number_of_models\": 1, \"number_of_predictions\": 1, \"private\": true, \"resource\": \"source/4fea654515526875f3001bc1\", \"size\": 4608, \"source_parser\": {\"header\": true, \"locale\": \"en_US\", \"missing_tokens\": [\"\", \"N/A\", \"n/a\", \"NULL\", \"null\", \"-\", \"#DIV/0\", \"#REF!\", \"#NAME?\", \"NIL\", \"nil\", \"NA\", \"na\", \"#VALUE!\", \"#NULL!\", \"NaN\", \"#N/A\", \"#NUM!\", \"?\"], \"quote\": \"\\\"\", \"separator\": \",\"}, \"status\": {\"code\": 5, \"elapsed\": 88, \"message\": \"The source has been created\"}, \"tags\": [], \"type\": 0, \"updated\": \"2012-06-27T01:42:52.885000\"}]}"
+    http_version: "1.1"
+  recorded_at: Wed, 27 Jun 2012 01:43:20 GMT
+- request: 
     method: delete
-    uri: https://bigml.io/andromeda/source/4fe88705035d07682f00289f?username=<USERNAME>&api_key=<API_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      connection:
+    uri: https://bigml.io/andromeda/source/4fea654515526875f3001bc1?api_key=<API_KEY>&username=<USERNAME>
+    body: 
+      string: ""
+    headers: 
+      connection: 
       - close
-  response:
-    status:
+  response: 
+    status: 
       code: 204
       message: NO CONTENT
-    headers:
-      content-length:
-      - '0'
-      content-type:
-      - text/html; charset=utf-8
-      date:
-      - Mon, 25 Jun 2012 15:41:37 GMT
-      server:
-      - nginx/1.0.12
-      connection:
+    headers: 
+      connection: 
       - Close
-    body:
-      encoding: US-ASCII
-      string: ''
-    http_version: '1.1'
-  recorded_at: Mon, 25 Jun 2012 15:43:28 GMT
-- request:
+      content-type: 
+      - text/html; charset=utf-8
+      server: 
+      - nginx/1.0.12
+      date: 
+      - Wed, 27 Jun 2012 01:41:21 GMT
+      content-length: 
+      - "0"
+    body: 
+      string: ""
+    http_version: "1.1"
+  recorded_at: Wed, 27 Jun 2012 01:43:21 GMT
+- request: 
     method: get
-    uri: https://bigml.io/andromeda/dataset?username=<USERNAME>&api_key=<API_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      connection:
+    uri: https://bigml.io/andromeda/dataset?api_key=<API_KEY>&username=<USERNAME>
+    body: 
+      string: ""
+    headers: 
+      connection: 
       - close
-  response:
-    status:
+  response: 
+    status: 
       code: 200
       message: OK
-    headers:
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Mon, 25 Jun 2012 15:39:10 GMT
-      server:
-      - nginx/1.0.12
-      content-length:
-      - '703'
-      connection:
+    headers: 
+      connection: 
       - Close
-    body:
-      encoding: US-ASCII
-      string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
-        "total_count": 1}, "objects": [{"category": 0, "code": 200, "columns": 5,
-        "created": "2012-06-25T15:43:43.875000", "credits": 0.00439453125, "description":
-        "", "locale": "en_US", "name": "iris'' dataset", "number_of_models": 1, "number_of_predictions":
-        1, "private": true, "resource": "dataset/4fe8872f1552681eb2002903", "rows":
-        150, "size": 4608, "source": "source/4fe88705035d07682f00289f", "source_status":
-        false, "status": {"bytes": 4608, "code": 5, "elapsed": 94, "field_errors":
-        [], "message": "The dataset has been created", "row_format_errors": [], "serialized_rows":
-        150}, "tags": [], "updated": "2012-06-25T15:43:05.876000"}]}'
-    http_version: '1.1'
-  recorded_at: Mon, 25 Jun 2012 15:43:28 GMT
-- request:
+      content-type: 
+      - application/json; charset=utf-8
+      server: 
+      - nginx/1.0.12
+      date: 
+      - Wed, 27 Jun 2012 01:38:52 GMT
+      content-length: 
+      - "704"
+    body: 
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"category\": 0, \"code\": 200, \"columns\": 5, \"created\": \"2012-06-27T01:43:34.436000\", \"credits\": 0.00439453125, \"description\": \"\", \"locale\": \"en_US\", \"name\": \"iris' dataset\", \"number_of_models\": 1, \"number_of_predictions\": 1, \"private\": true, \"resource\": \"dataset/4fea654615526875f8001b8f\", \"rows\": 150, \"size\": 4608, \"source\": \"source/4fea654515526875f3001bc1\", \"source_status\": false, \"status\": {\"bytes\": 4608, \"code\": 5, \"elapsed\": 132, \"field_errors\": [], \"message\": \"The dataset has been created\", \"row_format_errors\": [], \"serialized_rows\": 150}, \"tags\": [], \"updated\": \"2012-06-27T01:42:52.891000\"}]}"
+    http_version: "1.1"
+  recorded_at: Wed, 27 Jun 2012 01:43:22 GMT
+- request: 
     method: delete
-    uri: https://bigml.io/andromeda/dataset/4fe8872f1552681eb2002903?username=<USERNAME>&api_key=<API_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      connection:
+    uri: https://bigml.io/andromeda/dataset/4fea654615526875f8001b8f?api_key=<API_KEY>&username=<USERNAME>
+    body: 
+      string: ""
+    headers: 
+      connection: 
       - close
-  response:
-    status:
+  response: 
+    status: 
       code: 204
       message: NO CONTENT
-    headers:
-      content-length:
-      - '0'
-      content-type:
-      - text/html; charset=utf-8
-      date:
-      - Mon, 25 Jun 2012 15:41:40 GMT
-      server:
-      - nginx/1.0.12
-      connection:
+    headers: 
+      connection: 
       - Close
-    body:
-      encoding: US-ASCII
-      string: ''
-    http_version: '1.1'
-  recorded_at: Mon, 25 Jun 2012 15:43:30 GMT
-- request:
+      content-type: 
+      - text/html; charset=utf-8
+      server: 
+      - nginx/1.0.12
+      date: 
+      - Wed, 27 Jun 2012 01:41:24 GMT
+      content-length: 
+      - "0"
+    body: 
+      string: ""
+    http_version: "1.1"
+  recorded_at: Wed, 27 Jun 2012 01:43:24 GMT
+- request: 
     method: get
-    uri: https://bigml.io/andromeda/model?username=<USERNAME>&api_key=<API_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      connection:
+    uri: https://bigml.io/andromeda/model?api_key=<API_KEY>&username=<USERNAME>
+    body: 
+      string: ""
+    headers: 
+      connection: 
       - close
-  response:
-    status:
+  response: 
+    status: 
       code: 200
       message: OK
-    headers:
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Mon, 25 Jun 2012 15:39:13 GMT
-      server:
-      - nginx/1.0.12
-      content-length:
-      - '844'
-      connection:
+    headers: 
+      connection: 
       - Close
-    body:
-      encoding: US-ASCII
-      string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
-        "total_count": 1}, "objects": [{"category": 0, "code": 200, "columns": 5,
-        "created": "2012-06-25T15:43:45.464000", "credits": 0.017578125, "dataset":
-        "dataset/4fe8872f1552681eb2002903", "dataset_status": false, "description":
-        "", "holdout": 0.0, "input_fields": ["000000", "000001", "000002", "000003"],
-        "locale": "en_US", "max_columns": 5, "max_rows": 150, "name": "iris'' dataset
-        model", "number_of_predictions": 1, "objective_fields": ["000004"], "private":
-        true, "range": [1, 150], "resource": "model/4fe887311552681eb00028bd", "rows":
-        150, "size": 4608, "source": "source/4fe88705035d07682f00289f", "source_status":
-        false, "status": {"code": 5, "elapsed": 137, "message": "The model has been
-        created", "progress": 1}, "tags": [], "updated": "2012-06-25T15:43:05.880000"}]}'
-    http_version: '1.1'
-  recorded_at: Mon, 25 Jun 2012 15:43:31 GMT
-- request:
+      content-type: 
+      - application/json; charset=utf-8
+      server: 
+      - nginx/1.0.12
+      date: 
+      - Wed, 27 Jun 2012 01:38:54 GMT
+      content-length: 
+      - "844"
+    body: 
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"category\": 0, \"code\": 200, \"columns\": 5, \"created\": \"2012-06-27T01:42:51.406000\", \"credits\": 0.017578125, \"dataset\": \"dataset/4fea654615526875f8001b8f\", \"dataset_status\": false, \"description\": \"\", \"holdout\": 0.0, \"input_fields\": [\"000000\", \"000001\", \"000002\", \"000003\"], \"locale\": \"en_US\", \"max_columns\": 5, \"max_rows\": 150, \"name\": \"iris' dataset model\", \"number_of_predictions\": 1, \"objective_fields\": [\"000004\"], \"private\": true, \"range\": [1, 150], \"resource\": \"model/4fea651b035d0741ef001b38\", \"rows\": 150, \"size\": 4608, \"source\": \"source/4fea654515526875f3001bc1\", \"source_status\": false, \"status\": {\"code\": 5, \"elapsed\": 144, \"message\": \"The model has been created\", \"progress\": 1}, \"tags\": [], \"updated\": \"2012-06-27T01:42:52.895000\"}]}"
+    http_version: "1.1"
+  recorded_at: Wed, 27 Jun 2012 01:43:25 GMT
+- request: 
     method: delete
-    uri: https://bigml.io/andromeda/model/4fe887311552681eb00028bd?username=<USERNAME>&api_key=<API_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      connection:
+    uri: https://bigml.io/andromeda/model/4fea651b035d0741ef001b38?api_key=<API_KEY>&username=<USERNAME>
+    body: 
+      string: ""
+    headers: 
+      connection: 
       - close
-  response:
-    status:
+  response: 
+    status: 
       code: 204
       message: NO CONTENT
-    headers:
-      content-length:
-      - '0'
-      content-type:
-      - text/html; charset=utf-8
-      date:
-      - Mon, 25 Jun 2012 15:41:42 GMT
-      server:
-      - nginx/1.0.12
-      connection:
+    headers: 
+      connection: 
       - Close
-    body:
-      encoding: US-ASCII
-      string: ''
-    http_version: '1.1'
-  recorded_at: Mon, 25 Jun 2012 15:43:33 GMT
-- request:
+      content-type: 
+      - text/html; charset=utf-8
+      server: 
+      - nginx/1.0.12
+      date: 
+      - Wed, 27 Jun 2012 01:41:27 GMT
+      content-length: 
+      - "0"
+    body: 
+      string: ""
+    http_version: "1.1"
+  recorded_at: Wed, 27 Jun 2012 01:43:27 GMT
+- request: 
     method: get
-    uri: https://bigml.io/andromeda/prediction?username=<USERNAME>&api_key=<API_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      connection:
+    uri: https://bigml.io/andromeda/prediction?api_key=<API_KEY>&username=<USERNAME>
+    body: 
+      string: ""
+    headers: 
+      connection: 
       - close
-  response:
-    status:
+  response: 
+    status: 
       code: 200
       message: OK
-    headers:
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Mon, 25 Jun 2012 15:39:16 GMT
-      server:
-      - nginx/1.0.12
-      content-length:
-      - '1326'
-      connection:
+    headers: 
+      connection: 
       - Close
-    body:
-      encoding: US-ASCII
-      string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
-        "total_count": 1}, "objects": [{"category": 0, "code": 200, "created": "2012-06-25T15:43:05.864000",
-        "credits": 0.01, "dataset": "dataset/4fe8872f1552681eb2002903", "dataset_status":
-        false, "description": "", "fields": {"000001": {"column_number": 1, "datatype":
-        "double", "name": "sepal width", "optype": "numeric", "preferred": true},
-        "000002": {"column_number": 2, "datatype": "double", "name": "petal length",
-        "optype": "numeric", "preferred": true}, "000004": {"column_number": 4, "datatype":
-        "string", "name": "species", "optype": "categorical", "preferred": true}},
-        "input_data": {"000001": 3}, "locale": "en_US", "model": "model/4fe887311552681eb00028bd",
-        "model_status": false, "name": "Prediction for species", "objective_fields":
-        ["000004"], "prediction": {"000004": "Iris-virginica"}, "prediction_path":
-        {"bad_fields": [], "next_predicates": [{"field": "000002", "operator": ">",
-        "value": 2.45}, {"field": "000002", "operator": "<=", "value": 2.45}], "path":
-        [], "unknown_fields": []}, "private": true, "resource": "prediction/4fe88709035d07682f0028a1",
-        "source": "source/4fe88705035d07682f00289f", "source_status": false, "status":
-        {"code": 5, "message": "The prediction has been created"}, "tags": [], "updated":
-        "2012-06-25T15:43:05.865000"}]}'
-    http_version: '1.1'
-  recorded_at: Mon, 25 Jun 2012 15:43:35 GMT
-- request:
+      content-type: 
+      - application/json; charset=utf-8
+      server: 
+      - nginx/1.0.12
+      date: 
+      - Wed, 27 Jun 2012 01:38:58 GMT
+      content-length: 
+      - "1326"
+    body: 
+      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"category\": 0, \"code\": 200, \"created\": \"2012-06-27T01:42:52.879000\", \"credits\": 0.01, \"dataset\": \"dataset/4fea654615526875f8001b8f\", \"dataset_status\": false, \"description\": \"\", \"fields\": {\"000001\": {\"column_number\": 1, \"datatype\": \"double\", \"name\": \"sepal width\", \"optype\": \"numeric\", \"preferred\": true}, \"000002\": {\"column_number\": 2, \"datatype\": \"double\", \"name\": \"petal length\", \"optype\": \"numeric\", \"preferred\": true}, \"000004\": {\"column_number\": 4, \"datatype\": \"string\", \"name\": \"species\", \"optype\": \"categorical\", \"preferred\": true}}, \"input_data\": {\"000001\": 3}, \"locale\": \"en_US\", \"model\": \"model/4fea651b035d0741ef001b38\", \"model_status\": false, \"name\": \"Prediction for species\", \"objective_fields\": [\"000004\"], \"prediction\": {\"000004\": \"Iris-virginica\"}, \"prediction_path\": {\"bad_fields\": [], \"next_predicates\": [{\"field\": \"000002\", \"operator\": \">\", \"value\": 2.45}, {\"field\": \"000002\", \"operator\": \"<=\", \"value\": 2.45}], \"path\": [], \"unknown_fields\": []}, \"private\": true, \"resource\": \"prediction/4fea651c035d0741f1001b8a\", \"source\": \"source/4fea654515526875f3001bc1\", \"source_status\": false, \"status\": {\"code\": 5, \"message\": \"The prediction has been created\"}, \"tags\": [], \"updated\": \"2012-06-27T01:42:52.880000\"}]}"
+    http_version: "1.1"
+  recorded_at: Wed, 27 Jun 2012 01:43:29 GMT
+- request: 
     method: delete
-    uri: https://bigml.io/andromeda/prediction/4fe88709035d07682f0028a1?username=<USERNAME>&api_key=<API_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      connection:
+    uri: https://bigml.io/andromeda/prediction/4fea651c035d0741f1001b8a?api_key=<API_KEY>&username=<USERNAME>
+    body: 
+      string: ""
+    headers: 
+      connection: 
       - close
-  response:
-    status:
+  response: 
+    status: 
       code: 204
       message: NO CONTENT
-    headers:
-      content-length:
-      - '0'
-      content-type:
-      - text/html; charset=utf-8
-      date:
-      - Mon, 25 Jun 2012 15:41:45 GMT
-      server:
-      - nginx/1.0.12
-      connection:
+    headers: 
+      connection: 
       - Close
-    body:
-      encoding: US-ASCII
-      string: ''
-    http_version: '1.1'
-  recorded_at: Mon, 25 Jun 2012 15:43:35 GMT
-- request:
+      content-type: 
+      - text/html; charset=utf-8
+      server: 
+      - nginx/1.0.12
+      date: 
+      - Wed, 27 Jun 2012 01:41:30 GMT
+      content-length: 
+      - "0"
+    body: 
+      string: ""
+    http_version: "1.1"
+  recorded_at: Wed, 27 Jun 2012 01:43:30 GMT
+- request: 
     method: post
     uri: https://bigml.io/andromeda/source
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      content-type:
+    body: 
+      string: ""
+    headers: 
+      connection: 
+      - close
+      content-type: 
       - multipart/form-data; boundary=-----------RubyMultipartPost
-      content-length:
-      - '5149'
-      connection:
-      - close
-  response:
-    status:
+      content-length: 
+      - "5147"
+  response: 
+    status: 
       code: 201
       message: CREATED
-    headers:
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Mon, 25 Jun 2012 15:39:18 GMT
-      location:
-      - http://bigml.io/andromeda/source/4fe887401552681eaf0028bc
-      server:
-      - nginx/1.0.12
-      content-length:
-      - '567'
-      connection:
+    headers: 
+      location: 
+      - http://bigml.io/andromeda/source/4fea655915526875f8001b92
+      connection: 
       - Close
-    body:
-      encoding: US-ASCII
-      string: ! '{"category": 0, "code": 201, "content_type": "application/octet-stream",
-        "created": "2012-06-25T15:44:00.896851", "credits": 0.0, "description": "",
-        "file_name": "iris.csv", "md5": "d1175c032e1042bec7f974c91e4a65ae", "name":
-        "iris.csv", "number_of_datasets": 0, "number_of_models": 0, "number_of_predictions":
-        0, "private": true, "resource": "source/4fe887401552681eaf0028bc", "size":
-        4608, "source_parser": {}, "status": {"code": 1, "message": "The request has
-        been queued and will be processed soon"}, "tags": [], "type": 0, "updated":
-        "2012-06-25T15:44:00.896871"}'
-    http_version: '1.1'
-  recorded_at: Mon, 25 Jun 2012 15:43:37 GMT
-- request:
+      content-type: 
+      - application/json; charset=utf-8
+      server: 
+      - nginx/1.0.12
+      date: 
+      - Wed, 27 Jun 2012 01:39:02 GMT
+      content-length: 
+      - "567"
+    body: 
+      string: "{\"category\": 0, \"code\": 201, \"content_type\": \"application/octet-stream\", \"created\": \"2012-06-27T01:43:53.528965\", \"credits\": 0.0, \"description\": \"\", \"file_name\": \"iris.csv\", \"md5\": \"d1175c032e1042bec7f974c91e4a65ae\", \"name\": \"iris.csv\", \"number_of_datasets\": 0, \"number_of_models\": 0, \"number_of_predictions\": 0, \"private\": true, \"resource\": \"source/4fea655915526875f8001b92\", \"size\": 4608, \"source_parser\": {}, \"status\": {\"code\": 1, \"message\": \"The request has been queued and will be processed soon\"}, \"tags\": [], \"type\": 0, \"updated\": \"2012-06-27T01:43:53.528986\"}"
+    http_version: "1.1"
+  recorded_at: Wed, 27 Jun 2012 01:43:33 GMT
+- request: 
     method: post
-    uri: https://bigml.io/andromeda/dataset?username=<USERNAME>&api_key=<API_KEY>
-    body:
-      encoding: UTF-8
-      string: ! '{"source":"source/4fe887401552681eaf0028bc"}'
-    headers:
-      content-type:
-      - application/json
-      connection:
+    uri: https://bigml.io/andromeda/dataset?api_key=<API_KEY>&username=<USERNAME>
+    body: 
+      string: "{\"source\":\"source/4fea655915526875f8001b92\"}"
+    headers: 
+      connection: 
       - close
-  response:
-    status:
+      content-type: 
+      - application/json
+  response: 
+    status: 
       code: 201
       message: CREATED
-    headers:
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Mon, 25 Jun 2012 15:41:48 GMT
-      location:
-      - http://bigml.io/andromeda/dataset/4fe887421552681eb00028c1
-      server:
-      - nginx/1.0.12
-      content-length:
-      - '921'
-      connection:
+    headers: 
+      location: 
+      - http://bigml.io/andromeda/dataset/4fea652e035d0741f1001b90
+      connection: 
       - Close
-    body:
-      encoding: US-ASCII
-      string: ! '{"category": 0, "code": 201, "columns": 5, "created": "2012-06-25T15:44:02.366968",
-        "credits": 0.00439453125, "description": "", "fields": {"000000": {"column_number":
-        0, "name": "sepal length", "optype": "numeric"}, "000001": {"column_number":
-        1, "name": "sepal width", "optype": "numeric"}, "000002": {"column_number":
-        2, "name": "petal length", "optype": "numeric"}, "000003": {"column_number":
-        3, "name": "petal width", "optype": "numeric"}, "000004": {"column_number":
-        4, "name": "species", "optype": "categorical"}}, "locale": "en_US", "name":
-        "iris'' dataset", "number_of_models": 0, "number_of_predictions": 0, "private":
-        true, "resource": "dataset/4fe887421552681eb00028c1", "rows": 0, "size": 4608,
-        "source": "source/4fe887401552681eaf0028bc", "source_status": true, "status":
-        {"code": 1, "message": "The dataset is being processed and will be created
-        soon"}, "tags": [], "updated": "2012-06-25T15:44:02.366985"}'
-    http_version: '1.1'
-  recorded_at: Mon, 25 Jun 2012 15:43:39 GMT
-- request:
+      content-type: 
+      - application/json; charset=utf-8
+      server: 
+      - nginx/1.0.12
+      date: 
+      - Wed, 27 Jun 2012 01:41:34 GMT
+      content-length: 
+      - "921"
+    body: 
+      string: "{\"category\": 0, \"code\": 201, \"columns\": 5, \"created\": \"2012-06-27T01:43:10.456103\", \"credits\": 0.00439453125, \"description\": \"\", \"fields\": {\"000000\": {\"column_number\": 0, \"name\": \"sepal length\", \"optype\": \"numeric\"}, \"000001\": {\"column_number\": 1, \"name\": \"sepal width\", \"optype\": \"numeric\"}, \"000002\": {\"column_number\": 2, \"name\": \"petal length\", \"optype\": \"numeric\"}, \"000003\": {\"column_number\": 3, \"name\": \"petal width\", \"optype\": \"numeric\"}, \"000004\": {\"column_number\": 4, \"name\": \"species\", \"optype\": \"categorical\"}}, \"locale\": \"en_US\", \"name\": \"iris' dataset\", \"number_of_models\": 0, \"number_of_predictions\": 0, \"private\": true, \"resource\": \"dataset/4fea652e035d0741f1001b90\", \"rows\": 0, \"size\": 4608, \"source\": \"source/4fea655915526875f8001b92\", \"source_status\": true, \"status\": {\"code\": 1, \"message\": \"The dataset is being processed and will be created soon\"}, \"tags\": [], \"updated\": \"2012-06-27T01:43:10.456123\"}"
+    http_version: "1.1"
+  recorded_at: Wed, 27 Jun 2012 01:43:34 GMT
+- request: 
     method: post
-    uri: https://bigml.io/andromeda/model?username=<USERNAME>&api_key=<API_KEY>
-    body:
-      encoding: UTF-8
-      string: ! '{"dataset":"dataset/4fe887421552681eb00028c1"}'
-    headers:
-      content-type:
-      - application/json
-      connection:
+    uri: https://bigml.io/andromeda/model?api_key=<API_KEY>&username=<USERNAME>
+    body: 
+      string: "{\"dataset\":\"dataset/4fea652e035d0741f1001b90\"}"
+    headers: 
+      connection: 
       - close
-  response:
-    status:
+      content-type: 
+      - application/json
+  response: 
+    status: 
       code: 201
       message: CREATED
-    headers:
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Mon, 25 Jun 2012 15:39:21 GMT
-      location:
-      - http://bigml.io/andromeda/model/4fe8871a035d07683200287b
-      server:
-      - nginx/1.0.12
-      content-length:
-      - '691'
-      connection:
+    headers: 
+      location: 
+      - http://bigml.io/andromeda/model/4fea652f035d0741f4001b84
+      connection: 
       - Close
-    body:
-      encoding: US-ASCII
-      string: ! '{"category": 0, "code": 201, "columns": 5, "created": "2012-06-25T15:43:22.762112",
-        "credits": 0.017578125, "dataset": "dataset/4fe887421552681eb00028c1", "dataset_status":
-        true, "description": "", "holdout": 0.0, "input_fields": [], "locale": "en_US",
-        "max_columns": 5, "max_rows": 150, "name": "iris'' dataset model", "number_of_predictions":
-        0, "objective_fields": [], "private": true, "range": [1, 150], "resource":
-        "model/4fe8871a035d07683200287b", "rows": 150, "size": 4608, "source": "source/4fe887401552681eaf0028bc",
-        "source_status": true, "status": {"code": 1, "message": "The model is being
-        processed and will be created soon"}, "tags": [], "updated": "2012-06-25T15:43:22.762135"}'
-    http_version: '1.1'
-  recorded_at: Mon, 25 Jun 2012 15:43:40 GMT
-- request:
+      content-type: 
+      - application/json; charset=utf-8
+      server: 
+      - nginx/1.0.12
+      date: 
+      - Wed, 27 Jun 2012 01:39:05 GMT
+      content-length: 
+      - "691"
+    body: 
+      string: "{\"category\": 0, \"code\": 201, \"columns\": 5, \"created\": \"2012-06-27T01:43:11.833968\", \"credits\": 0.017578125, \"dataset\": \"dataset/4fea652e035d0741f1001b90\", \"dataset_status\": true, \"description\": \"\", \"holdout\": 0.0, \"input_fields\": [], \"locale\": \"en_US\", \"max_columns\": 5, \"max_rows\": 150, \"name\": \"iris' dataset model\", \"number_of_predictions\": 0, \"objective_fields\": [], \"private\": true, \"range\": [1, 150], \"resource\": \"model/4fea652f035d0741f4001b84\", \"rows\": 150, \"size\": 4608, \"source\": \"source/4fea655915526875f8001b92\", \"source_status\": true, \"status\": {\"code\": 1, \"message\": \"The model is being processed and will be created soon\"}, \"tags\": [], \"updated\": \"2012-06-27T01:43:11.833994\"}"
+    http_version: "1.1"
+  recorded_at: Wed, 27 Jun 2012 01:43:36 GMT
+- request: 
     method: post
-    uri: https://bigml.io/andromeda/prediction?username=<USERNAME>&api_key=<API_KEY>
-    body:
-      encoding: UTF-8
-      string: ! '{"model":"model/4fe8871a035d07683200287b","input_data":{"000001":3}}'
-    headers:
-      content-type:
-      - application/json
-      connection:
+    uri: https://bigml.io/andromeda/prediction?api_key=<API_KEY>&username=<USERNAME>
+    body: 
+      string: "{\"input_data\":{\"000001\":3},\"model\":\"model/4fea652f035d0741f4001b84\"}"
+    headers: 
+      connection: 
       - close
-  response:
-    status:
+      content-type: 
+      - application/json
+  response: 
+    status: 
       code: 201
       message: CREATED
-    headers:
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Mon, 25 Jun 2012 15:41:51 GMT
-      location:
-      - http://bigml.io/andromeda/prediction/4fe8871c035d0768300028f3
-      server:
-      - nginx/1.0.12
-      content-length:
-      - '1222'
-      connection:
+    headers: 
+      location: 
+      - http://bigml.io/andromeda/prediction/4fea655d15526875f9001b63
+      connection: 
       - Close
-    body:
-      encoding: US-ASCII
-      string: ! '{"category": 0, "code": 201, "created": "2012-06-25T15:43:24.201031",
-        "credits": 0.01, "dataset": "dataset/4fe887421552681eb00028c1", "dataset_status":
-        true, "description": "", "fields": {"000001": {"column_number": 1, "datatype":
-        "double", "name": "sepal width", "optype": "numeric", "preferred": true},
-        "000002": {"column_number": 2, "datatype": "double", "name": "petal length",
-        "optype": "numeric", "preferred": true}, "000004": {"column_number": 4, "datatype":
-        "string", "name": "species", "optype": "categorical", "preferred": true}},
-        "input_data": {"000001": 3}, "locale": "en_US", "model": "model/4fe8871a035d07683200287b",
-        "model_status": true, "name": "Prediction for species", "objective_fields":
-        ["000004"], "prediction": {"000004": "Iris-virginica"}, "prediction_path":
-        {"bad_fields": [], "next_predicates": [{"field": "000002", "operator": ">",
-        "value": 2.45}, {"field": "000002", "operator": "<=", "value": 2.45}], "path":
-        [], "unknown_fields": []}, "private": true, "resource": "prediction/4fe8871c035d0768300028f3",
-        "source": "source/4fe887401552681eaf0028bc", "source_status": true, "status":
-        {"code": 5, "message": "The prediction has been created"}, "tags": [], "updated":
-        "2012-06-25T15:43:24.201052"}'
-    http_version: '1.1'
-  recorded_at: Mon, 25 Jun 2012 15:43:41 GMT
-- request:
+      content-type: 
+      - application/json; charset=utf-8
+      server: 
+      - nginx/1.0.12
+      date: 
+      - Wed, 27 Jun 2012 01:41:37 GMT
+      content-length: 
+      - "1222"
+    body: 
+      string: "{\"category\": 0, \"code\": 201, \"created\": \"2012-06-27T01:43:57.623190\", \"credits\": 0.01, \"dataset\": \"dataset/4fea652e035d0741f1001b90\", \"dataset_status\": true, \"description\": \"\", \"fields\": {\"000001\": {\"column_number\": 1, \"datatype\": \"double\", \"name\": \"sepal width\", \"optype\": \"numeric\", \"preferred\": true}, \"000002\": {\"column_number\": 2, \"datatype\": \"double\", \"name\": \"petal length\", \"optype\": \"numeric\", \"preferred\": true}, \"000004\": {\"column_number\": 4, \"datatype\": \"string\", \"name\": \"species\", \"optype\": \"categorical\", \"preferred\": true}}, \"input_data\": {\"000001\": 3}, \"locale\": \"en_US\", \"model\": \"model/4fea652f035d0741f4001b84\", \"model_status\": true, \"name\": \"Prediction for species\", \"objective_fields\": [\"000004\"], \"prediction\": {\"000004\": \"Iris-virginica\"}, \"prediction_path\": {\"bad_fields\": [], \"next_predicates\": [{\"field\": \"000002\", \"operator\": \">\", \"value\": 2.45}, {\"field\": \"000002\", \"operator\": \"<=\", \"value\": 2.45}], \"path\": [], \"unknown_fields\": []}, \"private\": true, \"resource\": \"prediction/4fea655d15526875f9001b63\", \"source\": \"source/4fea655915526875f8001b92\", \"source_status\": true, \"status\": {\"code\": 5, \"message\": \"The prediction has been created\"}, \"tags\": [], \"updated\": \"2012-06-27T01:43:57.623207\"}"
+    http_version: "1.1"
+  recorded_at: Wed, 27 Jun 2012 01:43:37 GMT
+- request: 
     method: get
-    uri: https://bigml.io/andromeda/prediction/4fe8871c035d0768300028f3?username=<USERNAME>&api_key=<API_KEY>
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      connection:
+    uri: https://bigml.io/andromeda/prediction/4fea655d15526875f9001b63?api_key=<API_KEY>&username=<USERNAME>
+    body: 
+      string: ""
+    headers: 
+      connection: 
       - close
-  response:
-    status:
+  response: 
+    status: 
       code: 200
       message: OK
-    headers:
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Mon, 25 Jun 2012 15:39:24 GMT
-      server:
-      - nginx/1.0.12
-      content-length:
-      - '1222'
-      connection:
+    headers: 
+      connection: 
       - Close
-    body:
-      encoding: US-ASCII
-      string: ! '{"category": 0, "code": 200, "created": "2012-06-25T15:43:24.201000",
-        "credits": 0.01, "dataset": "dataset/4fe887421552681eb00028c1", "dataset_status":
-        true, "description": "", "fields": {"000001": {"column_number": 1, "datatype":
-        "double", "name": "sepal width", "optype": "numeric", "preferred": true},
-        "000002": {"column_number": 2, "datatype": "double", "name": "petal length",
-        "optype": "numeric", "preferred": true}, "000004": {"column_number": 4, "datatype":
-        "string", "name": "species", "optype": "categorical", "preferred": true}},
-        "input_data": {"000001": 3}, "locale": "en_US", "model": "model/4fe8871a035d07683200287b",
-        "model_status": true, "name": "Prediction for species", "objective_fields":
-        ["000004"], "prediction": {"000004": "Iris-virginica"}, "prediction_path":
-        {"bad_fields": [], "next_predicates": [{"field": "000002", "operator": ">",
-        "value": 2.45}, {"field": "000002", "operator": "<=", "value": 2.45}], "path":
-        [], "unknown_fields": []}, "private": true, "resource": "prediction/4fe8871c035d0768300028f3",
-        "source": "source/4fe887401552681eaf0028bc", "source_status": true, "status":
-        {"code": 5, "message": "The prediction has been created"}, "tags": [], "updated":
-        "2012-06-25T15:43:24.201000"}'
-    http_version: '1.1'
-  recorded_at: Mon, 25 Jun 2012 15:43:42 GMT
-recorded_with: VCR 2.2.2
+      content-type: 
+      - application/json; charset=utf-8
+      server: 
+      - nginx/1.0.12
+      date: 
+      - Wed, 27 Jun 2012 01:39:07 GMT
+      content-length: 
+      - "1222"
+    body: 
+      string: "{\"category\": 0, \"code\": 200, \"created\": \"2012-06-27T01:43:57.623000\", \"credits\": 0.01, \"dataset\": \"dataset/4fea652e035d0741f1001b90\", \"dataset_status\": true, \"description\": \"\", \"fields\": {\"000001\": {\"column_number\": 1, \"datatype\": \"double\", \"name\": \"sepal width\", \"optype\": \"numeric\", \"preferred\": true}, \"000002\": {\"column_number\": 2, \"datatype\": \"double\", \"name\": \"petal length\", \"optype\": \"numeric\", \"preferred\": true}, \"000004\": {\"column_number\": 4, \"datatype\": \"string\", \"name\": \"species\", \"optype\": \"categorical\", \"preferred\": true}}, \"input_data\": {\"000001\": 3}, \"locale\": \"en_US\", \"model\": \"model/4fea652f035d0741f4001b84\", \"model_status\": true, \"name\": \"Prediction for species\", \"objective_fields\": [\"000004\"], \"prediction\": {\"000004\": \"Iris-virginica\"}, \"prediction_path\": {\"bad_fields\": [], \"next_predicates\": [{\"field\": \"000002\", \"operator\": \">\", \"value\": 2.45}, {\"field\": \"000002\", \"operator\": \"<=\", \"value\": 2.45}], \"path\": [], \"unknown_fields\": []}, \"private\": true, \"resource\": \"prediction/4fea655d15526875f9001b63\", \"source\": \"source/4fea655915526875f8001b92\", \"source_status\": true, \"status\": {\"code\": 5, \"message\": \"The prediction has been created\"}, \"tags\": [], \"updated\": \"2012-06-27T01:43:57.623000\"}"
+    http_version: "1.1"
+  recorded_at: Wed, 27 Jun 2012 01:43:38 GMT

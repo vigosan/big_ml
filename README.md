@@ -30,9 +30,10 @@ model = BigML::Model.find("4fe8868a035d07682f002891")
 
 # create you predictions using parameters...
 prediction = BigML::Prediction.create(model.resource, { :input_data => { "000001" => 3 }})
+prediction.destroy
 
 # you can destroy everything!
-BigML::Model.destroy("4fe8868a035d07682f002891")
+BigML::Model.delete("4fe8868a035d07682f002891")
 
 ```
 
@@ -53,7 +54,7 @@ And then install the new dependencies with:
 
 Install the gem with rubygem in your system:
 
-    gem install big_ml
+    $ gem install big_ml
 
 ### Dependencies
 

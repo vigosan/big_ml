@@ -1,20 +1,13 @@
 # BigML
 
-A Ruby wrapper for the [BigML REST API](https://bigml.com/developers)
+A Ruby wrapper for the [BigML REST API](https://bigml.com/developers), provides access to sources, datasets, models, and predictions. You can create, retrieve, update and delete 
 
-## Installation
+[![Build Status](https://secure.travis-ci.org/vigosan/big_ml.png?branch=master)](http://travis-ci.org/vigosan/big_ml)
 
-Add this line to your application's Gemfile:
-
-    gem 'big_ml'
-
-And then execute:
-
-    $ bundle
-
-## Usage
+## Synopsis
 
 ```ruby
+require 'rubygems'
 require 'big_ml'
 
 BigML.configure do |c|
@@ -22,29 +15,68 @@ BigML.configure do |c|
   c.api_key = 'bar'
 end
 
-source = BigML::Source.create("spec/fixtures/iris.csv")
-dataset = BigML::Dataset.create(source.resource)
-model = BigML::Model.create(dataset.resource)
+# easy creation of sources
+file_path = "fixtures/iris.csv"
+source = BigML::Source.create(file_path)
+
+# Are you looking for old dataset?
+all_datasets = BigML::Dataset.all
+
+# or just want to create one?
+dataset = source.to_dataset
+
+# find a concrete one 
+model = BigML::Model.find("4fe8868a035d07682f002891")
+
+# create you predictions using parameters...
 prediction = BigML::Prediction.create(model.resource, { :input_data => { "000001" => 3 }})
+
+# you can destroy everything!
+BigML::Model.destroy("4fe8868a035d07682f002891")
+
 ```
 
+## Installation
+
+### Bundler
+
+Add this line to your application's Gemfile:
+
+    source 'https://rubygems.org'
+    gem 'big_ml'
+
+And then install the new dependencies with:
+
+    $ bundle install
+
+### Rubygems
+
+Install the gem with rubygem in your system:
+
+    gem install big_ml
+
+### Dependencies
+
+- httparty
+
+
 ## Ruby Interpreter Compatibility
+
 This library has been tested on the following ruby interpreters:
 
 * MRI 1.9.2
 * MRI 1.9.3
 
-## Running the tests in your local
+## Running the tests 
 
-Execute:
+Download and run the test suit:
 
-    rspec spec
+    $ git clone git@github.com:vigosan/big_ml.git
+    $ cd big_ml
+    $ bundle install
+    $ rspec spec
 
-or simply:
 
-    rake
-
-[![Build Status](https://secure.travis-ci.org/vigosan/big_ml.png?branch=master)](http://travis-ci.org/vigosan/big_ml)
 
 ## Contributing
 

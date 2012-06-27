@@ -44,6 +44,11 @@ describe BigML::Model, :vcr do
       BigML::Model.find(@model.id).name.should == 'foo name'
     end
 
+    it "must be able to update the name from the instance" do
+      @model.update( :name => 'foo name' ).code.should == 202
+      BigML::Model.find(@model.id).name.should == 'foo name'
+    end
+
     it "must be able to remove the model" do
       BigML::Model.delete(@model.id)
       BigML::Model.find(@model.id).should be_nil

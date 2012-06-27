@@ -41,6 +41,12 @@ describe BigML::Source, :vcr do
       BigML::Source.find(@source.id).name.should == 'new name'
     end
 
+    it "must be able to update the name from the instance" do
+      BigML::Source.find(@source.id).name.should == 'iris.csv'
+      @source.update( :name => 'new name' ).code.should == 202
+      BigML::Source.find(@source.id).name.should == 'new name'
+    end
+
     it "must be able to remove the source" do
       BigML::Source.delete(@source.id)
       BigML::Source.find(@source.id).should be_nil

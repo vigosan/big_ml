@@ -46,6 +46,11 @@ describe BigML::Prediction, :vcr do
       BigML::Prediction.find(@prediction.id).name.should == 'foo name'
     end
 
+    it "must be able to update the name from the instance" do
+      @prediction.update( :name => 'foo name' ).code.should == 202
+      BigML::Prediction.find(@prediction.id).name.should == 'foo name'
+    end
+
     it "must be able to remove the prediction" do
       BigML::Prediction.delete(@prediction.id)
       BigML::Prediction.find(@prediction.id).should be_nil

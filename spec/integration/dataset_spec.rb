@@ -42,6 +42,11 @@ describe BigML::Dataset, :vcr do
       BigML::Dataset.find(@dataset.id).name.should == 'foo name'
     end
 
+    it "must be able to update the name from the instance" do
+      @dataset.update(:name => 'foo name').code.should == 202
+      BigML::Dataset.find(@dataset.id).name.should == 'foo name'
+    end
+
     it "must be able to be deleted using the destroy method" do
       dataset_id = @dataset.id
       @dataset.destroy

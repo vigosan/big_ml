@@ -19,6 +19,10 @@ module BigML
       self.class.delete(id)
     end
 
+    def update(options)
+      self.class.update(id, options)
+    end
+
     class << self
       def all(options = {})
         response = client.get("/#{resource_name}", options)

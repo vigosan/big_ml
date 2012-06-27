@@ -76,8 +76,6 @@ Download and run the test suit:
     $ bundle install
     $ rspec spec
 
-
-
 ## Contributing
 
 1. Fork it

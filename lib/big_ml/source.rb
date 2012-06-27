@@ -10,6 +10,10 @@ module BigML
 
     attr_reader *SOURCE_PROPERTIES
 
+    def to_dataset
+      Dataset.create(resource)
+    end
+
     class << self
       def create(file, options = {})
         response = client.post("/#{resource_name}", options.merge(:multipart => true, :file => File.new(file)))

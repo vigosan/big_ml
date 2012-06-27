@@ -11,6 +11,10 @@ module BigML
 
     attr_reader *DATASET_PROPERTIES
 
+    def to_model
+      Model.create(resource)
+    end
+
     class << self
       def create(source, options = {})
         response = client.post("/#{resource_name}", options, { :source => source })

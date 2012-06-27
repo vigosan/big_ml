@@ -47,5 +47,11 @@ describe BigML::Dataset, :vcr do
       BigML::Dataset.find(@dataset.id).should be_nil
       BigML::Dataset.all.should have(0).datasets
     end
+
+    it "can be converted in a model" do
+      model = @dataset.to_model
+      model.instance_of?(BigML::Model).should be_true
+      model.code.should == 201
+    end
   end
 end

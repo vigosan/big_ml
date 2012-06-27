@@ -49,5 +49,11 @@ describe BigML::Model, :vcr do
       BigML::Model.find(@model.id).should be_nil
       BigML::Model.all.should have(0).models
     end
+
+    it "can be converted in a prediction" do
+      prediction = @model.to_prediction(:input_data => { "000001" => 3 })
+      prediction.instance_of?(BigML::Prediction).should be_true
+      prediction.code.should == 201
+    end
   end
 end

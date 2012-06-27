@@ -13,6 +13,10 @@ module BigML
 
     attr_reader *MODEL_PROPERTIES
 
+    def to_prediction(options)
+      Prediction.create(resource, options)
+    end
+
     class << self
       def create(dataset, options = {})
         response = client.post("/#{resource_name}", options, { :dataset => dataset })

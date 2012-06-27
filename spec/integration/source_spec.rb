@@ -46,5 +46,11 @@ describe BigML::Source, :vcr do
       BigML::Source.find(@source.id).should be_nil
       BigML::Source.all.should have(0).sources
     end
+
+    it "can be converted in a dataset" do
+      dataset = @source.to_dataset
+      dataset.instance_of?(BigML::Dataset).should be_true
+      dataset.code.should == 201
+    end
   end
 end

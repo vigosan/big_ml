@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Big ml by vigosan</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Big ml</h1>
+          <h2>A Ruby wrapper for the BigML REST API</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/vigosan/big_ml/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/vigosan/big_ml/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/vigosan/big_ml" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>BigML</h1>
+
+<p>A Ruby wrapper for the <a href="https://bigml.com/developers">BigML REST API</a>, provides access to sources, datasets, models, and predictions. You can create, retrieve, update and delete </p>
+
+<p><a href="http://travis-ci.org/vigosan/big_ml"><img src="https://secure.travis-ci.org/vigosan/big_ml.png?branch=master" alt="Build Status"></a></p>
+
+<h2>Synopsis</h2>
+
+<div class="highlight">
+<pre><span class="nb">require</span> <span class="s1">'rubygems'</span>
+<span class="nb">require</span> <span class="s1">'big_ml'</span>
+
+<span class="no">BigML</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span>
+  <span class="n">c</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="s1">'foo'</span>
+  <span class="n">c</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">'bar'</span>
+<span class="k">end</span>
+
+<span class="c1"># easy creation of sources</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s2">"fixtures/iris.csv"</span>
+<span class="n">source</span> <span class="o">=</span> <span class="no">BigML</span><span class="o">::</span><span class="no">Source</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+
+<span class="c1"># Are you looking for old dataset?</span>
+<span class="n">all_datasets</span> <span class="o">=</span> <span class="no">BigML</span><span class="o">::</span><span class="no">Dataset</span><span class="o">.</span><span class="n">all</span>
+
+<span class="c1"># or just want to create one?</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">to_dataset</span>
+
+<span class="c1"># find a concrete one </span>
+<span class="n">model</span> <span class="o">=</span> <span class="no">BigML</span><span class="o">::</span><span class="no">Model</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"4fe8868a035d07682f002891"</span><span class="p">)</span>
+
+<span class="c1"># create you predictions using parameters...</span>
+<span class="n">prediction</span> <span class="o">=</span> <span class="no">BigML</span><span class="o">::</span><span class="no">Prediction</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">resource</span><span class="p">,</span> <span class="p">{</span> <span class="ss">:input_data</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">"000001"</span> <span class="o">=&gt;</span> <span class="mi">3</span> <span class="p">}})</span>
+<span class="n">prediction</span><span class="o">.</span><span class="n">destroy</span>
+
+<span class="c1"># you can destroy everything!</span>
+<span class="no">BigML</span><span class="o">::</span><span class="no">Model</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">"4fe8868a035d07682f002891"</span><span class="p">)</span>
+
+</pre>
+</div>
+
+
+<h2>Installation</h2>
+
+<h3>Bundler</h3>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>source 'https://rubygems.org'
+gem 'big_ml'
+</code></pre>
+
+<p>And then install the new dependencies with:</p>
+
+<pre><code>$ bundle install
+</code></pre>
+
+<h3>Rubygems</h3>
+
+<p>Install the gem with rubygem in your system:</p>
+
+<pre><code>$ gem install big_ml
+</code></pre>
+
+<h3>Dependencies</h3>
+
+<ul>
+<li>httparty</li>
+</ul><h2>Ruby Interpreter Compatibility</h2>
+
+<p>This library has been tested on the following ruby interpreters:</p>
+
+<ul>
+<li>MRI 1.9.2</li>
+<li>MRI 1.9.3</li>
+</ul><h2>Running the tests</h2>
+
+<p>Download and run the test suit:</p>
+
+<pre><code>$ git clone git@github.com:vigosan/big_ml.git
+$ cd big_ml
+$ bundle install
+$ rspec spec
+</code></pre>
+
+<h2>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Added some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+        </section>
+
+        <footer>
+          Big ml is maintained by <a href="https://github.com/vigosan">vigosan</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,63 +1,75 @@
---- 
-recorded_with: VCR 2.2.2
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: get
-    uri: https://bigml.io/andromeda/source?api_key=<API_KEY>&username=<USERNAME>
-    body: 
-      string: ""
-    headers: 
-      connection: 
+    uri: https://bigml.io/andromeda/source?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
       - close
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      connection: 
-      - Close
-      content-type: 
+    headers:
+      content-type:
       - application/json; charset=utf-8
-      server: 
+      date:
+      - Thu, 28 Jun 2012 22:28:56 GMT
+      server:
       - nginx/1.0.12
-      date: 
-      - Wed, 27 Jun 2012 02:18:05 GMT
-      content-length: 
-      - "101"
-    body: 
-      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
-    http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 02:22:36 GMT
-- request: 
+      content-length:
+      - '101'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 0}, "objects": []}'
+    http_version: '1.1'
+  recorded_at: Thu, 28 Jun 2012 22:33:43 GMT
+- request:
     method: post
     uri: https://bigml.io/andromeda/source
-    body: 
-      string: ""
-    headers: 
-      connection: 
-      - close
-      content-type: 
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      content-type:
       - multipart/form-data; boundary=-----------RubyMultipartPost
-      content-length: 
-      - "5147"
-  response: 
-    status: 
+      content-length:
+      - '5147'
+      connection:
+      - close
+  response:
+    status:
       code: 201
       message: CREATED
-    headers: 
-      location: 
-      - http://bigml.io/andromeda/source/4fea6e55035d0741f1001bef
-      connection: 
-      - Close
-      content-type: 
+    headers:
+      content-type:
       - application/json; charset=utf-8
-      server: 
+      date:
+      - Thu, 28 Jun 2012 22:31:31 GMT
+      location:
+      - http://bigml.io/andromeda/source/4fecdbd915526875f70033e8
+      server:
       - nginx/1.0.12
-      date: 
-      - Wed, 27 Jun 2012 02:20:37 GMT
-      content-length: 
-      - "567"
-    body: 
-      string: "{\"category\": 0, \"code\": 201, \"content_type\": \"application/octet-stream\", \"created\": \"2012-06-27T02:22:13.603694\", \"credits\": 0.0, \"description\": \"\", \"file_name\": \"iris.csv\", \"md5\": \"d1175c032e1042bec7f974c91e4a65ae\", \"name\": \"iris.csv\", \"number_of_datasets\": 0, \"number_of_models\": 0, \"number_of_predictions\": 0, \"private\": true, \"resource\": \"source/4fea6e55035d0741f1001bef\", \"size\": 4608, \"source_parser\": {}, \"status\": {\"code\": 1, \"message\": \"The request has been queued and will be processed soon\"}, \"tags\": [], \"type\": 0, \"updated\": \"2012-06-27T02:22:13.603715\"}"
-    http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 02:22:37 GMT
+      content-length:
+      - '567'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"category": 0, "code": 201, "content_type": "application/octet-stream",
+        "created": "2012-06-28T22:34:01.125975", "credits": 0.0, "description": "",
+        "file_name": "iris.csv", "md5": "d1175c032e1042bec7f974c91e4a65ae", "name":
+        "iris.csv", "number_of_datasets": 0, "number_of_models": 0, "number_of_predictions":
+        0, "private": true, "resource": "source/4fecdbd915526875f70033e8", "size":
+        4608, "source_parser": {}, "status": {"code": 1, "message": "The request has
+        been queued and will be processed soon"}, "tags": [], "type": 0, "updated":
+        "2012-06-28T22:34:01.125996"}'
+    http_version: '1.1'
+  recorded_at: Thu, 28 Jun 2012 22:33:45 GMT
+recorded_with: VCR 2.2.2

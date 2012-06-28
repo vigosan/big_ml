@@ -1,84 +1,106 @@
---- 
-recorded_with: VCR 2.2.2
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: get
-    uri: https://bigml.io/andromeda/source?api_key=<API_KEY>&username=<USERNAME>
-    body: 
-      string: ""
-    headers: 
-      connection: 
+    uri: https://bigml.io/andromeda/source?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
       - close
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      connection: 
-      - Close
-      content-type: 
+    headers:
+      content-type:
       - application/json; charset=utf-8
-      server: 
+      date:
+      - Thu, 28 Jun 2012 22:31:25 GMT
+      server:
       - nginx/1.0.12
-      date: 
-      - Wed, 27 Jun 2012 02:20:32 GMT
-      content-length: 
-      - "1280"
-    body: 
-      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 1}, \"objects\": [{\"category\": 0, \"code\": 200, \"content_type\": \"application/octet-stream\", \"created\": \"2012-06-27T02:22:45.840000\", \"credits\": 0.0, \"description\": \"\", \"fields\": {\"000000\": {\"column_number\": 0, \"name\": \"sepal length\", \"optype\": \"numeric\"}, \"000001\": {\"column_number\": 1, \"name\": \"sepal width\", \"optype\": \"numeric\"}, \"000002\": {\"column_number\": 2, \"name\": \"petal length\", \"optype\": \"numeric\"}, \"000003\": {\"column_number\": 3, \"name\": \"petal width\", \"optype\": \"numeric\"}, \"000004\": {\"column_number\": 4, \"name\": \"species\", \"optype\": \"categorical\"}}, \"file_name\": \"iris.csv\", \"md5\": \"d1175c032e1042bec7f974c91e4a65ae\", \"name\": \"iris.csv\", \"number_of_datasets\": 1, \"number_of_models\": 1, \"number_of_predictions\": 0, \"private\": true, \"resource\": \"source/4fea6e7515526875f8001be7\", \"size\": 4608, \"source_parser\": {\"header\": true, \"locale\": \"en_US\", \"missing_tokens\": [\"\", \"N/A\", \"n/a\", \"NULL\", \"null\", \"-\", \"#DIV/0\", \"#REF!\", \"#NAME?\", \"NIL\", \"nil\", \"NA\", \"na\", \"#VALUE!\", \"#NULL!\", \"NaN\", \"#N/A\", \"#NUM!\", \"?\"], \"quote\": \"\\\"\", \"separator\": \",\"}, \"status\": {\"code\": 5, \"elapsed\": 64, \"message\": \"The source has been created\"}, \"tags\": [], \"type\": 0, \"updated\": \"2012-06-27T02:22:51.446000\"}]}"
-    http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 02:22:32 GMT
-- request: 
+      content-length:
+      - '1280'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 1}, "objects": [{"category": 0, "code": 200, "content_type":
+        "application/octet-stream", "created": "2012-06-28T22:32:51.882000", "credits":
+        0.0, "description": "", "fields": {"000000": {"column_number": 0, "name":
+        "sepal length", "optype": "numeric"}, "000001": {"column_number": 1, "name":
+        "sepal width", "optype": "numeric"}, "000002": {"column_number": 2, "name":
+        "petal length", "optype": "numeric"}, "000003": {"column_number": 3, "name":
+        "petal width", "optype": "numeric"}, "000004": {"column_number": 4, "name":
+        "species", "optype": "categorical"}}, "file_name": "iris.csv", "md5": "d1175c032e1042bec7f974c91e4a65ae",
+        "name": "iris.csv", "number_of_datasets": 1, "number_of_models": 1, "number_of_predictions":
+        0, "private": true, "resource": "source/4fecdb93035d0741ef0032a8", "size":
+        4608, "source_parser": {"header": true, "locale": "en_US", "missing_tokens":
+        ["", "N/A", "n/a", "NULL", "null", "-", "#DIV/0", "#REF!", "#NAME?", "NIL",
+        "nil", "NA", "na", "#VALUE!", "#NULL!", "NaN", "#N/A", "#NUM!", "?"], "quote":
+        "\"", "separator": ","}, "status": {"code": 5, "elapsed": 62, "message": "The
+        source has been created"}, "tags": [], "type": 0, "updated": "2012-06-28T22:33:03.549000"}]}'
+    http_version: '1.1'
+  recorded_at: Thu, 28 Jun 2012 22:33:38 GMT
+- request:
     method: delete
-    uri: https://bigml.io/andromeda/source/4fea6e7515526875f8001be7?api_key=<API_KEY>&username=<USERNAME>
-    body: 
-      string: ""
-    headers: 
-      connection: 
+    uri: https://bigml.io/andromeda/source/4fecdb93035d0741ef0032a8?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
       - close
-  response: 
-    status: 
+  response:
+    status:
       code: 204
       message: NO CONTENT
-    headers: 
-      connection: 
-      - Close
-      content-type: 
+    headers:
+      content-length:
+      - '0'
+      content-type:
       - text/html; charset=utf-8
-      server: 
+      date:
+      - Thu, 28 Jun 2012 22:28:54 GMT
+      server:
       - nginx/1.0.12
-      date: 
-      - Wed, 27 Jun 2012 02:18:03 GMT
-      content-length: 
-      - "0"
-    body: 
-      string: ""
-    http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 02:22:34 GMT
-- request: 
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 28 Jun 2012 22:33:40 GMT
+- request:
     method: get
-    uri: https://bigml.io/andromeda/source?api_key=<API_KEY>&username=<USERNAME>
-    body: 
-      string: ""
-    headers: 
-      connection: 
+    uri: https://bigml.io/andromeda/source?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
       - close
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      connection: 
-      - Close
-      content-type: 
+    headers:
+      content-type:
       - application/json; charset=utf-8
-      server: 
+      date:
+      - Thu, 28 Jun 2012 22:31:28 GMT
+      server:
       - nginx/1.0.12
-      date: 
-      - Wed, 27 Jun 2012 02:20:35 GMT
-      content-length: 
-      - "101"
-    body: 
-      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
-    http_version: "1.1"
-  recorded_at: Wed, 27 Jun 2012 02:22:35 GMT
+      content-length:
+      - '101'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 0}, "objects": []}'
+    http_version: '1.1'
+  recorded_at: Thu, 28 Jun 2012 22:33:42 GMT
+recorded_with: VCR 2.2.2

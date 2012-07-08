@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://bigml.io/andromeda/source?username=<USERNAME>&api_key=<API_KEY>
+    uri: https://bigml.io/dev/andromeda/source?username=<USERNAME>&api_key=<API_KEY>
     body:
       encoding: US-ASCII
       string: ''
@@ -17,7 +17,7 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Thu, 28 Jun 2012 22:28:56 GMT
+      - Sun, 08 Jul 2012 09:18:07 GMT
       server:
       - nginx/1.0.12
       content-length:
@@ -29,10 +29,10 @@ http_interactions:
       string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
         "total_count": 0}, "objects": []}'
     http_version: '1.1'
-  recorded_at: Thu, 28 Jun 2012 22:33:43 GMT
+  recorded_at: Sun, 08 Jul 2012 09:19:35 GMT
 - request:
     method: post
-    uri: https://bigml.io/andromeda/source
+    uri: https://bigml.io/dev/andromeda/source
     body:
       encoding: US-ASCII
       string: ''
@@ -40,7 +40,7 @@ http_interactions:
       content-type:
       - multipart/form-data; boundary=-----------RubyMultipartPost
       content-length:
-      - '5147'
+      - '5149'
       connection:
       - close
   response:
@@ -51,25 +51,25 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Thu, 28 Jun 2012 22:31:31 GMT
+      - Sun, 08 Jul 2012 09:13:16 GMT
       location:
-      - http://bigml.io/andromeda/source/4fecdbd915526875f70033e8
+      - http://bigml.io/andromeda/source/4ff9509515526823e0000054
       server:
       - nginx/1.0.12
       content-length:
-      - '567'
+      - '580'
       connection:
       - Close
     body:
       encoding: US-ASCII
       string: ! '{"category": 0, "code": 201, "content_type": "application/octet-stream",
-        "created": "2012-06-28T22:34:01.125975", "credits": 0.0, "description": "",
-        "file_name": "iris.csv", "md5": "d1175c032e1042bec7f974c91e4a65ae", "name":
-        "iris.csv", "number_of_datasets": 0, "number_of_models": 0, "number_of_predictions":
-        0, "private": true, "resource": "source/4fecdbd915526875f70033e8", "size":
+        "created": "2012-07-08T09:19:17.555186", "credits": 0.0, "description": "",
+        "dev": true, "file_name": "iris.csv", "md5": "d1175c032e1042bec7f974c91e4a65ae",
+        "name": "iris.csv", "number_of_datasets": 0, "number_of_models": 0, "number_of_predictions":
+        0, "private": true, "resource": "source/4ff9509515526823e0000054", "size":
         4608, "source_parser": {}, "status": {"code": 1, "message": "The request has
         been queued and will be processed soon"}, "tags": [], "type": 0, "updated":
-        "2012-06-28T22:34:01.125996"}'
+        "2012-07-08T09:19:17.555212"}'
     http_version: '1.1'
-  recorded_at: Thu, 28 Jun 2012 22:33:45 GMT
+  recorded_at: Sun, 08 Jul 2012 09:19:37 GMT
 recorded_with: VCR 2.2.2

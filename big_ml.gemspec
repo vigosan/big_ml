@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["vigosan@gmail.com", "felipe.talavera@gmail.com"]
   gem.description   = %q{A Ruby wrapper for the BigML REST API}
   gem.summary       = %q{A Ruby wrapper for the BigML REST API}
-  gem.homepage      = "https://bigml.com"
+  gem.homepage      = "http://vigosan.github.com/big_ml"
 
   gem.add_dependency              "httmultiparty"
   gem.add_dependency              "json"

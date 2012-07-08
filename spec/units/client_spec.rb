@@ -47,4 +47,23 @@ describe BigML::Util::Client do
       end
     end
   end
+
+  context "reset module configuration" do
+    let(:api) {
+      BigML::Util::Client.new
+    }
+
+    before(:each) {
+      BigML.reset
+    }
+
+    it "sets default username to nil" do
+      api.username.should be_nil
+    end
+
+    it "sets default api key to nil" do
+      api.api_key.should be_nil
+    end
+  end
+
 end

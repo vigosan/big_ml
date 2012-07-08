@@ -12,7 +12,8 @@ require 'big_ml'
 
 BigML.configure do |c|
   c.username = 'foo'
-  c.api_key = 'bar'
+  c.api_key  = 'bar'
+  c.dev_mode = true
 end
 
 # easy creation of sources

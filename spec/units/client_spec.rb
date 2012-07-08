@@ -19,17 +19,18 @@ describe BigML::Util::Client do
   end
 
   context "class configuration" do
-    let(:credentials) {
+    let(:config) {
       {
         :username => 'user',
-        :api_key  => 'secret'
+        :api_key  => 'secret',
+        :dev_mode => true
       }
     }
 
     context "during initialization" do
       it "should override module configuration" do
-        api = BigML::Util::Client.new(credentials)
-        keys.each { |key| api.send(key).should == credentials[key] }
+        api = BigML::Util::Client.new(config)
+        keys.each { |key| api.send(key).should == config[key] }
       end
     end
 
@@ -42,8 +43,8 @@ describe BigML::Util::Client do
 
       it "should override module configuration" do
         api = BigML::Util::Client.new
-        credentials.each { |key, value| api.send("#{key}=", value) }
-        keys.each { |key| api.send(key).should == credentials[key] }
+        config.each { |key, value| api.send("#{key}=", value) }
+        keys.each { |key| api.send(key).should == config[key] }
       end
     end
   end
@@ -63,6 +64,17 @@ describe BigML::Util::Client do
 
     it "sets default api key to nil" do
       api.api_key.should be_nil
+    end
+  end
+
+  context "environemt mode" do
+    it "uses production mode as default" do
+      BigML::Util::Client.base_uri.should == BigML::Util::Config::BIGML_PROD_ENDPOINT
+    end
+
+    it "uses development when dev_mode is enabled" do
+      BigML::Util::Client.new({:dev_mode => true})
+      BigML::Util::Client.base_uri.should == BigML::Util::Config::BIGML_DEV_ENDPOINT
     end
   end
 

@@ -11,8 +11,6 @@ module BigML
       include Request
       format :json
 
-      base_uri Config::BIGML_ENDPOINT
-
       attr_accessor *Config::VALID_OPTIONS_KEYS
 
       def initialize(attrs={})
@@ -20,6 +18,13 @@ module BigML
         Config::VALID_OPTIONS_KEYS.each { |key|
           instance_variable_set("@#{key}".to_sym, attrs[key])
         }
+        self.class.base_uri big_ml_url
+      end
+
+      protected
+
+      def big_ml_url
+        dev_mode ? Config::BIGML_DEV_ENDPOINT : Config::BIGML_PROD_ENDPOINT
       end
     end
   end

@@ -1,84 +1,93 @@
---- 
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/source?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 14 Jul 2012 15:16:03 GMT
+      server:
+      - nginx/1.0.12
+      content-length:
+      - '101'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 0}, "objects": []}'
+    http_version: '1.1'
+  recorded_at: Sat, 14 Jul 2012 15:17:06 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/dataset?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 14 Jul 2012 15:11:04 GMT
+      server:
+      - nginx/1.0.12
+      content-length:
+      - '101'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 0}, "objects": []}'
+    http_version: '1.1'
+  recorded_at: Sat, 14 Jul 2012 15:17:07 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/dataset?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sat, 14 Jul 2012 15:16:05 GMT
+      server:
+      - nginx/1.0.12
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 0}, "objects": []}'
+    http_version: '1.1'
+  recorded_at: Sat, 14 Jul 2012 15:17:08 GMT
 recorded_with: VCR 2.2.2
-http_interactions: 
-- request: 
-    method: get
-    uri: https://bigml.io/dev/andromeda/source?api_key=<API_KEY>&username=<USERNAME>
-    body: 
-      string: ""
-    headers: 
-      connection: 
-      - close
-  response: 
-    status: 
-      code: 200
-      message: OK
-    headers: 
-      connection: 
-      - Close
-      content-type: 
-      - application/json; charset=utf-8
-      server: 
-      - nginx/1.0.12
-      date: 
-      - Sun, 08 Jul 2012 20:39:54 GMT
-      content-length: 
-      - "101"
-    body: 
-      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
-    http_version: "1.1"
-  recorded_at: Sun, 08 Jul 2012 20:45:15 GMT
-- request: 
-    method: get
-    uri: https://bigml.io/dev/andromeda/dataset?api_key=<API_KEY>&username=<USERNAME>
-    body: 
-      string: ""
-    headers: 
-      connection: 
-      - close
-  response: 
-    status: 
-      code: 200
-      message: OK
-    headers: 
-      connection: 
-      - Close
-      content-type: 
-      - application/json; charset=utf-8
-      server: 
-      - nginx/1.0.12
-      date: 
-      - Sun, 08 Jul 2012 20:44:48 GMT
-      transfer-encoding: 
-      - chunked
-    body: 
-      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
-    http_version: "1.1"
-  recorded_at: Sun, 08 Jul 2012 20:45:16 GMT
-- request: 
-    method: get
-    uri: https://bigml.io/dev/andromeda/dataset?api_key=<API_KEY>&username=<USERNAME>
-    body: 
-      string: ""
-    headers: 
-      connection: 
-      - close
-  response: 
-    status: 
-      code: 200
-      message: OK
-    headers: 
-      connection: 
-      - Close
-      content-type: 
-      - application/json; charset=utf-8
-      server: 
-      - nginx/1.0.12
-      date: 
-      - Sun, 08 Jul 2012 20:39:56 GMT
-      transfer-encoding: 
-      - chunked
-    body: 
-      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
-    http_version: "1.1"
-  recorded_at: Sun, 08 Jul 2012 20:45:17 GMT

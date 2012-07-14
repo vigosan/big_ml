@@ -1,117 +1,135 @@
---- 
-recorded_with: VCR 2.2.2
-http_interactions: 
-- request: 
+---
+http_interactions:
+- request:
     method: get
-    uri: https://bigml.io/dev/andromeda/source?api_key=<API_KEY>&username=<USERNAME>
-    body: 
-      string: ""
-    headers: 
-      connection: 
+    uri: https://bigml.io/dev/andromeda/source?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
       - close
-  response: 
-    status: 
+  response:
+    status:
       code: 200
       message: OK
-    headers: 
-      connection: 
-      - Close
-      content-type: 
+    headers:
+      content-type:
       - application/json; charset=utf-8
-      server: 
+      date:
+      - Sat, 14 Jul 2012 15:26:55 GMT
+      server:
       - nginx/1.0.12
-      date: 
-      - Sun, 08 Jul 2012 20:50:15 GMT
-      content-length: 
-      - "101"
-    body: 
-      string: "{\"meta\": {\"limit\": 20, \"next\": null, \"offset\": 0, \"previous\": null, \"total_count\": 0}, \"objects\": []}"
-    http_version: "1.1"
-  recorded_at: Sun, 08 Jul 2012 20:55:37 GMT
-- request: 
+      content-length:
+      - '101'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 0}, "objects": []}'
+    http_version: '1.1'
+  recorded_at: Sat, 14 Jul 2012 15:27:58 GMT
+- request:
     method: post
     uri: https://bigml.io/dev/andromeda/source
-    body: 
-      string: ""
-    headers: 
-      connection: 
-      - close
-      content-type: 
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      content-type:
       - multipart/form-data; boundary=-----------RubyMultipartPost
-      content-length: 
-      - "5147"
-  response: 
-    status: 
+      content-length:
+      - '5149'
+      connection:
+      - close
+  response:
+    status:
       code: 201
       message: CREATED
-    headers: 
-      location: 
-      - http://bigml.io/andromeda/source/4ff9f3f51552683175000090
-      connection: 
-      - Close
-      content-type: 
+    headers:
+      content-type:
       - application/json; charset=utf-8
-      server: 
+      date:
+      - Sat, 14 Jul 2012 15:21:57 GMT
+      location:
+      - http://bigml.io/andromeda/source/50018fe4035d074059000046
+      server:
       - nginx/1.0.12
-      date: 
-      - Sun, 08 Jul 2012 20:55:10 GMT
-      content-length: 
-      - "580"
-    body: 
-      string: "{\"category\": 0, \"code\": 201, \"content_type\": \"application/octet-stream\", \"created\": \"2012-07-08T20:56:21.880769\", \"credits\": 0.0, \"description\": \"\", \"dev\": true, \"file_name\": \"iris.csv\", \"md5\": \"d1175c032e1042bec7f974c91e4a65ae\", \"name\": \"iris.csv\", \"number_of_datasets\": 0, \"number_of_models\": 0, \"number_of_predictions\": 0, \"private\": true, \"resource\": \"source/4ff9f3f51552683175000090\", \"size\": 4608, \"source_parser\": {}, \"status\": {\"code\": 1, \"message\": \"The request has been queued and will be processed soon\"}, \"tags\": [], \"type\": 0, \"updated\": \"2012-07-08T20:56:21.880799\"}"
-    http_version: "1.1"
-  recorded_at: Sun, 08 Jul 2012 20:55:38 GMT
-- request: 
+      content-length:
+      - '580'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"category": 0, "code": 201, "content_type": "application/octet-stream",
+        "created": "2012-07-14T15:27:32.949888", "credits": 0.0, "description": "",
+        "dev": true, "file_name": "iris.csv", "md5": "d1175c032e1042bec7f974c91e4a65ae",
+        "name": "iris.csv", "number_of_datasets": 0, "number_of_models": 0, "number_of_predictions":
+        0, "private": true, "resource": "source/50018fe4035d074059000046", "size":
+        4608, "source_parser": {}, "status": {"code": 1, "message": "The request has
+        been queued and will be processed soon"}, "tags": [], "type": 0, "updated":
+        "2012-07-14T15:27:32.949915"}'
+    http_version: '1.1'
+  recorded_at: Sat, 14 Jul 2012 15:28:00 GMT
+- request:
     method: delete
-    uri: https://bigml.io/dev/andromeda/source/4ff9f3f51552683175000090?api_key=<API_KEY>&username=<USERNAME>
-    body: 
-      string: ""
-    headers: 
-      connection: 
+    uri: https://bigml.io/dev/andromeda/source/50018fe4035d074059000046?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
       - close
-  response: 
-    status: 
+  response:
+    status:
       code: 204
       message: NO CONTENT
-    headers: 
-      connection: 
-      - Close
-      content-type: 
+    headers:
+      content-length:
+      - '0'
+      content-type:
       - text/html; charset=utf-8
-      server: 
+      date:
+      - Sat, 14 Jul 2012 15:27:02 GMT
+      server:
       - nginx/1.0.12
-      date: 
-      - Sun, 08 Jul 2012 20:50:19 GMT
-      content-length: 
-      - "0"
-    body: 
-      string: ""
-    http_version: "1.1"
-  recorded_at: Sun, 08 Jul 2012 20:55:41 GMT
-- request: 
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Sat, 14 Jul 2012 15:28:05 GMT
+- request:
     method: get
-    uri: https://bigml.io/dev/andromeda/source/4ff9f3f51552683175000090?api_key=<API_KEY>&username=<USERNAME>
-    body: 
-      string: ""
-    headers: 
-      connection: 
+    uri: https://bigml.io/dev/andromeda/source/50018fe4035d074059000046?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
       - close
-  response: 
-    status: 
+  response:
+    status:
       code: 404
       message: NOT FOUND
-    headers: 
-      connection: 
-      - Close
-      content-type: 
+    headers:
+      content-type:
       - application/json; charset=utf-8
-      server: 
+      date:
+      - Sat, 14 Jul 2012 15:22:03 GMT
+      server:
       - nginx/1.0.12
-      date: 
-      - Sun, 08 Jul 2012 20:55:14 GMT
-      content-length: 
-      - "169"
-    body: 
-      string: "{\"code\": 404, \"status\": {\"code\": -1201, \"extra\": [\"Couldn't find an instance of 'Source' which matched 'pk=4ff9f3f51552683175000090'.\"], \"message\": \"Id does not exist\"}}"
-    http_version: "1.1"
-  recorded_at: Sun, 08 Jul 2012 20:55:42 GMT
+      content-length:
+      - '169'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"code": 404, "status": {"code": -1201, "extra": ["Couldn''t find
+        an instance of ''Source'' which matched ''pk=50018fe4035d074059000046''."],
+        "message": "Id does not exist"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 14 Jul 2012 15:28:06 GMT
+recorded_with: VCR 2.2.2

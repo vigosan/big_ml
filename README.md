@@ -2,6 +2,8 @@
 
 A Ruby wrapper for the [BigML REST API](https://bigml.com/developers), provides access to sources, datasets, models, and predictions. You can create, retrieve, update and delete 
 
+[![Build Status](https://secure.travis-ci.org/vigosan/big_ml.png?branch=master)](http://travis-ci.org/vigosan/big_ml)
+
 ## Synopsis
 
 ```ruby

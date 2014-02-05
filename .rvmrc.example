@@ -1,1 +1,1 @@
-rvm use --create ruby-1.9.3-p194@bigml > /dev/null
+rvm use --create ruby-2.1.0@bigml > /dev/null

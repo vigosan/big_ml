@@ -1,6 +1,6 @@
 # BigML
 
-A Ruby wrapper for the [BigML REST API](https://bigml.com/developers), provides access to sources, datasets, models, and predictions. You can create, retrieve, update and delete 
+A Ruby wrapper for the [BigML REST API](https://bigml.com/developers), provides access to sources, datasets, models, and predictions. You can create, retrieve, update and delete
 
 [![Build Status](https://secure.travis-ci.org/vigosan/big_ml.png?branch=master)](http://travis-ci.org/vigosan/big_ml)
 
@@ -26,7 +26,7 @@ all_datasets = BigML::Dataset.all
 # or just want to create one?
 dataset = source.to_dataset
 
-# find a concrete one 
+# find a concrete one
 model = BigML::Model.find("4fe8868a035d07682f002891")
 
 # create you predictions using parameters...
@@ -66,10 +66,10 @@ Install the gem with rubygem in your system:
 
 This library has been tested on the following ruby interpreters:
 
-* MRI 1.9.2
-* MRI 1.9.3
+* 1.9.3
+* 2.1.0
 
-## Running the tests 
+## Running the tests
 
 Download and run the test suit:
 

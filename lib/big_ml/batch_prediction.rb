@@ -17,6 +17,15 @@ module BigML
         response = client.post("/#{resource_name}", {}, { :model => model, :dataset => dataset }.merge!(options))
         self.new(response) if response.success?
       end
+
+      def download(id)
+        response = client.get("/#{resource_name}/#{id}/download")
+        response.body if response.success?
+      end
+    end
+
+    def download
+      self.class.download(id)
     end
 
     def ready?

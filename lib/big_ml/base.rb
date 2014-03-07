@@ -1,4 +1,5 @@
 require 'big_ml/util/client'
+require 'timeout'
 
 module BigML
   class Base
@@ -23,6 +24,22 @@ module BigML
       self.class.update(id, options)
     end
 
+    def ready?
+      success? || error?
+    end
+
+    def success?
+      status["code"] == 5
+    end
+
+    def error?
+      status["code"] < 0
+    end
+
+    def wait_for_ready(options = {:delay => 1, :timeout => 60})
+      BigML::Base.wait_for_ready(self, options)
+    end
+
     class << self
       def all(options = {})
         response = client.get("/#{resource_name}", options)
@@ -45,6 +62,19 @@ module BigML
 
       def delete_all
         all.each {|s| delete(s.id) }
+      end
+
+      # Keeps reloading resource until it is ready
+      def wait_for_ready(resource, options = {:delay => 1, :timeout => 60})
+        klass = resource.class
+        remaining = options[:timeout]
+        until resource && resource.ready?
+          resource = klass.find(resource.id)
+          sleep(options[:delay]) unless resource.ready?
+          remaining = remaining - options[:delay]
+          raise Timeout::Error if remaining <= 0
+        end
+        resource
       end
 
       private

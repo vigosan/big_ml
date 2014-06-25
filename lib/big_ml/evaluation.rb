@@ -17,9 +17,9 @@ module BigML
       def create(model_or_ensemble, dataset, options = {})
         arguments = { dataset: dataset }
         if model_or_ensemble.start_with? 'model'
-          arguments[:model] = model
+          arguments[:model] = model_or_ensemble
         elsif model_or_ensemble.start_with? 'ensemble'
-          arguments[:ensemble] = ensemble
+          arguments[:ensemble] = model_or_ensemble
         else
           raise ArgumentError, "Expected model or ensemble, got #{model_or_ensemble}"
         end

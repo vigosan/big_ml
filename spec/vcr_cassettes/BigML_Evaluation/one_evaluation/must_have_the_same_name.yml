@@ -1,0 +1,1108 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/source?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:10 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '1002'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 1}, "objects": [{"category": 0, "code": 200, "content_type":
+        "application/octet-stream", "created": "2014-06-25T14:18:23.023000", "credits":
+        0.0, "description": "", "dev": true, "file_name": "iris.csv", "md5": "d1175c032e1042bec7f974c91e4a65ae",
+        "name": "iris.csv", "number_of_datasets": 1, "number_of_ensembles": 0, "number_of_models":
+        1, "number_of_predictions": 0, "private": true, "resource": "source/53aada2f0af5e8152c0014d2",
+        "shared": false, "size": 4608, "source_parser": {"header": true, "locale":
+        "en_US", "missing_tokens": ["", "NaN", "NULL", "N/A", "null", "-", "#REF!",
+        "#VALUE!", "?", "#NULL!", "#NUM!", "#DIV/0", "n/a", "#NAME?", "NIL", "nil",
+        "na", "#N/A", "NA"], "quote": "\"", "separator": ","}, "status": {"code":
+        5, "elapsed": 276, "message": "The source has been created"}, "subscription":
+        false, "tags": [], "term_analysis": {"enabled": true}, "type": 0, "updated":
+        "2014-06-25T14:18:26.765000"}]}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:10 GMT
+- request:
+    method: delete
+    uri: https://bigml.io/dev/andromeda/source/53aada2f0af5e8152c0014d2?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: NO CONTENT
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 25 Jun 2014 14:20:11 GMT
+      server:
+      - nginx/1.0.12
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:11 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/dataset?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:11 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 1}, "objects": [{"all_fields": true, "category": 0, "cluster":
+        null, "cluster_status": true, "code": 200, "columns": 5, "created": "2014-06-25T14:18:24.644000",
+        "credits": 0.00439453125, "description": "", "dev": true, "field_types": {"categorical":
+        1, "datetime": 0, "numeric": 4, "preferred": 5, "text": 0, "total": 5}, "locale":
+        "en_US", "missing_numeric_rows": 0, "name": "iris'' dataset", "number_of_batchcentroids":
+        0, "number_of_batchpredictions": 0, "number_of_clusters": 0, "number_of_ensembles":
+        0, "number_of_evaluations": 0, "number_of_models": 1, "number_of_predictions":
+        0, "objective_field": {"column_number": 4, "datatype": "string", "id": "000004",
+        "name": "species", "optype": "categorical", "order": 4, "term_analysis": {"enabled":
+        true}}, "price": 0.0, "private": true, "ranges": null, "replacements": null,
+        "resource": "dataset/53aada30ffa044085a000c17", "rows": 150, "sample_rates":
+        null, "seeds": null, "shared": false, "size": 4608, "source": "source/53aada2f0af5e8152c0014d2",
+        "source_status": false, "status": {"bytes": 4608, "code": 5, "elapsed": 372,
+        "field_errors": [], "message": "The dataset has been created", "row_format_errors":
+        [], "serialized_rows": 150}, "subscription": false, "tags": [], "term_limit":
+        32, "updated": "2014-06-25T14:18:29.033000"}]}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:11 GMT
+- request:
+    method: delete
+    uri: https://bigml.io/dev/andromeda/dataset/53aada30ffa044085a000c17?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: NO CONTENT
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 25 Jun 2014 14:20:11 GMT
+      server:
+      - nginx/1.0.12
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:11 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/model?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:11 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 1}, "objects": [{"balance_objective": false, "category": 0,
+        "code": 200, "columns": 5, "created": "2014-06-25T14:18:26.754000", "credits":
+        0.017578125, "credits_per_prediction": 0.0, "dataset": "dataset/53aada30ffa044085a000c17",
+        "dataset_field_types": {"categorical": 1, "datetime": 0, "numeric": 4, "preferred":
+        5, "text": 0, "total": 5}, "dataset_status": false, "dataset_type": 0, "description":
+        "", "dev": true, "ensemble": false, "ensemble_id": "", "ensemble_index": 0,
+        "locale": "en_US", "max_columns": 5, "max_rows": 150, "name": "iris'' dataset
+        model", "node_threshold": 512, "number_of_batchpredictions": 0, "number_of_evaluations":
+        0, "number_of_predictions": 0, "number_of_public_predictions": 0, "objective_field":
+        "000004", "objective_fields": ["000004"], "ordering": 0, "out_of_bag": false,
+        "price": 0.0, "private": true, "randomize": false, "range": [1, 150], "replacement":
+        false, "resource": "model/53aada32ffa04408550016df", "rows": 150, "sample_rate":
+        1.0, "selective_pruning": true, "shared": false, "size": 4608, "source": "source/53aada2f0af5e8152c0014d2",
+        "source_status": false, "stat_pruning": true, "status": {"code": 5, "elapsed":
+        223, "message": "The model has been created", "progress": 1.0}, "subscription":
+        false, "tags": ["species"], "updated": "2014-06-25T14:18:29.042000", "white_box":
+        false}]}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:11 GMT
+- request:
+    method: delete
+    uri: https://bigml.io/dev/andromeda/model/53aada32ffa04408550016df?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: NO CONTENT
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 25 Jun 2014 14:20:12 GMT
+      server:
+      - nginx/1.0.12
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:12 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/evaluation?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:12 GMT
+      server:
+      - nginx/1.0.12
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 0}, "objects": []}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:12 GMT
+- request:
+    method: post
+    uri: https://bigml.io/dev/andromeda/source
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      content-type:
+      - multipart/form-data; boundary=-----------RubyMultipartPost
+      content-length:
+      - '5150'
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:12 GMT
+      location:
+      - http://bigml.io/andromeda/source/53aada9cffa04408570008f4
+      server:
+      - nginx/1.0.12
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"category": 0, "code": 201, "content_type": "application/octet-stream",
+        "created": "2014-06-25T14:20:12.338838", "credits": 0.0, "description": "",
+        "dev": true, "fields_meta": {"count": 0, "limit": 1000, "offset": 0, "total":
+        0}, "file_name": "iris.csv", "md5": "d1175c032e1042bec7f974c91e4a65ae", "name":
+        "iris.csv", "number_of_datasets": 0, "number_of_ensembles": 0, "number_of_models":
+        0, "number_of_predictions": 0, "private": true, "resource": "source/53aada9cffa04408570008f4",
+        "shared": false, "size": 4608, "source_parser": {}, "status": {"code": 1,
+        "message": "The request has been queued and will be processed soon"}, "subscription":
+        false, "tags": [], "term_analysis": {}, "type": 0, "updated": "2014-06-25T14:20:12.338877"}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:12 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/source/53aada9cffa04408570008f4?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:12 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '761'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"category": 0, "code": 200, "content_type": "application/octet-stream",
+        "created": "2014-06-25T14:20:12.338000", "credits": 0.0, "description": "",
+        "dev": true, "fields_meta": {"count": 0, "limit": 1000, "offset": 0, "query_total":
+        0, "total": 0}, "file_name": "iris.csv", "md5": "d1175c032e1042bec7f974c91e4a65ae",
+        "name": "iris.csv", "number_of_datasets": 0, "number_of_ensembles": 0, "number_of_models":
+        0, "number_of_predictions": 0, "private": true, "resource": "source/53aada9cffa04408570008f4",
+        "shared": false, "size": 4608, "source_parser": {"missing_tokens": []}, "status":
+        {"code": 3, "elapsed": 1, "message": "The source is being created"}, "subscription":
+        false, "tags": [], "term_analysis": {}, "type": 0, "updated": "2014-06-25T14:20:12.562000"}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:12 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/source/53aada9cffa04408570008f4?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:13 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '1478'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"category": 0, "code": 200, "content_type": "application/octet-stream",
+        "created": "2014-06-25T14:20:12.338000", "credits": 0.0, "description": "",
+        "dev": true, "fields": {"000000": {"column_number": 0, "name": "sepal length",
+        "optype": "numeric", "order": 0}, "000001": {"column_number": 1, "name": "sepal
+        width", "optype": "numeric", "order": 1}, "000002": {"column_number": 2, "name":
+        "petal length", "optype": "numeric", "order": 2}, "000003": {"column_number":
+        3, "name": "petal width", "optype": "numeric", "order": 3}, "000004": {"column_number":
+        4, "name": "species", "optype": "categorical", "order": 4, "term_analysis":
+        {"enabled": true}}}, "fields_meta": {"count": 5, "limit": 1000, "offset":
+        0, "query_total": 5, "total": 5}, "file_name": "iris.csv", "md5": "d1175c032e1042bec7f974c91e4a65ae",
+        "name": "iris.csv", "number_of_datasets": 0, "number_of_ensembles": 0, "number_of_models":
+        0, "number_of_predictions": 0, "private": true, "resource": "source/53aada9cffa04408570008f4",
+        "shared": false, "size": 4608, "source_parser": {"header": true, "locale":
+        "en_US", "missing_tokens": ["", "NaN", "NULL", "N/A", "null", "-", "#REF!",
+        "#VALUE!", "?", "#NULL!", "#NUM!", "#DIV/0", "n/a", "#NAME?", "NIL", "nil",
+        "na", "#N/A", "NA"], "quote": "\"", "separator": ","}, "status": {"code":
+        5, "elapsed": 519, "message": "The source has been created"}, "subscription":
+        false, "tags": [], "term_analysis": {"enabled": true}, "type": 0, "updated":
+        "2014-06-25T14:20:13.103000"}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:13 GMT
+- request:
+    method: post
+    uri: https://bigml.io/dev/andromeda/dataset?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: UTF-8
+      string: '{"source":"source/53aada9cffa04408570008f4"}'
+    headers:
+      content-type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:14 GMT
+      location:
+      - http://bigml.io/andromeda/dataset/53aada9d0af5e8152c001501
+      server:
+      - nginx/1.0.12
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"all_fields": true, "category": 0, "cluster": null, "cluster_status":
+        true, "code": 201, "columns": 0, "created": "2014-06-25T14:20:13.983853",
+        "credits": 0.00439453125, "description": "", "dev": true, "download": {"code":
+        0, "excluded_input_fields": [], "header": true, "input_fields": [], "message":
+        "", "preview": [], "separator": ","}, "excluded_fields": [], "field_types":
+        {"categorical": 0, "datetime": 0, "numeric": 0, "preferred": 0, "text": 0,
+        "total": 0}, "fields_meta": {"count": 0, "limit": 1000, "offset": 0, "total":
+        0}, "locale": "en-US", "missing_numeric_rows": 0, "missing_tokens": [], "name":
+        "iris'' dataset", "number_of_batchcentroids": 0, "number_of_batchpredictions":
+        0, "number_of_clusters": 0, "number_of_ensembles": 0, "number_of_evaluations":
+        0, "number_of_models": 0, "number_of_predictions": 0, "price": 0.0, "private":
+        true, "ranges": null, "replacements": null, "resource": "dataset/53aada9d0af5e8152c001501",
+        "rows": 0, "sample_rates": null, "seeds": null, "shared": false, "size": 4608,
+        "source": "source/53aada9cffa04408570008f4", "source_status": true, "status":
+        {"code": 1, "message": "The dataset is being processed and will be created
+        soon"}, "subscription": false, "tags": [], "term_limit": 32, "updated": "2014-06-25T14:20:13.983899",
+        "user_metadata": {}}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:14 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/dataset/53aada9d0af5e8152c001501?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:14 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '2044'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"all_fields": true, "category": 0, "cluster": null, "cluster_status":
+        true, "code": 200, "columns": 5, "created": "2014-06-25T14:20:13.983000",
+        "credits": 0.00439453125, "description": "", "dev": true, "download": {"code":
+        0, "excluded_input_fields": [], "header": true, "input_fields": [], "message":
+        "", "preview": [], "separator": ","}, "excluded_fields": [], "field_types":
+        {"categorical": 0, "datetime": 0, "numeric": 0, "preferred": 0, "text": 0,
+        "total": 5}, "fields": {"000000": {"column_number": 0, "name": "sepal length",
+        "optype": "numeric", "order": 0}, "000001": {"column_number": 1, "name": "sepal
+        width", "optype": "numeric", "order": 1}, "000002": {"column_number": 2, "name":
+        "petal length", "optype": "numeric", "order": 2}, "000003": {"column_number":
+        3, "name": "petal width", "optype": "numeric", "order": 3}, "000004": {"column_number":
+        4, "name": "species", "optype": "categorical", "order": 4, "term_analysis":
+        {"enabled": true}}}, "fields_meta": {"count": 5, "limit": 1000, "offset":
+        0, "query_total": 5, "total": 5}, "locale": "en_US", "missing_numeric_rows":
+        0, "missing_tokens": ["", "NaN", "NULL", "N/A", "null", "-", "#REF!", "#VALUE!",
+        "?", "#NULL!", "#NUM!", "#DIV/0", "n/a", "#NAME?", "NIL", "nil", "na", "#N/A",
+        "NA"], "name": "iris'' dataset", "number_of_batchcentroids": 0, "number_of_batchpredictions":
+        0, "number_of_clusters": 0, "number_of_ensembles": 0, "number_of_evaluations":
+        0, "number_of_models": 0, "number_of_predictions": 0, "price": 0.0, "private":
+        true, "ranges": null, "replacements": null, "resource": "dataset/53aada9d0af5e8152c001501",
+        "rows": 0, "sample_rates": null, "seeds": null, "shared": false, "size": 4608,
+        "source": "source/53aada9cffa04408570008f4", "source_status": true, "status":
+        {"bytes": 0, "code": 2, "elapsed": 0, "field_errors": [], "message": "The
+        dataset creation has been started.  No partial summary yet", "row_format_errors":
+        [], "serialized_rows": 0}, "subscription": false, "tags": [], "term_limit":
+        32, "updated": "2014-06-25T14:20:14.231000", "user_metadata": {}}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:14 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/dataset/53aada9d0af5e8152c001501?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:15 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"all_fields": true, "category": 0, "cluster": null, "cluster_status":
+        true, "code": 200, "columns": 5, "created": "2014-06-25T14:20:13.983000",
+        "credits": 0.00439453125, "description": "", "dev": true, "download": {"code":
+        0, "excluded_input_fields": [], "header": true, "input_fields": [], "message":
+        "", "preview": [], "separator": ","}, "excluded_fields": [], "field_types":
+        {"categorical": 1, "datetime": 0, "numeric": 4, "preferred": 5, "text": 0,
+        "total": 5}, "fields": {"000000": {"column_number": 0, "datatype": "double",
+        "name": "sepal length", "optype": "numeric", "order": 0, "preferred": true,
+        "summary": {"bins": [[4.3, 1], [4.425, 4], [4.6, 4], [4.77143, 7], [4.9625,
+        16], [5.1, 9], [5.2, 4], [5.3, 1], [5.4, 6], [5.5, 7], [5.6, 6], [5.7, 8],
+        [5.8, 7], [5.9, 3], [6, 6], [6.1, 6], [6.2, 4], [6.3, 9], [6.4, 7], [6.5,
+        5], [6.6, 2], [6.7, 8], [6.8, 3], [6.9, 4], [7, 1], [7.1, 1], [7.2, 3], [7.3,
+        1], [7.4, 1], [7.6, 1], [7.7, 4], [7.9, 1]], "maximum": 7.9, "mean": 5.84333,
+        "median": 5.77889, "minimum": 4.3, "missing_count": 0, "population": 150,
+        "splits": [4.51526, 4.67252, 4.81113, 4.89582, 4.96139, 5.01131, 5.05992,
+        5.11148, 5.18177, 5.35681, 5.44129, 5.5108, 5.58255, 5.65532, 5.71658, 5.77889,
+        5.85381, 5.97078, 6.05104, 6.13074, 6.23023, 6.29578, 6.35078, 6.41459, 6.49383,
+        6.63013, 6.70719, 6.79218, 6.92597, 7.20423, 7.64746], "standard_deviation":
+        0.82807, "sum": 876.5, "sum_squares": 5223.85, "variance": 0.68569}}, "000001":
+        {"column_number": 1, "datatype": "double", "name": "sepal width", "optype":
+        "numeric", "order": 1, "preferred": true, "summary": {"counts": [[2, 1], [2.2,
+        3], [2.3, 4], [2.4, 3], [2.5, 8], [2.6, 5], [2.7, 9], [2.8, 14], [2.9, 10],
+        [3, 26], [3.1, 11], [3.2, 13], [3.3, 6], [3.4, 12], [3.5, 6], [3.6, 4], [3.7,
+        3], [3.8, 6], [3.9, 2], [4, 1], [4.1, 1], [4.2, 1], [4.4, 1]], "maximum":
+        4.4, "mean": 3.05733, "median": 3.02044, "minimum": 2, "missing_count": 0,
+        "population": 150, "standard_deviation": 0.43587, "sum": 458.6, "sum_squares":
+        1430.4, "variance": 0.18998}}, "000002": {"column_number": 2, "datatype":
+        "double", "name": "petal length", "optype": "numeric", "order": 2, "preferred":
+        true, "summary": {"bins": [[1, 1], [1.16667, 3], [1.3, 7], [1.4, 13], [1.5,
+        13], [1.6, 7], [1.7, 4], [1.9, 2], [3, 1], [3.3, 2], [3.5, 2], [3.6, 1], [3.75,
+        2], [3.9, 3], [4.0375, 8], [4.23333, 6], [4.46667, 12], [4.6, 3], [4.74444,
+        9], [4.94444, 9], [5.1, 8], [5.25, 4], [5.46, 5], [5.6, 6], [5.75, 6], [5.95,
+        4], [6.1, 3], [6.3, 1], [6.4, 1], [6.6, 1], [6.7, 2], [6.9, 1]], "maximum":
+        6.9, "mean": 3.758, "median": 4.34142, "minimum": 1, "missing_count": 0, "population":
+        150, "splits": [1.25138, 1.32426, 1.37171, 1.40962, 1.44567, 1.48173, 1.51859,
+        1.56301, 1.6255, 1.74645, 3.23033, 3.675, 3.94203, 4.0469, 4.18243, 4.34142,
+        4.45309, 4.51823, 4.61771, 4.72566, 4.83445, 4.93363, 5.03807, 5.1064, 5.20938,
+        5.43979, 5.5744, 5.6646, 5.81496, 6.02913, 6.38125], "standard_deviation":
+        1.7653, "sum": 563.7, "sum_squares": 2582.71, "variance": 3.11628}}, "000003":
+        {"column_number": 3, "datatype": "double", "name": "petal width", "optype":
+        "numeric", "order": 3, "preferred": true, "summary": {"counts": [[0.1, 5],
+        [0.2, 29], [0.3, 7], [0.4, 7], [0.5, 1], [0.6, 1], [1, 7], [1.1, 3], [1.2,
+        5], [1.3, 13], [1.4, 8], [1.5, 12], [1.6, 4], [1.7, 2], [1.8, 12], [1.9, 5],
+        [2, 6], [2.1, 6], [2.2, 3], [2.3, 8], [2.4, 3], [2.5, 3]], "maximum": 2.5,
+        "mean": 1.19933, "median": 1.32848, "minimum": 0.1, "missing_count": 0, "population":
+        150, "standard_deviation": 0.76224, "sum": 179.9, "sum_squares": 302.33, "variance":
+        0.58101}}, "000004": {"column_number": 4, "datatype": "string", "name": "species",
+        "optype": "categorical", "order": 4, "preferred": true, "summary": {"categories":
+        [["Iris-setosa", 50], ["Iris-versicolor", 50], ["Iris-virginica", 50]], "missing_count":
+        0}, "term_analysis": {"enabled": true}}}, "fields_meta": {"count": 5, "limit":
+        1000, "offset": 0, "query_total": 5, "total": 5}, "locale": "en_US", "missing_numeric_rows":
+        0, "missing_tokens": ["", "NaN", "NULL", "N/A", "null", "-", "#REF!", "#VALUE!",
+        "?", "#NULL!", "#NUM!", "#DIV/0", "n/a", "#NAME?", "NIL", "nil", "na", "#N/A",
+        "NA"], "name": "iris'' dataset", "number_of_batchcentroids": 0, "number_of_batchpredictions":
+        0, "number_of_clusters": 0, "number_of_ensembles": 0, "number_of_evaluations":
+        0, "number_of_models": 0, "number_of_predictions": 0, "objective_field": {"column_number":
+        4, "datatype": "string", "id": "000004", "name": "species", "optype": "categorical",
+        "order": 4, "term_analysis": {"enabled": true}}, "price": 0.0, "private":
+        true, "ranges": null, "replacements": null, "resource": "dataset/53aada9d0af5e8152c001501",
+        "rows": 150, "sample_rates": null, "seeds": null, "shared": false, "size":
+        4608, "source": "source/53aada9cffa04408570008f4", "source_status": true,
+        "status": {"bytes": 4608, "code": 5, "elapsed": 494, "field_errors": [], "message":
+        "The dataset has been created", "row_format_errors": [], "serialized_rows":
+        150}, "subscription": false, "tags": [], "term_limit": 32, "updated": "2014-06-25T14:20:14.727000",
+        "user_metadata": {}}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:15 GMT
+- request:
+    method: post
+    uri: https://bigml.io/dev/andromeda/model?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: UTF-8
+      string: '{"dataset":"dataset/53aada9d0af5e8152c001501"}'
+    headers:
+      content-type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:15 GMT
+      location:
+      - http://bigml.io/andromeda/model/53aada9f0af5e8152c001506
+      server:
+      - nginx/1.0.12
+      content-length:
+      - '1365'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"balance_objective": false, "category": 0, "code": 201, "columns":
+        1, "created": "2014-06-25T14:20:15.733155", "credits": 0.017578125, "credits_per_prediction":
+        0.0, "dataset": "dataset/53aada9d0af5e8152c001501", "dataset_field_types":
+        {"categorical": 1, "datetime": 0, "numeric": 4, "preferred": 5, "text": 0,
+        "total": 5}, "dataset_status": true, "dataset_type": 0, "description": "",
+        "dev": true, "ensemble": false, "ensemble_id": "", "ensemble_index": 0, "excluded_fields":
+        [], "fields_meta": {"count": 0, "limit": 1000, "offset": 0, "total": 0}, "input_fields":
+        [], "locale": "en-US", "max_columns": 5, "max_rows": 150, "name": "iris''
+        dataset model", "node_threshold": 512, "number_of_batchpredictions": 0, "number_of_evaluations":
+        0, "number_of_predictions": 0, "number_of_public_predictions": 0, "objective_field":
+        "000004", "objective_fields": ["000004"], "ordering": 0, "out_of_bag": false,
+        "price": 0.0, "private": true, "randomize": false, "range": [1, 150], "replacement":
+        false, "resource": "model/53aada9f0af5e8152c001506", "rows": 150, "sample_rate":
+        1.0, "shared": false, "size": 4608, "source": "source/53aada9cffa04408570008f4",
+        "source_status": true, "status": {"code": 1, "message": "The model is being
+        processed and will be created soon"}, "subscription": false, "tags": ["species"],
+        "updated": "2014-06-25T14:20:15.733187", "white_box": false}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:16 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/model/53aada9f0af5e8152c001506?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:16 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"balance_objective": false, "category": 0, "code": 200, "columns":
+        5, "created": "2014-06-25T14:20:15.733000", "credits": 0.017578125, "credits_per_prediction":
+        0.0, "dataset": "dataset/53aada9d0af5e8152c001501", "dataset_field_types":
+        {"categorical": 1, "datetime": 0, "numeric": 4, "preferred": 5, "text": 0,
+        "total": 5}, "dataset_status": true, "dataset_type": 0, "description": "",
+        "dev": true, "ensemble": false, "ensemble_id": "", "ensemble_index": 0, "excluded_fields":
+        [], "fields_meta": {"count": 5, "limit": 1000, "offset": 0, "query_total":
+        5, "total": 5}, "input_fields": ["000000", "000001", "000002", "000003"],
+        "locale": "en_US", "max_columns": 5, "max_rows": 150, "model": {"fields":
+        {"000000": {"column_number": 0, "datatype": "double", "name": "sepal length",
+        "optype": "numeric", "order": 0, "preferred": true, "summary": {"bins": [[4.3,
+        1], [4.425, 4], [4.6, 4], [4.77143, 7], [4.9625, 16], [5.1, 9], [5.2, 4],
+        [5.3, 1], [5.4, 6], [5.5, 7], [5.6, 6], [5.7, 8], [5.8, 7], [5.9, 3], [6,
+        6], [6.1, 6], [6.2, 4], [6.3, 9], [6.4, 7], [6.5, 5], [6.6, 2], [6.7, 8],
+        [6.8, 3], [6.9, 4], [7, 1], [7.1, 1], [7.2, 3], [7.3, 1], [7.4, 1], [7.6,
+        1], [7.7, 4], [7.9, 1]], "maximum": 7.9, "mean": 5.84333, "median": 5.77889,
+        "minimum": 4.3, "missing_count": 0, "population": 150, "splits": [4.51526,
+        4.67252, 4.81113, 4.89582, 4.96139, 5.01131, 5.05992, 5.11148, 5.18177, 5.35681,
+        5.44129, 5.5108, 5.58255, 5.65532, 5.71658, 5.77889, 5.85381, 5.97078, 6.05104,
+        6.13074, 6.23023, 6.29578, 6.35078, 6.41459, 6.49383, 6.63013, 6.70719, 6.79218,
+        6.92597, 7.20423, 7.64746], "standard_deviation": 0.82807, "sum": 876.5, "sum_squares":
+        5223.85, "variance": 0.68569}}, "000001": {"column_number": 1, "datatype":
+        "double", "name": "sepal width", "optype": "numeric", "order": 1, "preferred":
+        true, "summary": {"counts": [[2, 1], [2.2, 3], [2.3, 4], [2.4, 3], [2.5, 8],
+        [2.6, 5], [2.7, 9], [2.8, 14], [2.9, 10], [3, 26], [3.1, 11], [3.2, 13], [3.3,
+        6], [3.4, 12], [3.5, 6], [3.6, 4], [3.7, 3], [3.8, 6], [3.9, 2], [4, 1], [4.1,
+        1], [4.2, 1], [4.4, 1]], "maximum": 4.4, "mean": 3.05733, "median": 3.02044,
+        "minimum": 2, "missing_count": 0, "population": 150, "standard_deviation":
+        0.43587, "sum": 458.6, "sum_squares": 1430.4, "variance": 0.18998}}, "000002":
+        {"column_number": 2, "datatype": "double", "name": "petal length", "optype":
+        "numeric", "order": 2, "preferred": true, "summary": {"bins": [[1, 1], [1.16667,
+        3], [1.3, 7], [1.4, 13], [1.5, 13], [1.6, 7], [1.7, 4], [1.9, 2], [3, 1],
+        [3.3, 2], [3.5, 2], [3.6, 1], [3.75, 2], [3.9, 3], [4.0375, 8], [4.23333,
+        6], [4.46667, 12], [4.6, 3], [4.74444, 9], [4.94444, 9], [5.1, 8], [5.25,
+        4], [5.46, 5], [5.6, 6], [5.75, 6], [5.95, 4], [6.1, 3], [6.3, 1], [6.4, 1],
+        [6.6, 1], [6.7, 2], [6.9, 1]], "maximum": 6.9, "mean": 3.758, "median": 4.34142,
+        "minimum": 1, "missing_count": 0, "population": 150, "splits": [1.25138, 1.32426,
+        1.37171, 1.40962, 1.44567, 1.48173, 1.51859, 1.56301, 1.6255, 1.74645, 3.23033,
+        3.675, 3.94203, 4.0469, 4.18243, 4.34142, 4.45309, 4.51823, 4.61771, 4.72566,
+        4.83445, 4.93363, 5.03807, 5.1064, 5.20938, 5.43979, 5.5744, 5.6646, 5.81496,
+        6.02913, 6.38125], "standard_deviation": 1.7653, "sum": 563.7, "sum_squares":
+        2582.71, "variance": 3.11628}}, "000003": {"column_number": 3, "datatype":
+        "double", "name": "petal width", "optype": "numeric", "order": 3, "preferred":
+        true, "summary": {"counts": [[0.1, 5], [0.2, 29], [0.3, 7], [0.4, 7], [0.5,
+        1], [0.6, 1], [1, 7], [1.1, 3], [1.2, 5], [1.3, 13], [1.4, 8], [1.5, 12],
+        [1.6, 4], [1.7, 2], [1.8, 12], [1.9, 5], [2, 6], [2.1, 6], [2.2, 3], [2.3,
+        8], [2.4, 3], [2.5, 3]], "maximum": 2.5, "mean": 1.19933, "median": 1.32848,
+        "minimum": 0.1, "missing_count": 0, "population": 150, "standard_deviation":
+        0.76224, "sum": 179.9, "sum_squares": 302.33, "variance": 0.58101}}, "000004":
+        {"column_number": 4, "datatype": "string", "name": "species", "optype": "categorical",
+        "order": 4, "preferred": true, "summary": {"categories": [["Iris-setosa",
+        50], ["Iris-versicolor", 50], ["Iris-virginica", 50]], "missing_count": 0},
+        "term_analysis": {"enabled": true}}}, "kind": "mtree", "missing_tokens": ["",
+        "NaN", "NULL", "N/A", "null", "-", "#REF!", "#VALUE!", "?", "#NULL!", "#NUM!",
+        "#DIV/0", "n/a", "#NAME?", "NIL", "nil", "na", "#N/A", "NA"], "model_fields":
+        {"000004": {"column_number": 4, "datatype": "string", "name": "species", "optype":
+        "categorical", "preferred": true, "term_analysis": {"enabled": true}}}, "node_threshold":
+        512}, "name": "iris'' dataset model", "node_threshold": 512, "number_of_batchpredictions":
+        0, "number_of_evaluations": 0, "number_of_predictions": 0, "number_of_public_predictions":
+        0, "objective_field": "000004", "objective_fields": ["000004"], "ordering":
+        0, "out_of_bag": false, "price": 0.0, "private": true, "randomize": false,
+        "range": [1, 150], "replacement": false, "resource": "model/53aada9f0af5e8152c001506",
+        "rows": 150, "sample_rate": 1.0, "shared": false, "size": 4608, "source":
+        "source/53aada9cffa04408570008f4", "source_status": true, "status": {"code":
+        2, "elapsed": 0, "message": "The model creation has been started. No partial
+        model yet", "progress": 0}, "subscription": false, "tags": ["species"], "updated":
+        "2014-06-25T14:20:15.917000", "white_box": false}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:16 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/model/53aada9f0af5e8152c001506?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:17 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"balance_objective": false, "category": 0, "code": 200, "columns":
+        5, "created": "2014-06-25T14:20:15.733000", "credits": 0.017578125, "credits_per_prediction":
+        0.0, "dataset": "dataset/53aada9d0af5e8152c001501", "dataset_field_types":
+        {"categorical": 1, "datetime": 0, "numeric": 4, "preferred": 5, "text": 0,
+        "total": 5}, "dataset_status": true, "dataset_type": 0, "description": "",
+        "dev": true, "ensemble": false, "ensemble_id": "", "ensemble_index": 0, "excluded_fields":
+        [], "fields_meta": {"count": 5, "limit": 1000, "offset": 0, "query_total":
+        5, "total": 5}, "input_fields": ["000000", "000001", "000002", "000003"],
+        "locale": "en_US", "max_columns": 5, "max_rows": 150, "model": {"depth_threshold":
+        512, "distribution": {"predictions": {"categories": [["Iris-setosa", 50],
+        ["Iris-versicolor", 50], ["Iris-virginica", 50]]}, "training": {"categories":
+        [["Iris-setosa", 50], ["Iris-versicolor", 50], ["Iris-virginica", 50]]}},
+        "fields": {"000000": {"column_number": 0, "datatype": "double", "name": "sepal
+        length", "optype": "numeric", "order": 0, "preferred": true, "summary": {"bins":
+        [[4.3, 1], [4.425, 4], [4.6, 4], [4.77143, 7], [4.9625, 16], [5.1, 9], [5.2,
+        4], [5.3, 1], [5.4, 6], [5.5, 7], [5.6, 6], [5.7, 8], [5.8, 7], [5.9, 3],
+        [6, 6], [6.1, 6], [6.2, 4], [6.3, 9], [6.4, 7], [6.5, 5], [6.6, 2], [6.7,
+        8], [6.8, 3], [6.9, 4], [7, 1], [7.1, 1], [7.2, 3], [7.3, 1], [7.4, 1], [7.6,
+        1], [7.7, 4], [7.9, 1]], "maximum": 7.9, "mean": 5.84333, "median": 5.77889,
+        "minimum": 4.3, "missing_count": 0, "population": 150, "splits": [4.51526,
+        4.67252, 4.81113, 4.89582, 4.96139, 5.01131, 5.05992, 5.11148, 5.18177, 5.35681,
+        5.44129, 5.5108, 5.58255, 5.65532, 5.71658, 5.77889, 5.85381, 5.97078, 6.05104,
+        6.13074, 6.23023, 6.29578, 6.35078, 6.41459, 6.49383, 6.63013, 6.70719, 6.79218,
+        6.92597, 7.20423, 7.64746], "standard_deviation": 0.82807, "sum": 876.5, "sum_squares":
+        5223.85, "variance": 0.68569}}, "000001": {"column_number": 1, "datatype":
+        "double", "name": "sepal width", "optype": "numeric", "order": 1, "preferred":
+        true, "summary": {"counts": [[2, 1], [2.2, 3], [2.3, 4], [2.4, 3], [2.5, 8],
+        [2.6, 5], [2.7, 9], [2.8, 14], [2.9, 10], [3, 26], [3.1, 11], [3.2, 13], [3.3,
+        6], [3.4, 12], [3.5, 6], [3.6, 4], [3.7, 3], [3.8, 6], [3.9, 2], [4, 1], [4.1,
+        1], [4.2, 1], [4.4, 1]], "maximum": 4.4, "mean": 3.05733, "median": 3.02044,
+        "minimum": 2, "missing_count": 0, "population": 150, "standard_deviation":
+        0.43587, "sum": 458.6, "sum_squares": 1430.4, "variance": 0.18998}}, "000002":
+        {"column_number": 2, "datatype": "double", "name": "petal length", "optype":
+        "numeric", "order": 2, "preferred": true, "summary": {"bins": [[1, 1], [1.16667,
+        3], [1.3, 7], [1.4, 13], [1.5, 13], [1.6, 7], [1.7, 4], [1.9, 2], [3, 1],
+        [3.3, 2], [3.5, 2], [3.6, 1], [3.75, 2], [3.9, 3], [4.0375, 8], [4.23333,
+        6], [4.46667, 12], [4.6, 3], [4.74444, 9], [4.94444, 9], [5.1, 8], [5.25,
+        4], [5.46, 5], [5.6, 6], [5.75, 6], [5.95, 4], [6.1, 3], [6.3, 1], [6.4, 1],
+        [6.6, 1], [6.7, 2], [6.9, 1]], "maximum": 6.9, "mean": 3.758, "median": 4.34142,
+        "minimum": 1, "missing_count": 0, "population": 150, "splits": [1.25138, 1.32426,
+        1.37171, 1.40962, 1.44567, 1.48173, 1.51859, 1.56301, 1.6255, 1.74645, 3.23033,
+        3.675, 3.94203, 4.0469, 4.18243, 4.34142, 4.45309, 4.51823, 4.61771, 4.72566,
+        4.83445, 4.93363, 5.03807, 5.1064, 5.20938, 5.43979, 5.5744, 5.6646, 5.81496,
+        6.02913, 6.38125], "standard_deviation": 1.7653, "sum": 563.7, "sum_squares":
+        2582.71, "variance": 3.11628}}, "000003": {"column_number": 3, "datatype":
+        "double", "name": "petal width", "optype": "numeric", "order": 3, "preferred":
+        true, "summary": {"counts": [[0.1, 5], [0.2, 29], [0.3, 7], [0.4, 7], [0.5,
+        1], [0.6, 1], [1, 7], [1.1, 3], [1.2, 5], [1.3, 13], [1.4, 8], [1.5, 12],
+        [1.6, 4], [1.7, 2], [1.8, 12], [1.9, 5], [2, 6], [2.1, 6], [2.2, 3], [2.3,
+        8], [2.4, 3], [2.5, 3]], "maximum": 2.5, "mean": 1.19933, "median": 1.32848,
+        "minimum": 0.1, "missing_count": 0, "population": 150, "standard_deviation":
+        0.76224, "sum": 179.9, "sum_squares": 302.33, "variance": 0.58101}}, "000004":
+        {"column_number": 4, "datatype": "string", "name": "species", "optype": "categorical",
+        "order": 4, "preferred": true, "summary": {"categories": [["Iris-setosa",
+        50], ["Iris-versicolor", 50], ["Iris-virginica", 50]], "missing_count": 0},
+        "term_analysis": {"enabled": true}}}, "importance": [["000002", 0.70194],
+        ["000003", 0.29094], ["000001", 0.00712]], "kind": "mtree", "missing_tokens":
+        ["", "NaN", "NULL", "N/A", "null", "-", "#REF!", "#VALUE!", "?", "#NULL!",
+        "#NUM!", "#DIV/0", "n/a", "#NAME?", "NIL", "nil", "na", "#N/A", "NA"], "model_fields":
+        {"000001": {"column_number": 1, "datatype": "double", "name": "sepal width",
+        "optype": "numeric", "preferred": true}, "000002": {"column_number": 2, "datatype":
+        "double", "name": "petal length", "optype": "numeric", "preferred": true},
+        "000003": {"column_number": 3, "datatype": "double", "name": "petal width",
+        "optype": "numeric", "preferred": true}, "000004": {"column_number": 4, "datatype":
+        "string", "name": "species", "optype": "categorical", "preferred": true, "term_analysis":
+        {"enabled": true}}}, "node_threshold": 512, "root": {"children": [{"children":
+        [{"children": [{"confidence": 0.91799, "count": 43, "id": 3, "objective_summary":
+        {"categories": [["Iris-virginica", 43]]}, "output": "Iris-virginica", "predicate":
+        {"field": "000002", "operator": ">", "value": 4.85}}, {"children": [{"confidence":
+        0.20654, "count": 1, "id": 5, "objective_summary": {"categories": [["Iris-versicolor",
+        1]]}, "output": "Iris-versicolor", "predicate": {"field": "000001", "operator":
+        ">", "value": 3.1}}, {"confidence": 0.34237, "count": 2, "id": 6, "objective_summary":
+        {"categories": [["Iris-virginica", 2]]}, "output": "Iris-virginica", "predicate":
+        {"field": "000001", "operator": "<=", "value": 3.1}}], "confidence": 0.20765,
+        "count": 3, "id": 4, "objective_summary": {"categories": [["Iris-virginica",
+        2], ["Iris-versicolor", 1]]}, "output": "Iris-virginica", "predicate": {"field":
+        "000002", "operator": "<=", "value": 4.85}}], "confidence": 0.88664, "count":
+        46, "id": 2, "objective_summary": {"categories": [["Iris-virginica", 45],
+        ["Iris-versicolor", 1]]}, "output": "Iris-virginica", "predicate": {"field":
+        "000003", "operator": ">", "value": 1.75}}, {"children": [{"children": [{"children":
+        [{"confidence": 0.20654, "count": 1, "id": 10, "objective_summary": {"categories":
+        [["Iris-virginica", 1]]}, "output": "Iris-virginica", "predicate": {"field":
+        "000002", "operator": ">", "value": 5.45}}, {"confidence": 0.34237, "count":
+        2, "id": 11, "objective_summary": {"categories": [["Iris-versicolor", 2]]},
+        "output": "Iris-versicolor", "predicate": {"field": "000002", "operator":
+        "<=", "value": 5.45}}], "confidence": 0.20765, "count": 3, "id": 9, "objective_summary":
+        {"categories": [["Iris-versicolor", 2], ["Iris-virginica", 1]]}, "output":
+        "Iris-versicolor", "predicate": {"field": "000003", "operator": ">", "value":
+        1.55}}, {"confidence": 0.43849, "count": 3, "id": 12, "objective_summary":
+        {"categories": [["Iris-virginica", 3]]}, "output": "Iris-virginica", "predicate":
+        {"field": "000003", "operator": "<=", "value": 1.55}}], "confidence": 0.29999,
+        "count": 6, "id": 8, "objective_summary": {"categories": [["Iris-virginica",
+        4], ["Iris-versicolor", 2]]}, "output": "Iris-virginica", "predicate": {"field":
+        "000002", "operator": ">", "value": 4.95}}, {"children": [{"confidence": 0.20654,
+        "count": 1, "id": 14, "objective_summary": {"categories": [["Iris-virginica",
+        1]]}, "output": "Iris-virginica", "predicate": {"field": "000003", "operator":
+        ">", "value": 1.65}}, {"confidence": 0.92444, "count": 47, "id": 15, "objective_summary":
+        {"categories": [["Iris-versicolor", 47]]}, "output": "Iris-versicolor", "predicate":
+        {"field": "000003", "operator": "<=", "value": 1.65}}], "confidence": 0.89101,
+        "count": 48, "id": 13, "objective_summary": {"categories": [["Iris-versicolor",
+        47], ["Iris-virginica", 1]]}, "output": "Iris-versicolor", "predicate": {"field":
+        "000002", "operator": "<=", "value": 4.95}}], "confidence": 0.8009, "count":
+        54, "id": 7, "objective_summary": {"categories": [["Iris-versicolor", 49],
+        ["Iris-virginica", 5]]}, "output": "Iris-versicolor", "predicate": {"field":
+        "000003", "operator": "<=", "value": 1.75}}], "confidence": 0.40383, "count":
+        100, "id": 1, "objective_summary": {"categories": [["Iris-versicolor", 50],
+        ["Iris-virginica", 50]]}, "output": "Iris-versicolor", "predicate": {"field":
+        "000002", "operator": ">", "value": 2.45}}, {"confidence": 0.92865, "count":
+        50, "id": 16, "objective_summary": {"categories": [["Iris-setosa", 50]]},
+        "output": "Iris-setosa", "predicate": {"field": "000002", "operator": "<=",
+        "value": 2.45}}], "confidence": 0.26289, "count": 150, "id": 0, "objective_summary":
+        {"categories": [["Iris-setosa", 50], ["Iris-versicolor", 50], ["Iris-virginica",
+        50]]}, "output": "Iris-setosa", "predicate": true}}, "name": "iris'' dataset
+        model", "node_threshold": 512, "number_of_batchpredictions": 0, "number_of_evaluations":
+        0, "number_of_predictions": 0, "number_of_public_predictions": 0, "objective_field":
+        "000004", "objective_fields": ["000004"], "ordering": 0, "out_of_bag": false,
+        "price": 0.0, "private": true, "randomize": false, "range": [1, 150], "replacement":
+        false, "resource": "model/53aada9f0af5e8152c001506", "rows": 150, "sample_rate":
+        1.0, "selective_pruning": true, "shared": false, "size": 4608, "source": "source/53aada9cffa04408570008f4",
+        "source_status": true, "stat_pruning": true, "status": {"code": 5, "elapsed":
+        196, "message": "The model has been created", "progress": 1.0}, "subscription":
+        false, "tags": ["species"], "updated": "2014-06-25T14:20:16.109000", "white_box":
+        false}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:17 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/dataset/53aada9d0af5e8152c001501?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:17 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"all_fields": true, "category": 0, "cluster": null, "cluster_status":
+        true, "code": 200, "columns": 5, "created": "2014-06-25T14:20:13.983000",
+        "credits": 0.00439453125, "description": "", "dev": true, "download": {"code":
+        0, "excluded_input_fields": [], "header": true, "input_fields": [], "message":
+        "", "preview": [], "separator": ","}, "excluded_fields": [], "field_types":
+        {"categorical": 1, "datetime": 0, "numeric": 4, "preferred": 5, "text": 0,
+        "total": 5}, "fields": {"000000": {"column_number": 0, "datatype": "double",
+        "name": "sepal length", "optype": "numeric", "order": 0, "preferred": true,
+        "summary": {"bins": [[4.3, 1], [4.425, 4], [4.6, 4], [4.77143, 7], [4.9625,
+        16], [5.1, 9], [5.2, 4], [5.3, 1], [5.4, 6], [5.5, 7], [5.6, 6], [5.7, 8],
+        [5.8, 7], [5.9, 3], [6, 6], [6.1, 6], [6.2, 4], [6.3, 9], [6.4, 7], [6.5,
+        5], [6.6, 2], [6.7, 8], [6.8, 3], [6.9, 4], [7, 1], [7.1, 1], [7.2, 3], [7.3,
+        1], [7.4, 1], [7.6, 1], [7.7, 4], [7.9, 1]], "maximum": 7.9, "mean": 5.84333,
+        "median": 5.77889, "minimum": 4.3, "missing_count": 0, "population": 150,
+        "splits": [4.51526, 4.67252, 4.81113, 4.89582, 4.96139, 5.01131, 5.05992,
+        5.11148, 5.18177, 5.35681, 5.44129, 5.5108, 5.58255, 5.65532, 5.71658, 5.77889,
+        5.85381, 5.97078, 6.05104, 6.13074, 6.23023, 6.29578, 6.35078, 6.41459, 6.49383,
+        6.63013, 6.70719, 6.79218, 6.92597, 7.20423, 7.64746], "standard_deviation":
+        0.82807, "sum": 876.5, "sum_squares": 5223.85, "variance": 0.68569}}, "000001":
+        {"column_number": 1, "datatype": "double", "name": "sepal width", "optype":
+        "numeric", "order": 1, "preferred": true, "summary": {"counts": [[2, 1], [2.2,
+        3], [2.3, 4], [2.4, 3], [2.5, 8], [2.6, 5], [2.7, 9], [2.8, 14], [2.9, 10],
+        [3, 26], [3.1, 11], [3.2, 13], [3.3, 6], [3.4, 12], [3.5, 6], [3.6, 4], [3.7,
+        3], [3.8, 6], [3.9, 2], [4, 1], [4.1, 1], [4.2, 1], [4.4, 1]], "maximum":
+        4.4, "mean": 3.05733, "median": 3.02044, "minimum": 2, "missing_count": 0,
+        "population": 150, "standard_deviation": 0.43587, "sum": 458.6, "sum_squares":
+        1430.4, "variance": 0.18998}}, "000002": {"column_number": 2, "datatype":
+        "double", "name": "petal length", "optype": "numeric", "order": 2, "preferred":
+        true, "summary": {"bins": [[1, 1], [1.16667, 3], [1.3, 7], [1.4, 13], [1.5,
+        13], [1.6, 7], [1.7, 4], [1.9, 2], [3, 1], [3.3, 2], [3.5, 2], [3.6, 1], [3.75,
+        2], [3.9, 3], [4.0375, 8], [4.23333, 6], [4.46667, 12], [4.6, 3], [4.74444,
+        9], [4.94444, 9], [5.1, 8], [5.25, 4], [5.46, 5], [5.6, 6], [5.75, 6], [5.95,
+        4], [6.1, 3], [6.3, 1], [6.4, 1], [6.6, 1], [6.7, 2], [6.9, 1]], "maximum":
+        6.9, "mean": 3.758, "median": 4.34142, "minimum": 1, "missing_count": 0, "population":
+        150, "splits": [1.25138, 1.32426, 1.37171, 1.40962, 1.44567, 1.48173, 1.51859,
+        1.56301, 1.6255, 1.74645, 3.23033, 3.675, 3.94203, 4.0469, 4.18243, 4.34142,
+        4.45309, 4.51823, 4.61771, 4.72566, 4.83445, 4.93363, 5.03807, 5.1064, 5.20938,
+        5.43979, 5.5744, 5.6646, 5.81496, 6.02913, 6.38125], "standard_deviation":
+        1.7653, "sum": 563.7, "sum_squares": 2582.71, "variance": 3.11628}}, "000003":
+        {"column_number": 3, "datatype": "double", "name": "petal width", "optype":
+        "numeric", "order": 3, "preferred": true, "summary": {"counts": [[0.1, 5],
+        [0.2, 29], [0.3, 7], [0.4, 7], [0.5, 1], [0.6, 1], [1, 7], [1.1, 3], [1.2,
+        5], [1.3, 13], [1.4, 8], [1.5, 12], [1.6, 4], [1.7, 2], [1.8, 12], [1.9, 5],
+        [2, 6], [2.1, 6], [2.2, 3], [2.3, 8], [2.4, 3], [2.5, 3]], "maximum": 2.5,
+        "mean": 1.19933, "median": 1.32848, "minimum": 0.1, "missing_count": 0, "population":
+        150, "standard_deviation": 0.76224, "sum": 179.9, "sum_squares": 302.33, "variance":
+        0.58101}}, "000004": {"column_number": 4, "datatype": "string", "name": "species",
+        "optype": "categorical", "order": 4, "preferred": true, "summary": {"categories":
+        [["Iris-setosa", 50], ["Iris-versicolor", 50], ["Iris-virginica", 50]], "missing_count":
+        0}, "term_analysis": {"enabled": true}}}, "fields_meta": {"count": 5, "limit":
+        1000, "offset": 0, "query_total": 5, "total": 5}, "locale": "en_US", "missing_numeric_rows":
+        0, "missing_tokens": ["", "NaN", "NULL", "N/A", "null", "-", "#REF!", "#VALUE!",
+        "?", "#NULL!", "#NUM!", "#DIV/0", "n/a", "#NAME?", "NIL", "nil", "na", "#N/A",
+        "NA"], "name": "iris'' dataset", "number_of_batchcentroids": 0, "number_of_batchpredictions":
+        0, "number_of_clusters": 0, "number_of_ensembles": 0, "number_of_evaluations":
+        0, "number_of_models": 1, "number_of_predictions": 0, "objective_field": {"column_number":
+        4, "datatype": "string", "id": "000004", "name": "species", "optype": "categorical",
+        "order": 4, "term_analysis": {"enabled": true}}, "price": 0.0, "private":
+        true, "ranges": null, "replacements": null, "resource": "dataset/53aada9d0af5e8152c001501",
+        "rows": 150, "sample_rates": null, "seeds": null, "shared": false, "size":
+        4608, "source": "source/53aada9cffa04408570008f4", "source_status": true,
+        "status": {"bytes": 4608, "code": 5, "elapsed": 494, "field_errors": [], "message":
+        "The dataset has been created", "row_format_errors": [], "serialized_rows":
+        150}, "subscription": false, "tags": [], "term_limit": 32, "updated": "2014-06-25T14:20:15.750000",
+        "user_metadata": {}}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:17 GMT
+- request:
+    method: post
+    uri: https://bigml.io/dev/andromeda/evaluation?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: UTF-8
+      string: '{"model":"model/53aada9f0af5e8152c001506","dataset":"dataset/53aada9d0af5e8152c001501"}'
+    headers:
+      content-type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:17 GMT
+      location:
+      - http://bigml.io/andromeda/evaluation/53aadaa10af5e8153700076e
+      server:
+      - nginx/1.0.12
+      content-length:
+      - '929'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"category": 0, "code": 201, "combiner": 0, "created": "2014-06-25T14:20:17.783925",
+        "credits": 1.5, "dataset": "dataset/53aada9d0af5e8152c001501", "dataset_status":
+        true, "dataset_type": 0, "datasets": [], "description": "", "dev": true, "ensemble":
+        "", "fields_map": {}, "locale": "en-US", "max_rows": 150, "missing_strategy":
+        0, "model": "model/53aada9f0af5e8152c001506", "model_status": true, "model_type":
+        0, "name": "Evaluation of iris'' dataset model with iris'' dataset", "number_of_models":
+        1, "ordering": 0, "out_of_bag": false, "private": true, "range": [1, 150],
+        "replacement": false, "resource": "evaluation/53aadaa10af5e8153700076e", "result":
+        {}, "rows": 150, "sample_rate": 1.0, "sampled_rows": 150, "shared": false,
+        "size": 4608, "status": {"code": 1, "message": "The evaluation is being processed
+        and will be performed soon"}, "subscription": false, "tags": [], "type": 0,
+        "updated": "2014-06-25T14:20:17.783983"}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:18 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/evaluation?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:20:18 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 1}, "objects": [{"category": 0, "code": 200, "combiner": 0,
+        "created": "2014-06-25T14:20:17.783000", "credits": 1.5, "dataset": "dataset/53aada9d0af5e8152c001501",
+        "dataset_status": true, "dataset_type": 0, "datasets": [], "description":
+        "", "dev": true, "ensemble": "", "locale": "en-US", "max_rows": 150, "missing_strategy":
+        0, "model": "model/53aada9f0af5e8152c001506", "model_status": true, "model_type":
+        0, "name": "Evaluation of iris'' dataset model with iris'' dataset", "number_of_models":
+        1, "ordering": 0, "out_of_bag": false, "private": true, "range": [1, 150],
+        "replacement": false, "resource": "evaluation/53aadaa10af5e8153700076e", "rows":
+        150, "sample_rate": 1.0, "sampled_rows": 150, "shared": false, "size": 4608,
+        "status": {"code": 2, "elapsed": 0, "message": "The evaluation has been started.
+        No partial evaluation yet", "progress": 0}, "subscription": false, "tags":
+        [], "type": 0, "updated": "2014-06-25T14:20:17.926000"}]}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:20:18 GMT
+recorded_with: VCR 2.9.2

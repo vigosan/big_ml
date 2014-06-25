@@ -24,11 +24,7 @@ module BigML
 
     class << self
       def create(dataset, options = {})
-        arguments = { :dataset => dataset }
-        if number_of_models = options.delete(:number_of_models)
-          arguments[:number_of_models] = number_of_models
-        end
-        response = client.post("/#{resource_name}", options, arguments)
+        response = client.post("/#{resource_name}", {}, options.merge(dataset: dataset))
         self.new(response) if response.success?
       end
     end

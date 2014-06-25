@@ -2,67 +2,66 @@ require "spec_helper"
 
 describe BigML::Source, :vcr do
 
-  before(:each) do
+  before do
     BigML::Source.delete_all
   end
 
   describe "no source" do
     describe ".all" do
       it "must be empty" do
-        BigML::Source.all.should == []
+        expect(BigML::Source.all).to eq([])
       end
     end
   end
 
   describe "one source" do
-    before do
-      @source = BigML::Source.create("spec/fixtures/iris.csv")
-    end
+    let(:source) { BigML::Source.create 'spec/fixtures/iris.csv' }
 
     it "was created successfully" do
-      @source.code.should == 201
+      expect(source.code).to eq(201)
     end
 
     it "must have only one item" do 
-      BigML::Source.all.should have(1).sources
+      expect(BigML::Source.all.length).to eq(1)
     end
 
     it "must have the same file_name" do
-      BigML::Source.all.first.file_name.should == "iris.csv"
+      expect(BigML::Source.all.first.file_name).to eq("iris.csv")
     end
 
-    it "must be able to be find using the reference" do
-      BigML::Source.find(@source.id) == @source
+    xit "must be able to be find using the reference" do
+      # needs new casette
+      expect(BigML::Source.find source.id).to eq(source)
     end
 
     it "must be able to update the name" do
-      BigML::Source.find(@source.id).name.should == 'iris.csv'
-      BigML::Source.update(@source.id, { :name => 'new name' }).code.should == 202
-      BigML::Source.find(@source.id).name.should == 'new name'
+      expect(BigML::Source.find(source.id).name).to eq('iris.csv')
+      expect(BigML::Source.update(source.id, { name: 'new name' }).code).to eq(202)
+      expect(BigML::Source.find(source.id).name).to eq('new name')
     end
 
     it "must be able to update the name from the instance" do
-      BigML::Source.find(@source.id).name.should == 'iris.csv'
-      @source.update( :name => 'new name' ).code.should == 202
-      BigML::Source.find(@source.id).name.should == 'new name'
+      expect(BigML::Source.find(source.id).name).to eq('iris.csv')
+      expect(source.update(name: 'new name').code).to eq(202)
+      expect(BigML::Source.find(source.id).name).to eq('new name')
     end
 
     it "must be able to remove the source" do
-      BigML::Source.delete(@source.id)
-      BigML::Source.find(@source.id).should be_nil
-      BigML::Source.all.should have(0).sources
+      BigML::Source.delete source.id
+      expect(BigML::Source.find source.id).to be_nil
+      expect(BigML::Source.all.length).to eq(0)
     end
 
     it "must be able to be deleted using the destroy method" do
-      source_id = @source.id
-      @source.destroy
-      BigML::Source.find(source_id).should be_nil
+      source_id = source.id
+      source.destroy
+      expect(BigML::Source.find source_id).to be_nil
     end
 
     it "can be converted in a dataset" do
-      dataset = @source.to_dataset
-      dataset.instance_of?(BigML::Dataset).should be_true
-      dataset.code.should == 201
+      dataset = source.to_dataset
+      expect(dataset).to be_instance_of(BigML::Dataset)
+      expect(dataset.code).to eq(201)
     end
   end
 end

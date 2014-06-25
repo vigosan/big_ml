@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe BigML::Prediction, :vcr do
 
-  before(:each) do
+  before do
     BigML::Source.delete_all
     BigML::Dataset.delete_all
     BigML::Model.delete_all
@@ -12,55 +12,54 @@ describe BigML::Prediction, :vcr do
   describe "no prediction" do
     describe ".all" do
       it "must be empty" do
-        BigML::Prediction.all.should == []
+        expect(BigML::Prediction.all).to eq([])
       end
     end
   end
 
   describe "one prediction" do
-    before do
-      @source = BigML::Source.create("spec/fixtures/iris.csv")
-      @dataset = BigML::Dataset.create(@source.resource)
-      @model = BigML::Model.create(@dataset.resource)
-      @prediction = BigML::Prediction.create(@model.resource, { :input_data => { "000001" => 3 }})
-    end
+    let(:source) { BigML::Source.create 'spec/fixtures/iris.csv' }
+    let(:dataset) { BigML::Dataset.create source.resource }
+    let(:model) { BigML::Model.create dataset.resource }
+    let(:prediction) { BigML::Prediction.create model.resource, { input_data: { "000001" => 3 }} }
 
     it "was created successfully" do
-      @prediction.code.should == 201
+      expect(prediction.code).to eq(201)
     end
 
     it "must have only one item" do 
-      BigML::Prediction.all.should have(1).predictions
+      expect(BigML::Prediction.all.length).to eq(1)
     end
 
     it "must have the same name" do
-      BigML::Prediction.all.first.name.should == "Prediction for species"
+      expect(BigML::Prediction.all.first.name).to eq("Prediction for species")
     end
 
-    it "must be able to be find using the reference" do
-      BigML::Prediction.find(@prediction.id) == @prediction
+    xit "must be able to be find using the reference" do
+      # needs new casette
+      expect(BigML::Prediction.find prediction.id).to eq(prediction)
     end
 
     it "must be able to update the name" do
-      BigML::Prediction.update(@prediction.id, { :name => 'foo name' }).code.should == 202
-      BigML::Prediction.find(@prediction.id).name.should == 'foo name'
+      expect(BigML::Prediction.update(prediction.id, { :name => 'foo name' }).code).to eq(202)
+      expect(BigML::Prediction.find(prediction.id).name).to eq('foo name')
     end
 
     it "must be able to update the name from the instance" do
-      @prediction.update( :name => 'foo name' ).code.should == 202
-      BigML::Prediction.find(@prediction.id).name.should == 'foo name'
+      expect(prediction.update(name: 'foo name').code).to eq(202)
+      expect(BigML::Prediction.find(prediction.id).name).to eq('foo name')
     end
 
     it "must be able to remove the prediction" do
-      BigML::Prediction.delete(@prediction.id)
-      BigML::Prediction.find(@prediction.id).should be_nil
-      BigML::Prediction.all.should have(0).predictions
+      BigML::Prediction.delete prediction.id
+      expect(BigML::Prediction.find prediction.id).to be_nil
+      expect(BigML::Prediction.all.length).to eq(0)
     end
 
     it "must be able to be deleted using the destroy method" do
-      prediction_id = @prediction.id
-      @prediction.destroy
-      BigML::Prediction.find(prediction_id).should be_nil
+      prediction_id = prediction.id
+      prediction.destroy
+      expect(BigML::Prediction.find prediction_id).to be_nil
     end
   end
 end

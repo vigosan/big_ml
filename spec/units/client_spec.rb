@@ -21,7 +21,8 @@ describe BigML::Util::Client do
       {
         username: 'user',
         api_key: 'secret',
-        dev_mode: true
+        dev_mode: true,
+        debug: false
       }
     end
 

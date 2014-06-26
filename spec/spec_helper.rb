@@ -3,8 +3,8 @@ require 'rspec'
 require 'vcr'
 
 BigML.configure do |c|
-  c.username = 'bigmlvcr'
-  c.api_key  = '02cde8464ffa0fa4d3aa3490b5c32c3f99fe3140'
+  c.username = 'foo'
+  c.api_key  = 'bar'
   c.dev_mode = true
 end
 

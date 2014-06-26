@@ -16,7 +16,8 @@ VCR.configure do |c|
   c.filter_sensitive_data('<API_KEY>') { BigML.api_key }
 end
 
-RSpec.configure do |c|
-  c.mock_with :rspec
-  c.treat_symbols_as_metadata_keys_with_true_values = true
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
 end

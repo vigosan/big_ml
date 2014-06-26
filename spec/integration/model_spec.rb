@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe BigML::Model, :vcr do
 
-  before(:each) do
+  before do
     BigML::Source.delete_all
     BigML::Dataset.delete_all
     BigML::Model.delete_all
@@ -11,60 +11,58 @@ describe BigML::Model, :vcr do
   describe "no model" do
     describe ".all" do
       it "must be empty" do
-        BigML::Model.all.should == []
+        expect(BigML::Model.all).to eq([])
       end
     end
   end
 
   describe "one model" do
-    before do
-      @source = BigML::Source.create("spec/fixtures/iris.csv")
-      @dataset = BigML::Dataset.create(@source.resource)
-      @model = BigML::Model.create(@dataset.resource)
-    end
+    let(:source) { BigML::Source.create 'spec/fixtures/iris.csv' }
+    let(:dataset) { BigML::Dataset.create source.resource }
+    let(:model) { BigML::Model.create dataset.resource }
 
     it "was created successfully" do
-      @model.code.should == 201
+      expect(model.code).to eq(201)
     end
 
-    it "must have only one item" do 
-      BigML::Model.all.should have(1).models
+    it "must have only one item" do
+      expect(BigML::Model.all.length).to eq(1)
     end
 
     it "must have the same size" do
-      BigML::Model.all.first.size.should == 4608
+      expect(BigML::Model.all.first.size).to eq(4608)
     end
 
     it "must be able to be find using the reference" do
-      BigML::Model.find(@model.id) == @model
+      expect(BigML::Model.find(model.id).id).to eq(model.id)
     end
 
     it "must be able to update the name" do
-      BigML::Model.update(@model.id, { :name => 'foo name' }).code.should == 202
-      BigML::Model.find(@model.id).name.should == 'foo name'
+      expect(BigML::Model.update(model.id, { name: 'foo name' }).code).to eq(202)
+      expect(BigML::Model.find(model.id).name).to eq('foo name')
     end
 
     it "must be able to update the name from the instance" do
-      @model.update( :name => 'foo name' ).code.should == 202
-      BigML::Model.find(@model.id).name.should == 'foo name'
+      expect(model.update(name: 'foo name').code).to eq(202)
+      expect(BigML::Model.find(model.id).name).to eq('foo name')
     end
 
     it "must be able to remove the model" do
-      BigML::Model.delete(@model.id)
-      BigML::Model.find(@model.id).should be_nil
-      BigML::Model.all.should have(0).models
+      BigML::Model.delete model.id
+      expect(BigML::Model.find model.id).to be_nil
+      expect(BigML::Model.all.length).to eq(0)
     end
 
     it "must be able to be deleted using the destroy method" do
-      model_id = @model.id
-      @model.destroy
-      BigML::Model.find(model_id).should be_nil
+      model_id = model.id
+      model.destroy
+      expect(BigML::Model.find model_id).to be_nil
     end
 
     it "can be converted in a prediction" do
-      prediction = @model.to_prediction(:input_data => { "000001" => 3 })
-      prediction.instance_of?(BigML::Prediction).should be_true
-      prediction.code.should == 201
+      prediction = model.to_prediction(input_data: { "000001" => 3 })
+      expect(prediction).to be_instance_of(BigML::Prediction)
+      expect(prediction.code).to eq(201)
     end
   end
 end

@@ -33,9 +33,8 @@ describe BigML::Model, :vcr do
       expect(BigML::Model.all.first.size).to eq(4608)
     end
 
-    xit "must be able to be find using the reference" do
-      # needs new casette
-      expect(BigML::Model.find model.id).to eq(model)
+    it "must be able to be find using the reference" do
+      expect(BigML::Model.find(model.id).id).to eq(model.id)
     end
 
     it "must be able to update the name" do

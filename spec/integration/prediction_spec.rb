@@ -35,9 +35,8 @@ describe BigML::Prediction, :vcr do
       expect(BigML::Prediction.all.first.name).to eq("Prediction for species")
     end
 
-    xit "must be able to be find using the reference" do
-      # needs new casette
-      expect(BigML::Prediction.find prediction.id).to eq(prediction)
+    it "must be able to be find using the reference" do
+      expect(BigML::Prediction.find(prediction.id).id).to eq(prediction.id)
     end
 
     it "must be able to update the name" do

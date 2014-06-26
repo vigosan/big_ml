@@ -73,4 +73,40 @@ describe BigML::Util::Client do
       expect(BigML::Util::Client.base_uri).to eq(BigML::Util::Config::BIGML_DEV_ENDPOINT)
     end
   end
+
+  context 'response handling', :vcr do
+    let(:client) { BigML::Util::Client.new config }
+    let(:base_config) do
+      {
+        username: 'bad',
+        api_key: 'auth',
+        dev_mode: true,
+      }
+    end
+    let(:resource) { BigML::Source }
+
+    before do
+      resource.instance_variable_set :@client, client
+    end
+
+    describe 'debug mode' do
+      let(:config) { base_config.merge debug: true}
+
+      it 'raises on bad request' do
+        expect{resource.create 'spec/fixtures/iris.csv'}.to raise_error(BigML::UnsuccessfulRequestError, /unauthorized/i)
+      end
+    end
+
+    describe 'normal mode' do
+      let(:config) { base_config.merge debug: false}
+
+      it 'does not raise on bad request' do
+        expect{resource.create 'spec/fixtures/iris.csv'}.not_to raise_error
+      end
+    end
+
+    after do
+      resource.instance_variable_set :@client, nil
+    end
+  end
 end

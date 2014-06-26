@@ -10,6 +10,8 @@ require 'big_ml/util/config'
 module BigML
   extend Util::Config
 
+  UnsuccessfulRequestError = Class.new(StandardError)
+
   class << self
     def new(options = {})
       Client.new(options)

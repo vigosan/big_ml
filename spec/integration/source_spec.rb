@@ -29,9 +29,8 @@ describe BigML::Source, :vcr do
       expect(BigML::Source.all.first.file_name).to eq("iris.csv")
     end
 
-    xit "must be able to be find using the reference" do
-      # needs new casette
-      expect(BigML::Source.find source.id).to eq(source)
+    it "must be able to be find using the reference" do
+      expect(BigML::Source.find(source.id).id).to eq(source.id)
     end
 
     it "must be able to update the name" do

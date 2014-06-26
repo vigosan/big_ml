@@ -27,14 +27,12 @@ describe BigML::Dataset, :vcr do
       expect(BigML::Dataset.all.length).to eq(1)
     end
 
-    xit "must have the same file_name" do
-      # broken
+    it "must have the same file_name" do
       expect(BigML::Dataset.all.first.size).to eq(4608)
     end
 
-    xit "must be able to be find using the reference" do
-      # needs new casette
-      expect(BigML::Dataset.find dataset.id).to eq(dataset)
+    it "must be able to be find using the reference" do
+      expect(BigML::Dataset.find(dataset.id).id).to eq(dataset.id)
     end
 
     it "must be able to update the name" do
@@ -59,10 +57,9 @@ describe BigML::Dataset, :vcr do
       expect(BigML::Dataset.all.length).to eq(0)
     end
 
-    xit "can be converted in a model" do
-      # needs new casette
+    it "can be converted in a model" do
       model = dataset.to_model
-      expect(model).to be_instance_of?(BigML::Model)
+      expect(model).to be_instance_of(BigML::Model)
       expect(model.code).to eq(201)
     end
   end

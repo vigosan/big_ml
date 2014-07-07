@@ -11,8 +11,10 @@ module BigML
       DEFAULT_BIGML_API_KEY  = nil
       # Set default mode to production
       DEFAULT_IN_DEV_MODE    = false
+      # Set default debug mode to off
+      DEFAULT_IN_DEBUG_MODE  = false
       # An array of valid keys in the options hash when configuring a {BigML::Client}
-      VALID_OPTIONS_KEYS     = [:username, :api_key, :dev_mode]
+      VALID_OPTIONS_KEYS     = [:username, :api_key, :dev_mode, :debug]
 
       attr_accessor *VALID_OPTIONS_KEYS
 
@@ -31,6 +33,7 @@ module BigML
         self.username = DEFAULT_BIGML_USERNAME
         self.api_key  = DEFAULT_BIGML_API_KEY
         self.dev_mode = DEFAULT_IN_DEV_MODE
+        self.debug    = DEFAULT_IN_DEBUG_MODE
       end
     end
   end

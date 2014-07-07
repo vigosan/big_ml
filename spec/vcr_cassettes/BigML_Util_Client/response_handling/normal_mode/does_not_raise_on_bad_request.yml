@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://bigml.io/dev/andromeda/source
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      content-type:
+      - multipart/form-data; boundary=-----------RubyMultipartPost
+      content-length:
+      - '5109'
+  response:
+    status:
+      code: 401
+      message: UNAUTHORIZED
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Thu, 26 Jun 2014 15:38:28 GMT
+      server:
+      - nginx/1.0.12
+      content-length:
+      - '71'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"code": 401, "status": {"code": -1100, "message": "Unauthorized use"}}'
+    http_version: '1.1'
+  recorded_at: Thu, 26 Jun 2014 15:38:29 GMT
+recorded_with: VCR 2.9.2

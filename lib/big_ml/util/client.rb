@@ -12,6 +12,7 @@ module BigML
       format :json
 
       attr_accessor *Config::VALID_OPTIONS_KEYS
+      alias_method :debug?, :debug
 
       def initialize(attrs={})
         attrs = BigML.options.merge(attrs)

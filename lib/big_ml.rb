@@ -5,11 +5,14 @@ require 'big_ml/prediction'
 require 'big_ml/batch_prediction'
 require 'big_ml/source'
 require 'big_ml/evaluation'
+require 'big_ml/ensemble'
 
 require 'big_ml/util/config'
 
 module BigML
   extend Util::Config
+
+  UnsuccessfulRequestError = Class.new(StandardError)
 
   class << self
     def new(options = {})

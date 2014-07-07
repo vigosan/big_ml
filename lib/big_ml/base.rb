@@ -36,7 +36,7 @@ module BigML
       status["code"] < 0
     end
 
-    def wait_for_ready(options = {:delay => 1, :timeout => 60})
+    def wait_for_ready(options = {})
       BigML::Base.wait_for_ready(self, options)
     end
 
@@ -65,13 +65,14 @@ module BigML
       end
 
       # Keeps reloading resource until it is ready
-      def wait_for_ready(resource, options = {:delay => 1, :timeout => 60})
+      def wait_for_ready(resource, options = {})
         klass = resource.class
-        remaining = options[:timeout]
+        remaining = options.fetch :timeout, 60
+        delay = options.fetch :delay, 1
         until resource && resource.ready?
           resource = klass.find(resource.id)
-          sleep(options[:delay]) unless resource.ready?
-          remaining = remaining - options[:delay]
+          sleep(delay) unless resource.ready?
+          remaining = remaining - delay
           raise Timeout::Error if remaining <= 0
         end
         resource

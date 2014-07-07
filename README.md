@@ -14,6 +14,7 @@ BigML.configure do |c|
   c.username = 'foo'
   c.api_key  = 'bar'
   c.dev_mode = true
+  #c.debug   = true # Raises errors for bad requests
 end
 
 # easy creation of sources

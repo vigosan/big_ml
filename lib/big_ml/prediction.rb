@@ -12,8 +12,8 @@ module BigML
     attr_reader *PREDICTION_PROPERTIES
 
     class << self
-      def create(model, options = {})
-        response = client.post("/#{resource_name}", {}, { :model => model }.merge!(options))
+      def create(model_or_ensemble, options = {})
+        response = client.post("/#{resource_name}", {}, { model_or_ensemble.split('/').first.to_sym => model_or_ensemble }.merge!(options))
         self.new(response) if response.success?
       end
     end

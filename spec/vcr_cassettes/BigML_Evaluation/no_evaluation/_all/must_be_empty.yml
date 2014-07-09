@@ -1,0 +1,600 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/source?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:17:25 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '1002'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 1}, "objects": [{"category": 0, "code": 200, "content_type":
+        "application/octet-stream", "created": "2014-06-25T14:16:35.374000", "credits":
+        0.0, "description": "", "dev": true, "file_name": "iris.csv", "md5": "d1175c032e1042bec7f974c91e4a65ae",
+        "name": "iris.csv", "number_of_datasets": 1, "number_of_ensembles": 0, "number_of_models":
+        1, "number_of_predictions": 0, "private": true, "resource": "source/53aad9c3ffa04408550016af",
+        "shared": false, "size": 4608, "source_parser": {"header": true, "locale":
+        "en_US", "missing_tokens": ["", "NaN", "NULL", "N/A", "null", "-", "#REF!",
+        "#VALUE!", "?", "#NULL!", "#NUM!", "#DIV/0", "n/a", "#NAME?", "NIL", "nil",
+        "na", "#N/A", "NA"], "quote": "\"", "separator": ","}, "status": {"code":
+        5, "elapsed": 298, "message": "The source has been created"}, "subscription":
+        false, "tags": [], "term_analysis": {"enabled": true}, "type": 0, "updated":
+        "2014-06-25T14:16:38.690000"}]}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:25 GMT
+- request:
+    method: delete
+    uri: https://bigml.io/dev/andromeda/source/53aad9c3ffa04408550016af?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: NO CONTENT
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 25 Jun 2014 14:17:26 GMT
+      server:
+      - nginx/1.0.12
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:26 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/dataset?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:17:26 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 1}, "objects": [{"all_fields": true, "category": 0, "cluster":
+        null, "cluster_status": true, "code": 200, "columns": 5, "created": "2014-06-25T14:16:36.957000",
+        "credits": 0.00439453125, "description": "", "dev": true, "field_types": {"categorical":
+        1, "datetime": 0, "numeric": 4, "preferred": 5, "text": 0, "total": 5}, "locale":
+        "en_US", "missing_numeric_rows": 0, "name": "iris'' dataset", "number_of_batchcentroids":
+        0, "number_of_batchpredictions": 0, "number_of_clusters": 0, "number_of_ensembles":
+        0, "number_of_evaluations": 0, "number_of_models": 1, "number_of_predictions":
+        0, "objective_field": {"column_number": 4, "datatype": "string", "id": "000004",
+        "name": "species", "optype": "categorical", "order": 4, "term_analysis": {"enabled":
+        true}}, "price": 0.0, "private": true, "ranges": null, "replacements": null,
+        "resource": "dataset/53aad9c40af5e81535000e8b", "rows": 150, "sample_rates":
+        null, "seeds": null, "shared": false, "size": 4608, "source": "source/53aad9c3ffa04408550016af",
+        "source_status": false, "status": {"bytes": 4608, "code": 5, "elapsed": 433,
+        "field_errors": [], "message": "The dataset has been created", "row_format_errors":
+        [], "serialized_rows": 150}, "subscription": false, "tags": [], "term_limit":
+        32, "updated": "2014-06-25T14:16:40.949000"}]}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:26 GMT
+- request:
+    method: delete
+    uri: https://bigml.io/dev/andromeda/dataset/53aad9c40af5e81535000e8b?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: NO CONTENT
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 25 Jun 2014 14:17:26 GMT
+      server:
+      - nginx/1.0.12
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:26 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/model?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:17:26 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 1}, "objects": [{"balance_objective": false, "category": 0,
+        "code": 200, "columns": 5, "created": "2014-06-25T14:16:38.680000", "credits":
+        0.017578125, "credits_per_prediction": 0.0, "dataset": "dataset/53aad9c40af5e81535000e8b",
+        "dataset_field_types": {"categorical": 1, "datetime": 0, "numeric": 4, "preferred":
+        5, "text": 0, "total": 5}, "dataset_status": false, "dataset_type": 0, "description":
+        "", "dev": true, "ensemble": false, "ensemble_id": "", "ensemble_index": 0,
+        "locale": "en_US", "max_columns": 5, "max_rows": 150, "name": "iris'' dataset
+        model", "node_threshold": 512, "number_of_batchpredictions": 0, "number_of_evaluations":
+        0, "number_of_predictions": 0, "number_of_public_predictions": 0, "objective_field":
+        "000004", "objective_fields": ["000004"], "ordering": 0, "out_of_bag": false,
+        "price": 0.0, "private": true, "randomize": false, "range": [1, 150], "replacement":
+        false, "resource": "model/53aad9c60af5e8152f000a26", "rows": 150, "sample_rate":
+        1.0, "selective_pruning": true, "shared": false, "size": 4608, "source": "source/53aad9c3ffa04408550016af",
+        "source_status": false, "stat_pruning": true, "status": {"code": 5, "elapsed":
+        319, "message": "The model has been created", "progress": 1.0}, "subscription":
+        false, "tags": ["species"], "updated": "2014-06-25T14:16:40.959000", "white_box":
+        false}]}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:26 GMT
+- request:
+    method: delete
+    uri: https://bigml.io/dev/andromeda/model/53aad9c60af5e8152f000a26?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: NO CONTENT
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 25 Jun 2014 14:17:26 GMT
+      server:
+      - nginx/1.0.12
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:27 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/evaluation?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:17:27 GMT
+      server:
+      - nginx/1.0.12
+      vary:
+      - Accept-Encoding
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 7}, "objects": [{"category": 0, "code": 500, "combiner": 0,
+        "created": "2014-06-25T14:16:40.615000", "credits": 0.0, "dataset": "dataset/53aad9c40af5e81535000e8b",
+        "dataset_status": false, "dataset_type": 0, "datasets": [], "description":
+        "", "dev": true, "ensemble": "", "locale": "en-US", "max_rows": 150, "missing_strategy":
+        0, "model": "model/53aad9c60af5e8152f000a26", "model_status": false, "model_type":
+        0, "name": "Evaluation of iris'' dataset model with iris'' dataset", "number_of_models":
+        1, "ordering": 0, "out_of_bag": false, "private": true, "range": [1, 150],
+        "replacement": false, "resource": "evaluation/53aad9c8ffa04408550016b2", "rows":
+        150, "sample_rate": 1.0, "sampled_rows": 150, "shared": false, "size": 4608,
+        "status": {"code": -1, "message": "The evaluation cannot be perfomed"}, "subscription":
+        false, "tags": [], "type": 0, "updated": "2014-06-25T14:16:40.957000"}, {"category":
+        0, "code": 200, "combiner": 0, "created": "2014-06-25T14:16:25.626000", "credits":
+        1.5, "dataset": "dataset/53aad9b50af5e81535000e7d", "dataset_status": false,
+        "dataset_type": 0, "datasets": [], "description": "", "dev": true, "ensemble":
+        "", "locale": "en-US", "max_rows": 150, "missing_strategy": 0, "model": "model/53aad9b70af5e81535000e83",
+        "model_status": false, "model_type": 0, "name": "Evaluation of iris'' dataset
+        model with iris'' dataset", "number_of_models": 1, "ordering": 0, "out_of_bag":
+        false, "private": true, "range": [1, 150], "replacement": false, "resource":
+        "evaluation/53aad9b90af5e81535000e86", "rows": 150, "sample_rate": 1.0, "sampled_rows":
+        150, "shared": false, "size": 4608, "status": {"code": 5, "elapsed": 472,
+        "message": "The evaluation has been performed", "progress": 1.0}, "subscription":
+        false, "tags": [], "type": 0, "updated": "2014-06-25T14:16:26.505000"}, {"category":
+        0, "code": 200, "combiner": 0, "created": "2014-06-25T14:16:18.215000", "credits":
+        1.5, "dataset": "dataset/53aad9aeffa0440852000813", "dataset_status": false,
+        "dataset_type": 0, "datasets": [], "description": "", "dev": true, "ensemble":
+        "", "locale": "en-US", "max_rows": 150, "missing_strategy": 0, "model": "model/53aad9b0ffa04408550016a1",
+        "model_status": false, "model_type": 0, "name": "Evaluation of iris'' dataset
+        model with iris'' dataset", "number_of_models": 1, "ordering": 0, "out_of_bag":
+        false, "private": true, "range": [1, 150], "replacement": false, "resource":
+        "evaluation/53aad9b20af5e815310006d4", "rows": 150, "sample_rate": 1.0, "sampled_rows":
+        150, "shared": false, "size": 4608, "status": {"code": 5, "elapsed": 598,
+        "message": "The evaluation has been performed", "progress": 1.0}, "subscription":
+        false, "tags": [], "type": 0, "updated": "2014-06-25T14:16:19.151000"}, {"category":
+        0, "code": 500, "combiner": 0, "created": "2014-06-25T14:16:11.004000", "credits":
+        0.0, "dataset": "dataset/53aad9a7ffa044085d000800", "dataset_status": false,
+        "dataset_type": 0, "datasets": [], "description": "", "dev": true, "ensemble":
+        "", "locale": "en-US", "max_rows": 150, "missing_strategy": 0, "model": "model/53aad9a9ffa044085500169e",
+        "model_status": false, "model_type": 0, "name": "Evaluation of iris'' dataset
+        model with iris'' dataset", "number_of_models": 1, "ordering": 0, "out_of_bag":
+        false, "private": true, "range": [1, 150], "replacement": false, "resource":
+        "evaluation/53aad9abffa04408570008d2", "rows": 150, "sample_rate": 1.0, "sampled_rows":
+        150, "shared": false, "size": 4608, "status": {"code": -1, "elapsed": 1868,
+        "error": -40, "message": "Unexpected problem accessing storage", "progress":
+        0}, "subscription": false, "tags": [], "type": 0, "updated": "2014-06-25T14:16:24.717000"},
+        {"category": 0, "code": 200, "combiner": 0, "created": "2014-06-25T14:16:03.662000",
+        "credits": 1.5, "dataset": "dataset/53aad99fffa0440855001696", "dataset_status":
+        false, "dataset_type": 0, "datasets": [], "description": "", "dev": true,
+        "ensemble": "", "locale": "en-US", "max_rows": 150, "missing_strategy": 0,
+        "model": "model/53aad9a1ffa0440855001699", "model_status": false, "model_type":
+        0, "name": "Evaluation of iris'' dataset model with iris'' dataset", "number_of_models":
+        1, "ordering": 0, "out_of_bag": false, "private": true, "range": [1, 150],
+        "replacement": false, "resource": "evaluation/53aad9a30af5e81535000e71", "rows":
+        150, "sample_rate": 1.0, "sampled_rows": 150, "shared": false, "size": 4608,
+        "status": {"code": 5, "elapsed": 592, "message": "The evaluation has been
+        performed", "progress": 1.0}, "subscription": false, "tags": [], "type": 0,
+        "updated": "2014-06-25T14:16:04.620000"}, {"category": 0, "code": 500, "combiner":
+        0, "created": "2014-06-25T14:15:55.794000", "credits": 0.0, "dataset": "dataset/53aad9980af5e8152c00148f",
+        "dataset_status": false, "dataset_type": 0, "datasets": [], "description":
+        "", "dev": true, "ensemble": "", "locale": "en-US", "max_rows": 150, "missing_strategy":
+        0, "model": "model/53aad9990af5e81535000e6e", "model_status": false, "model_type":
+        0, "name": "Evaluation of iris'' dataset model with iris'' dataset", "number_of_models":
+        1, "ordering": 0, "out_of_bag": false, "private": true, "range": [1, 150],
+        "replacement": false, "resource": "evaluation/53aad99bffa0440852000810", "rows":
+        150, "sample_rate": 1.0, "sampled_rows": 150, "shared": false, "size": 4608,
+        "status": {"code": -1, "elapsed": 1695, "error": -40, "message": "Unexpected
+        problem accessing storage", "progress": 0}, "subscription": false, "tags":
+        [], "type": 0, "updated": "2014-06-25T14:16:15.240000"}, {"category": 0, "code":
+        500, "combiner": 0, "created": "2014-06-25T14:15:48.704000", "credits": 0.0,
+        "dataset": "dataset/53aad991ffa04408570008cd", "dataset_status": false, "dataset_type":
+        0, "datasets": [], "description": "", "dev": true, "ensemble": "", "locale":
+        "en-US", "max_rows": 150, "missing_strategy": 0, "model": "model/53aad9920af5e8152c001487",
+        "model_status": false, "model_type": 0, "name": "Evaluation of iris'' dataset
+        model with iris'' dataset", "number_of_models": 1, "ordering": 0, "out_of_bag":
+        false, "private": true, "range": [1, 150], "replacement": false, "resource":
+        "evaluation/53aad9940af5e8152c00148a", "rows": 150, "sample_rate": 1.0, "sampled_rows":
+        150, "shared": false, "size": 4608, "status": {"code": -1, "elapsed": 1644,
+        "error": -40, "message": "Unexpected problem accessing storage", "progress":
+        0}, "subscription": false, "tags": [], "type": 0, "updated": "2014-06-25T14:15:59.483000"}]}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:27 GMT
+- request:
+    method: delete
+    uri: https://bigml.io/dev/andromeda/evaluation/53aad9c8ffa04408550016b2?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: NO CONTENT
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 25 Jun 2014 14:17:27 GMT
+      server:
+      - nginx/1.0.12
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:27 GMT
+- request:
+    method: delete
+    uri: https://bigml.io/dev/andromeda/evaluation/53aad9b90af5e81535000e86?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: NO CONTENT
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 25 Jun 2014 14:17:27 GMT
+      server:
+      - nginx/1.0.12
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:27 GMT
+- request:
+    method: delete
+    uri: https://bigml.io/dev/andromeda/evaluation/53aad9b20af5e815310006d4?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: NO CONTENT
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 25 Jun 2014 14:17:27 GMT
+      server:
+      - nginx/1.0.12
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:27 GMT
+- request:
+    method: delete
+    uri: https://bigml.io/dev/andromeda/evaluation/53aad9abffa04408570008d2?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: NO CONTENT
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 25 Jun 2014 14:17:27 GMT
+      server:
+      - nginx/1.0.12
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:28 GMT
+- request:
+    method: delete
+    uri: https://bigml.io/dev/andromeda/evaluation/53aad9a30af5e81535000e71?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: NO CONTENT
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 25 Jun 2014 14:17:28 GMT
+      server:
+      - nginx/1.0.12
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:28 GMT
+- request:
+    method: delete
+    uri: https://bigml.io/dev/andromeda/evaluation/53aad99bffa0440852000810?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: NO CONTENT
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 25 Jun 2014 14:17:28 GMT
+      server:
+      - nginx/1.0.12
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:28 GMT
+- request:
+    method: delete
+    uri: https://bigml.io/dev/andromeda/evaluation/53aad9940af5e8152c00148a?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 204
+      message: NO CONTENT
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-length:
+      - '0'
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Wed, 25 Jun 2014 14:17:28 GMT
+      server:
+      - nginx/1.0.12
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:28 GMT
+- request:
+    method: get
+    uri: https://bigml.io/dev/andromeda/evaluation?username=<USERNAME>&api_key=<API_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-methods:
+      - POST,GET,PUT,DELETE
+      access-control-allow-origin:
+      - "*"
+      content-type:
+      - application/json
+      date:
+      - Wed, 25 Jun 2014 14:17:28 GMT
+      server:
+      - nginx/1.0.12
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"meta": {"limit": 20, "next": null, "offset": 0, "previous": null,
+        "total_count": 0}, "objects": []}'
+    http_version: '1.1'
+  recorded_at: Wed, 25 Jun 2014 14:17:28 GMT
+recorded_with: VCR 2.9.2

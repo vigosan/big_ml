@@ -3,10 +3,15 @@ require 'big_ml/base'
 module BigML
   class Prediction < Base
     PREDICTION_PROPERTIES = [
-      :category, :code, :created, :credits, :dataset, :dataset_status, 
-      :description, :fields, :input_data, :model, :model_status, :name, 
-      :objective_fields, :prediction, :prediction_path, :private, :resource, 
-      :source, :source_status, :status, :tags, :updated
+      :category, :code, :combiner, :confidence, :created, :credits, :dataset,
+      :dataset_status, :description, :dev, :ensemble, :error_predictions,
+      :fields, :finished_predictions,  :input_data, :locale, :missing_strategy,
+      :model, :models, :model_type, :model_status, :name, :number_of_models, 
+      :objective_field, :objective_fields, :objective_field_name, :output,
+      :prediction, :predictions, :prediction_path, :private, :project, 
+      :resource, :query_string, :source, :source_status, :status, :subscription,
+      :tags, :task, :threshold, :tlp, :total_count, :updated, :votes,
+      :vote_confidence
     ]
 
     attr_reader *PREDICTION_PROPERTIES

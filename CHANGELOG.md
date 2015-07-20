@@ -3,6 +3,10 @@
 ## 0.1.4
 - Update resources properties
 
+## 0.1.2 or 0.1.3
+- BigML::Ensemble
+- BigML::Evaluation
+
 ## 0.1.1
 - Casting method to_* added
 - Update and destroy methods in the instances

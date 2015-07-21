@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0
+-  BigML::Anomaly
+-  BigML::Cluster
+-  BigML::Centroid
+-  BigML::Score
+-  BigML::BatchCentroid
+-  BigML::BatchScore
+
 ## 0.1.4
 - Update resources properties
 

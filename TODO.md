@@ -3,4 +3,5 @@
 ## Source
 
 - implement creation by url
-- implement creation using inline data 
+- implement creation using inline data
+- support VPC (private enviroment for customer)
